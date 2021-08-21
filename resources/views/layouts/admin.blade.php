@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>heldesk | Admin</title>
+  <title>@yield('titpage')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+  
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -244,7 +245,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">heldesk</span>
+      <span class="brand-text font-weight-light">GoreDigital</span>
     </a>
 
     <!-- Sidebar -->
@@ -353,23 +354,13 @@
           </li>
           @endcan
           {{-- listado de menus por desarrollar --}}
-          <li class="nav-item ">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-ticket-alt"></i>
+          <li class="nav-item">
+            <a href="{{ route('pide') }}" class="nav-link {{ activo('pide') }}">
+              <i class="nav-icon fas fa-building"></i>
               <p>
                 Servicios PIDE
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="http://goredigital.test/ticket" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Reniec</p>
-                </a>
-              </li>
-                                                                     
-            </ul>
           </li>
           <li class="nav-item ">
             <a href="#" class="nav-link ">

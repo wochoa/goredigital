@@ -1,6 +1,8 @@
 
 @extends('layouts.admin')
-
+@section('titpage')
+  Gobierno digital | Reporte de atenciones
+@endsection
 @section('content')
 <!-- Content Header (Page header) -->
 <div class="content-header">

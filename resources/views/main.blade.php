@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-
+@section('titpage')
+  Gobierno digital | Dashboard
+@endsection
 @section('content')
 <!-- Content Header (Page header) -->
 <div class="content-header">
@@ -48,7 +50,7 @@
           <div class="icon">
             <i class="ion ion-stats-bars"></i>
           </div>
-          <a href="#" class="small-box-footer">Ir a SGD <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="http://digital.regionhuanuco.gob.pe" class="small-box-footer" target="_blanck">Ir a SGD <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -63,7 +65,7 @@
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="#" class="small-box-footer">Ir a GP <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="https://gestionportales.regionhuanuco.gob.pe" class="small-box-footer" target="_blanck">Ir a GP <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -78,7 +80,7 @@
           <div class="icon">
             <i class="ion ion-pie-graph"></i>
           </div>
-          <a href="#" class="small-box-footer">Ir a Convocatorias <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="http://selecciondepersonal.regionhuanuco.gob.pe/" class="small-box-footer" target="_blanck">Ir a Convocatorias <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -108,7 +110,7 @@
           <div class="icon">
             <i class="ion ion-pie-graph"></i>
           </div>
-          <a href="#" class="small-box-footer">Ir a PIDE <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{ route('pide') }}" class="small-box-footer">Ir a PIDE <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -123,7 +125,7 @@
           <div class="icon">
             <i class="ion ion-ios-cog"></i>
           </div>
-          <a href="#" class="small-box-footer">Ir a Intranet <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="http://www2.regionhuanuco.gob.pe/portal/admin/" class="small-box-footer" target="_blanck">Ir a Intranet <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->

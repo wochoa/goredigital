@@ -42,3 +42,21 @@ route::get('/usersoporte','HomeController@usersoporte')->name('usersoporte');
 route::get('/rolpermiso','HomeController@rolpermiso')->name('rolpermiso');
 route::get('/permisos','HomeController@permisos')->name('permisos');
 route::get('/reporteetnciones','HomeController@reporteetnciones')->name('reporteetnciones');
+
+// rutas para servicios pide
+// consulta pide
+route::get('/pide','pide@pide')->name('pide');
+
+route::get('/reniec/{dni}','pide@reniec')->name('reniec');
+route::get('/sis/{dni}','pide@sis')->name('sis');
+route::get('/sunat/{ruc}','pide@sunat')->name('sunat');
+route::get('/sunedu/{dni}','pide@sunedu')->name('sunedu');
+route::get('/essalud/{dni}','pide@essalud')->name('essalud');
+route::get('/proveedorsancionado/{ruc}','pide@proveedorsancionado')->name('proveedorsancionado');
+route::get('/busprocselxexpediente/{exp}','pide@busprocselxexpediente')->name('busprocselxexpediente');
+route::get('/busprocselxrucaniomes/{ruc}/{anio}/{mes}','pide@busprocselxrucaniomes')->name('busprocselxrucaniomes');
+route::get('/infocolnacioparticular/{id}','pide@infocolnacioparticular')->name('infocolnacioparticular');
+route::get('/gradoinstituto/{dni}','pide@gradoinstituto')->name('gradoinstituto');
+route::get('/antecedentejudicial/{pat}/{mat}/{nom}','pide@antecedentejudicial')->name('antecedentejudicial'); 
+route::get('/proveedoradjudicadoxexpediente/{exp}','pide@proveedoradjudicadoxexpediente')->name('proveedoradjudicadoxexpediente');
+route::get('/proveeadjxrucyanio/{ruc}/{anio}','pide@proveeadjxrucyanio')->name('proveeadjxrucyanio');
