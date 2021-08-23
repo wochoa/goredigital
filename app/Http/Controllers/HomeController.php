@@ -167,4 +167,9 @@ class HomeController extends Controller
         
     }
 
+    public function gestionportales()
+    {
+        return view('gestionportales');
+    }
+
 }

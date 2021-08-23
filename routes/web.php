@@ -41,7 +41,11 @@ route::get('/usersoporte','HomeController@usersoporte')->name('usersoporte');
 
 route::get('/rolpermiso','HomeController@rolpermiso')->name('rolpermiso');
 route::get('/permisos','HomeController@permisos')->name('permisos');
+
 route::get('/reporteetnciones','HomeController@reporteetnciones')->name('reporteetnciones');
+
+//gestion portales
+route::get('/gestionportales','HomeController@gestionportales')->name('gestionportales');
 
 // rutas para servicios pide
 // consulta pide

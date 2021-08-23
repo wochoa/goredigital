@@ -354,6 +354,7 @@
           </li>
           @endcan
           {{-- listado de menus por desarrollar --}}
+          @can('pagina_pide')
           <li class="nav-item">
             <a href="{{ route('pide') }}" class="nav-link {{ activo('pide') }}">
               <i class="nav-icon fas fa-building"></i>
@@ -362,24 +363,8 @@
               </p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-ticket-alt"></i>
-              <p>
-                Gestion de portales
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="http://goredigital.test/ticket" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Crear Ticket</p>
-                </a>
-              </li>
-                                                                     
-            </ul>
-          </li>
+          @endcan
+          
            {{-- fin de menus por desarrollar --}}
           @hasanyrole('Superadmin|Administrador')
           <li class="nav-header">Administrador</li>
@@ -429,6 +414,14 @@
               <i class="nav-icon fas fa-person-booth"></i>
               <p>
                 Categoria atenciones
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('gestionportales') }}" class="nav-link {{ activo('gestionportales') }}">
+              <i class="nav-icon fas fa-person-booth"></i>
+              <p>
+                Gestionportales
               </p>
             </a>
           </li>
