@@ -2,6 +2,9 @@
 
 namespace App\Http\Livewire;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use Livewire\Component;
 
 class GestionPortales extends Component
@@ -27,8 +30,27 @@ class GestionPortales extends Component
     }
     public function render()
     {
-        $paginas=DB::connection('mysql')->table('direcciones_web')->get();
-        $userportales=DB::connection('mysql')->table('userportales')->get();
+
+        //////////////////////////PARA CAPTURAR LA ID DE DEPEENDENCIA P.EJEMP 3: SEDE CENTRAL REGIONAL //////////////////////////
+        $iddepe1=auth()->user()->depe_id;
+        $coddepe=DB::table('dependencia')->where('iddependencia',$iddepe1)->value('depe_depende');
+        $codidepe=$coddepe;//@$coddepe[0]->depe_depende;// id de dependencia
+
+        if(Auth::user()->hasRole('Superadmin')==1)
+        {
+            $paginas=DB::connection('mysql')->table('direcciones_web')->get();
+            $userportales=DB::connection('mysql')->table('userportales')->get();
+        }
+        else{
+            $paginas=DB::connection('mysql')->table('direcciones_web')->where('iddependencia',$codidepe)->get();
+            $codwebpor=DB::connection('mysql')->table('direcciones_web')->where('iddependencia',$codidepe)->value('iddirecciones_web');
+            $userportales=DB::connection('mysql')->table('userportales')->where('iddirecciones_web',$codwebpor)->get();
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       
+
+        
         
 
         $dependencia=DB::table('dependencia')->select('depe_depende')->where(['depe_estado'=>'1','depe_tipo'=>'1'])->groupBy('depe_depende')->orderBy('depe_depende','DESC')->get();

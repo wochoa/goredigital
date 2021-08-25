@@ -125,7 +125,7 @@
           </button>
       </div>
       <div class="modal-body">
-        <input type="text" value="{{ $codpag }}">
+        {{-- <input type="text" value="{{ $codpag }}"> --}}
         <div class="form-group">
           <label for="">Direccion web</label>
           <input type="text" class="form-control form-control-sm" value="{{ $nombreweb }}">

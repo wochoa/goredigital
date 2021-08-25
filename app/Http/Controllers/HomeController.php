@@ -115,8 +115,8 @@ class HomeController extends Controller
     public function usersoporte()
     {
         $idofi=Auth::user()->depe_id;
-        $codigodepe=DB::table('dependencia')->where('iddependencia',$idofi)->get();
-        $coddependencia=$codigodepe[0]->depe_depende;
+        $codigodepe=DB::table('dependencia')->where('iddependencia',$idofi)->value('depe_depende');
+        $coddependencia=$codigodepe;//$codigodepe[0]->depe_depende;
 
         $usersoporte=DB::table('vistausersoporte')->where('depe_depende',$coddependencia)->get();
         if(Auth::user()->can('Pagina_personalsoporte'))
