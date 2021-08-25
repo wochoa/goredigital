@@ -78,7 +78,10 @@
     width: 400px; } }
 
 .auth-wrapper .auth-bg {
-  background-color: #fff; }
+  /* background-color: #fff;  */
+  background-color: #ffffff4a;
+    color: #fff;
+}
 
 .dark-layout .auth-wrapper .auth-bg {
   background-color: #283046; }

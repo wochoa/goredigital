@@ -2,25 +2,12 @@
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
 
     {{-- <h4 class="text-center display-4" style="font-size: 14px !important;">Buscar por apellido</h4> --}}
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-
-                <div class="input-group">
-                    <input type="search" class="form-control form-control-lg" placeholder="Escriba apellido paterno" wire:model="search" onkeyup="javascript:this.value=this.value.toUpperCase();">
-                    <div class="input-group-append">
-                        <button class="btn btn-lg btn-default">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                {{-- <small>{{ $search }}</small> --}}
-
-        </div>
-    </div>
+    
     <br>
     <div class="row">
-        @if($contadorsgd<>$contadorrol)
-        <div class="col-sm-7">
+        @if($contadorsgd>$contadorrol)
+        @role('Superadmin')
+        <div class="col-sm-6">
             <div class="card card-gray">
                 <div class="card-header p-2">
                   <h3 class="card-title">Relacion de personal a nivel pliego</h3>
@@ -28,45 +15,68 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    {{-- {{ print_r($usuariossgd) }} --}}
-
-                    <table class="table table-bordered table-sm" >
-                        <thead>
-                        <tr><th>N</th><th>Nombre y apellidos</th><th>Cargo</th><td>DNI</td><td>Cel</td><td>Acciones</td></tr>
-                        </thead>                    
-                       
-                       
-                        @forelse($userSGD as $ofina)
-
-                        @php
-                            $i=0;
-                        @endphp
-
-                        @foreach($rolasiguser as $key)
-                            @if($ofina->id==$key->id)
-                                 @break
-                               @else 
-                               @php
-                                   $i++;
-                               @endphp
-                            @endif
-                        @endforeach
-                         @if(count($rolasiguser)==$i)
-                         <tr><td><small>{{ $ofina->id }}</small></td><td><small>{{ $ofina->adm_name }} {{ $ofina->adm_lastname }}</small></td><td><small>{{ $ofina->adm_cargo }}</small></td><td><small>{{ $ofina->adm_dni }}</small></td><td><small>{{ $ofina->adm_telefono }}</small></td><td>
-                           
-                            @can('UsuarioSGD_rol')
-                                <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#sistemas" wire:click="cargadato({{ $ofina->id }})">Rol</button>
-                            @endcan                         
-                           
-                        </td></tr>  
-                         @endif
+                    <div class="row">
+                        <div class="col-md-8">
+                
+                                <div class="input-group">
+                                    <input type="search" class="form-control form-control-sm" placeholder="Escriba apellido paterno" wire:model="search" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-sm btn-default">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                {{-- <small>{{ $search }}</small> --}}
+                
+                        </div>
+                        <div class="col-md-4">
+                            @role('Superadmin')
+                                <button class="btn btn-xs btn-warning mb-2" wire:click="migrarslgconrol">Migrar por unica vez</button>
+                                <div wire:loading>
+                                    Estamos procesando...
+                                </div>
+                            @endrole
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <table class="table table-bordered table-sm" >
+                            <thead>
+                            <tr><th>N</th><th>Nombre y apellidos</th><th>Cargo</th><td>DNI</td><td>Cel</td><td>Acciones</td></tr>
+                            </thead>                    
                         
-                        @empty
-                          Los usuarios ya cuentan al menos con un rol  
-                        @endforelse
+                        
+                            @forelse($userSGD as $ofina)
+
+                            @php
+                                $i=0;
+                            @endphp
+
+                            @foreach($rolasiguser as $key)
+                                @if($ofina->id==$key->id)
+                                    @break
+                                @else 
+                                @php
+                                    $i++;
+                                @endphp
+                                @endif
+                            @endforeach
+                            @if(count($rolasiguser)==$i)
+                            <tr><td><small>{{ $ofina->id }}</small></td><td><small>{{ $ofina->adm_name }} {{ $ofina->adm_lastname }}</small></td><td><small>{{ $ofina->adm_cargo }}</small></td><td><small>{{ $ofina->adm_dni }}</small></td><td><small>{{ $ofina->adm_telefono }}</small></td><td>
+                            
+                                @can('UsuarioSGD_rol')
+                                    <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#sistemas" wire:click="cargadato({{ $ofina->id }})">Rol</button>
+                                @endcan                         
+                            
+                            </td></tr>  
+                            @endif
+                            
+                            @empty
+                            Los usuarios ya cuentan al menos con un rol  
+                            @endforelse
 
 
-                    </table>
+                        </table>
+                    </div>
 
                     
                 </div>
@@ -80,8 +90,9 @@
                 </div>
             </div>
         </div>
+        @endrole
         @endif
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <div class="card card-gray">
                 <div class="card-header p-2">
                   <h3 class="card-title">Relacion de personal a nivel pliego</h3>
@@ -89,25 +100,59 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                    
-                    @role('Superadmin')
-                    <button class="btn btn-xs btn-warning mb-2" wire:click="migrarslgconrol">Migrar por unica vez</button>
-                    <div wire:loading>
-                        Estamos procesando...
+                    @hasrole('Superadmin')
+                    <div class="form-gorup row">
+                        <label for="" class="col-sm-3">Dependencia:</label>
+                        <div class="col-sm-9">
+                            <select name="" id="" class="form-control form-control-sm" wire:click="unidad($event.target.value)">
+                                @for($i = 0; $i < count($datosdepe); $i++)
+                                    @if($datosdepe[$i]["iddepe"]==$depe_id)
+                                    <option value="{{ $datosdepe[$i]["iddepe"]}}" selected="selected">{{ $datosdepe[$i]["nombredebe"]}}</option> 
+                                    @else
+                                    <option value="{{ $datosdepe[$i]["iddepe"]}}">{{ $datosdepe[$i]["nombredebe"]}}</option>
+                                    @endif 
+                                @endfor
+                            </select>
+                        </div>
                     </div>
-                    @endrole
+                    @else
+                    <div class="form-gorup row">
+                        <label for="" class="col-sm-3">Dependencia:</label>
+                        <div class="col-sm-9">
+                            {{ $nombredepe }}
+                        </div>
+                    </div>
+                        
+                    @endhasrole
+                   
+                    <div class="form-gorup row">
+                        <label for="" class="col-sm-3">Unidad:</label>
+                        <div class="col-sm-9">
+                            <select name="" id="" class="form-control form-control-sm" wire:click="personal($event.target.value)">
+                                @for($j = 0; $j < count($unidades); $j++)
+                                    @if($unidades[$j]->iddependencia ==$unidad_id)
+                                    <option value="{{ $unidades[$j]->iddependencia }}" selected="selected">{{ $unidades[$j]->depe_nombre }}</option>
+                                    @else
+                                    <option value="{{ $unidades[$j]->iddependencia }}" >{{ $unidades[$j]->depe_nombre }}</option>
+                                    @endif
+                                @endfor
+                            </select>
+                        </div>
+                    </div>
+                   
 
-                    <table class="table table-bordered table-sm" >
+                    <table class="table table-bordered table-sm mt-2" >
                         <thead>
-                        <tr><th>Nombre y apellidos</th><th>Rol</th><th></th></tr>
+                        <tr><th>Nombre y apellidos</th><th>Asignaciones</th></tr>
                         </thead>                    
                         @foreach($rolasiguser as $rolasig)
-                         @if($rolasig->rol<>'Superadmin')
-                         <tr><td><small>{{ $rolasig->nombres }} {{ $rolasig->apellidos }}</small></td><td><small>{{ $rolasig->rol }}</small></td><td>
-                             <button class="btn btn-xs btn-info" wire:click="cargaeditrol({{ $rolasig->id }},'{{ $rolasig->rol }}','{{ $rolasig->nombres }} {{ $rolasig->apellidos }}')" data-toggle="modal" data-target="#editar"><i class="fa fa-edit"></i> Rol</button>
+                        {{-- aqui indicamos que el administrador es super usuario, no tiene que modificarse por ningun rol --}}
+                         @if($rolasig->id<>1)
+                         <tr><td><small>{{ $rolasig->nomape }}</small></td><td>
+                             <button class="btn btn-xs btn-info" wire:click="cargaeditrol({{ $rolasig->id }},'{{ $rolasig->nomape }}')" data-toggle="modal" data-target="#editar"><i class="fa fa-edit"></i> Rol</button>
                             </td></tr> 
                          @else
-                         <tr><td><small>{{ $rolasig->nombres }} {{ $rolasig->apellidos }}</small></td><td><small>{{ $rolasig->id }}{{ $rolasig->rol }}</small></td><td>-</td></tr>
+                         <tr><td><small>{{ $rolasig->nomape }}</small></td><td>-</td></tr>
                          @endif
                                                     
                         @endforeach
@@ -115,19 +160,21 @@
 
                     </table>
 
+
+                    {{-- {{ groupArray($rolasiguser,'id') }} --}}
                     
                 </div>
                 <!-- /.card-body -->
-                <div class="card-footer clearfix float-right">
+                <div class="card-footer clearfix float-right p-1 mt-3">
 
-                    {{-- {{ $rolasiguser->links() }} --}}
+                    {{ $rolasiguser->links() }}
                    
                   </div>
             </div> 
         </div>
     </div>
 
-        {{-- modal sistemas--}}
+        {{-- modal para asignar nuevl rol--}}
         <div wire:ignore.self class="modal fade" id="sistemas" >
             <div class="modal-dialog">
             <div class="modal-content">
@@ -163,7 +210,7 @@
             <!-- /.modal-dialog -->
         </div>
 
-        {{-- modal sistemas--}}
+        {{-- modal editamos el para actualizar al usuario y sus roles--}}
         <div wire:ignore.self class="modal fade" id="editar" >
             <div class="modal-dialog">
             <div class="modal-content">
@@ -174,10 +221,11 @@
                 </div>
                 <div class="modal-body">
                     <p><strong>Usuario</strong>: {{ $nombres }}</p>
-                    <div class="form-group">
-                        <label>Asignacion de rol:{{ $nomrolasig }} </label>
-                            <select name="nomrol" class="custom-select text-sm" wire:model="nomrolasig">
-                                <option value="">Seleccion tipo de ayuda...</option>
+                    <div class="form-group" >
+                        <div wire:ignore>
+                            <label>Asignacion de rol:{!! print_r($nomrolasig) !!} </label>
+                            <select name="nomrol" id="category-dropdown"class="custom-select text-sm select2" wire:model="nomrolasig" multiple>
+                                {{-- <option value="">Seleccion tipo de ayuda...</option> --}}
                                 @foreach($rol as $rols)                            
                                     @if($rols->name<>'Superadmin')
                                     <option value="{{ $rols->name }}" selected>{{ $rols->name }}</option>  
@@ -191,6 +239,7 @@
 
                             </select>
                             @error('nomrolasig') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
                             
                     </div>
  
@@ -198,7 +247,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                 <button  class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <button  class="btn btn-primary" wire:click="actualizacionderol">Actualizar rol</button>
+                <button  class="btn btn-primary"  onclick="jecutatraslado()" >Actualizar rol</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -210,6 +259,11 @@
 
 @section('script')
 <script>
+
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+  });
 
     window.livewire.on('saverolasignado', () => {
         $('#sistemas').modal('hide');
@@ -224,5 +278,36 @@ window.livewire.on('actualizadorol',()=>{
 window.livewire.on('migracionok',()=>{
     toastr.info('La migracion termino con exito');
 });
+</script>
+
+<script>
+document.addEventListener("livewire:load", () => {
+	Livewire.hook('message.processed', (message, component) => {
+		$('#category-dropdown').select2();
+        
+        // @this.emit('Iniciacargarol', $('#category-dropdown').select2('val'));
+    
+        }); 
+    
+    }); 
+
+
+
+
+    // document.addEventListener('livewire:load', function () {
+    // $('#category-dropdown').on('select2:close', (e) => {
+    //     @this.emit('Iniciacargarol', $('#category-dropdown').select2('val'));
+    // });
+
+    // $('#category-dropdown').val(@this.get('category-dropdown')).trigger('change');
+    // });
+ function jecutatraslado()
+ {
+     if($('#category-dropdown').val()!='')
+     {
+        @this.emit('Iniciacargarol', $('#category-dropdown').select2('val'));
+     }
+     else{alert('Se requiere como minimo un rol')}
+ }
 </script>
 @endsection

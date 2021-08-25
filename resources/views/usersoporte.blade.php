@@ -37,7 +37,7 @@
                         <tr><th>N</th><th>Nombre y apellidos</th><th>Cargo</th><th>celular</th><th>Correo</th><th>Rol asignado</th></tr>
                         </thead>                    
                         @foreach($usersoporte as $user)
-                        @if($user->rolasignado=='Superadmin' or $user->rolasignado=='Soporte' or $user->rolasignado=='Administrador' )
+                        @if($user->rolasignado=='Soporte')
                         <tr><td><small>{{ $user->id }}</small></td><td><small>{{ $user->adm_name }} {{ $user->adm_lastname }}</small></td><td><small>{{ $user->adm_cargo }}</small></td><td><small>{{ $user->adm_telefono }}</small></td><td><small>{{ $user->adm_correo }}</small></td><td><small>{{ $user->rolasignado }}</small></td></tr>
                         @endif
                                                    

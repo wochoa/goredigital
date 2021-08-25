@@ -18,12 +18,12 @@
           <!-- Login-->
           <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
               <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                  <h2 class="card-title font-weight-bold mb-1">Bienvenido a GoreDigital! 👋</h2>
+                  <h2 class="card-title font-weight-bold mb-1 text-white">Bienvenido a GoreDigital! 👋</h2>
                   <p class="card-text mb-2">Iniciar sesión</p>
                   <form class="form mt-2" method="POST" action="{{ route('login') }}">
                     @csrf
                       <div class="form-group">
-                          <label class="form-label" for="login-email">Usuario:</label>
+                          <label class="text-white" for="login-email">Usuario:</label>
                           <input class="form-control {{ $errors->has('adm_email')|| $errors->has('adm_email') ? 'is-invalid':''}}" id="adm_email" type="text" name="adm_email" placeholder="Usuario..." aria-describedby="login-email" autofocus="" tabindex="1" value="{{ old('adm_email')?:old('adm_email') }}" onkeyup="javascript:this.value=this.value.toUpperCase();" required/>
                           {{-- @error('adm_email') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror --}}
 
@@ -36,7 +36,7 @@
                       </div>
                       <div class="form-group">
                           <div class="d-flex justify-content-between">
-                              <label for="login-password">Contrtaseña:</label>
+                              <label for="login-password" class="text-white">Contrtaseña:</label>
                               {{-- <a href="page-auth-forgot-password-v2.html"><small>Olvidaste tu contraseña?</small></a> --}}
                           </div>
                           <div class="input-group input-group-merge form-password-toggle">
@@ -52,7 +52,7 @@
                       <div class="form-group">
                           <div class="custom-control custom-checkbox">
                               <input class="custom-control-input" name="remember" id="remember" type="checkbox" tabindex="3" {{ old('remember') ? 'checked' : '' }}/>
-                              <label class="custom-control-label" for="remember-me"> Recordarme</label>
+                              <label class="custom-control-label text-white" for="remember-me"> Recordarme</label>
                           </div>
                       </div>
                       <button class="btn btn-dark btn-block" tabindex="4" type="submit"> Ingresar</button>
