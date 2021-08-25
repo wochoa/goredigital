@@ -40,7 +40,7 @@ class UsuariosSgd extends Component
 
     public $nombredepe;
 
-    public array $locationUsers = [];
+    public $locationUsers = [];
     protected $listeners = ['Iniciacargarol'];
     
     public function mount()
