@@ -29,6 +29,7 @@ class PagContenido extends Component
     public $ticketpendiente;
     ////////////////////////////////////////////////////////////////////////
     public $iddependencia;
+    public $usersoporte;
     ///////////////////////////////////////////////////////////////////////
 
     public $problemas;
@@ -50,9 +51,11 @@ class PagContenido extends Component
     public function render()
     {
         $idofi=Auth::user()->depe_id;
-        $codigodepe=DB::table('dependencia')->where('iddependencia',$idofi)->get();
-        $this->iddependencia=$codigodepe[0]->depe_depende;
+        $codigodepe=DB::table('dependencia')->where('iddependencia',$idofi)->value('depe_depende');
+        $this->iddependencia=$codigodepe;//$codigodepe[0]->depe_depende;
 
+        // para ver usuarios de soporte
+        $this->usersoporte=DB::table('vistausersoporte')->where(['depe_depende'=>$this->iddependencia,'rolasignado'=>'Soporte'])->get();
         // PARA MOSTRAR LOS TICKET QUE SON<> DE FINALIZADO por que los finalizados ya no aparecen en la lista
         $this->ticketcreados=DB::table('vistaticket')->join('dependencia','vistaticket.depe_id','=','dependencia.iddependencia')->where('codejecutora',$this->iddependencia)->get();
 

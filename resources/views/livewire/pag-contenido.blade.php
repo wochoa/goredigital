@@ -45,19 +45,22 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <h5 class="text-danger">SOPORTE TECNICO</h5>
-                        <table>
-                        <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png" width="20"></td><td>Andre Garcia Aguire</td></tr>
-                        <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png" width="20"></td><td>Adolfo H. Carlos Mendoza</td></tr>
-                        <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png" width="20"></td><td>Andres Duran Espinoza</td></tr>
+                        <p>Personal encargado de dar soporte en temas de redes, sistemas, acceso y equipos tecnológicos</p>
+                        <table class="table table-sm">
+                            @foreach($usersoporte as $keyuser)
+                            <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="{{ Storage::url($keyuser->avatar) }}" width="20"></td><td>{{ $keyuser->adm_name }} {{ $keyuser->adm_lastname }} <spa class=" badge badge-info float-right">{{ $keyuser->adm_telefono }}</span></td></tr>
+                            @endforeach
+                        
+                        {{-- <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png" width="20"></td><td>Adolfo H. Carlos Mendoza</td></tr>
+                        <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png" width="20"></td><td>Andres Duran Espinoza</td></tr> --}}
                         </table>
                         {{-- <hr> --}}
-                        <h5 class="text-warning">SOPORTE SISTEMAS</h5>
+                        {{-- <h5 class="text-warning">SOPORTE SISTEMAS</h5>
                         <table>
                         <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png" width="20"></td><td>Darwin F. Campos Soto</td></tr>
                         <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png" width="20"></td><td>Pedro Cardozo Zanabria</td></tr>
                         <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar5.png" width="20"></td><td>Wilmer Ochoa Alvarado</td></tr>
-                        </table>
+                        </table> --}}
                     </div>
                 <!-- /.card-body -->
                 </div>
