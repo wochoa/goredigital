@@ -53,7 +53,7 @@ class GestionPortales extends Component
         
         
 
-        $dependencia=DB::table('dependencia')->select('depe_depende')->where(['depe_estado'=>'1','depe_tipo'=>'1'])->groupBy('depe_depende')->orderBy('depe_depende','DESC')->get();
+        $dependencia=DB::table('dependencia')->select('depe_depende')->where('depe_tipo','1')->groupBy('depe_depende')->orderBy('depe_depende','DESC')->get();
         
         for($i=0;$i<count($dependencia);$i++)
         {
@@ -64,7 +64,7 @@ class GestionPortales extends Component
                
         }
 
-        $this->unidades=DB::table('dependencia')->where(['depe_depende'=>$this->depe_id,'depe_estado'=>'1'])->orderBy('iddependencia','asc')->get();
+        $this->unidades=DB::table('dependencia')->where('depe_depende',$this->depe_id)->orderBy('iddependencia','asc')->get();
         $this->personal=DB::table('admin')->where(['depe_id'=>$this->unidad_id,'adm_estado'=>'1'])->orderBy('adm_name','asc')->get();
 
         return view('livewire.gestion-portales', compact('paginas','datosdepe','userportales'));
