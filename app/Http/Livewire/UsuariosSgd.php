@@ -89,7 +89,7 @@ class UsuariosSgd extends Component
                
         }
 
-        $this->unidades=DB::table('dependencia')->where(['depe_depende'=>$this->depe_id,'depe_estado'=>'1'])->orderBy('iddependencia','asc')->get();
+        $this->unidades=DB::table('dependencia')->where('depe_depende',$this->depe_id)->orderBy('iddependencia','asc')->get();
         // fin de llenado de dependencias
 
         $this->userSGD=User::where('adm_estado',1)->where('adm_lastname', 'like', '%'.$this->search.'%')->orderBy('id','asc')->paginate(10);
