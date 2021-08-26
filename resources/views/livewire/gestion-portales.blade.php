@@ -136,9 +136,9 @@
             {{-- <option value="" selected>Seleccione la unidad</option> --}}
             @for($j = 0; $j < count($unidades); $j++)
              @if($j==0)
-             <option value="{{ $unidades[$j]->iddependencia }}" selected>{{ $unidades[$j]->depe_nombre }}</option>
+             <option value="{{ $unidades[$j]->iddependencia }}" selected>{!! $unidades[$j]->depe_nombre  !!}</option>
              @else
-             <option value="{{ $unidades[$j]->iddependencia }}" >{{ $unidades[$j]->depe_nombre }}</option>
+             <option value="{{ $unidades[$j]->iddependencia }}" >{!! $unidades[$j]->depe_nombre !!}</option>
              @endif
             
              
