@@ -27,6 +27,14 @@ Route::get('storage/avatar/{file}', function ($file) {
 });
 
 Route::get('/', 'HomeController@index')->name('main');
+Route::get('/register', function () {
+    return redirect('/');
+});
+
+Route::get('/password/reset', function () {
+    return redirect('/');
+});
+
 Route::get('/ticket', 'HomeController@ticket')->name('ticket');
 
 Route::get('/oficina', 'HomeController@oficina')->name('oficina');
