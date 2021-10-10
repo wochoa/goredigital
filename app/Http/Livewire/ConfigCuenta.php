@@ -23,7 +23,7 @@ class ConfigCuenta extends Component
         if($this->foto){
             $ubicacion=$this->foto->store('avatar');  
             $id=Auth::user()->id;
-            DB::update("update users set avatar = '".$ubicacion."' where id = ?", [$id]);
+            DB::update("update admin set avatar = '".$ubicacion."' where id = ?", [$id]);
             return redirect('/configcuenta');
         }
       

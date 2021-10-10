@@ -294,7 +294,7 @@
                     <input type="text" class="form-control" placeholder="Enter ...">
             </div> --}}
                 <div class="form-group">
-                    <label>Detalle para atencion</label>
+                    <label>Detalle su pedido para recibir atención</label>
                     <textarea class="form-control form-control-sm" rows="3" placeholder="Detalle su requerimiento de servicio" wire:model="detalle"></textarea>
                     @error('detalle') <span class="text-danger">{{ $message }}</span> @enderror
                     {{-- {{ $detalle }} --}}

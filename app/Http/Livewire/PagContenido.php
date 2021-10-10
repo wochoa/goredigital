@@ -95,7 +95,7 @@ class PagContenido extends Component
     // para mostrar los ticket
     public function mostrarTickets($data)
     {
-        $this->ticketcreados=DB::table('vistaticket')->join('dependencia','vistaticket.depe_id','=','dependencia.iddependencia')->where('codejecutora',$this->iddependencia)->orderBy('idticket','DESC')->get();
+        $this->ticketcreados=DB::table('vistaticket')->join('dependencia','vistaticket.idoficina','=','dependencia.iddependencia')->where('codejecutora',$this->iddependencia)->orderBy('idticket','DESC')->get();
 
         $this->numticket();
 

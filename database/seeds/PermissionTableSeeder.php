@@ -91,6 +91,10 @@ class PermissionTableSeeder extends Seeder
         Permission::create(['name' => 'pg_registrovisitas_leer']);
         Permission::create(['name' => 'pg_registrovisitas_reporte']);
         Permission::create(['name' => 'pagina_pide']);
+        Permission::create(['name' => 'gp_slider_leer']);
+        Permission::create(['name' => 'gp_slider_editar']);
+        Permission::create(['name' => 'gp_slider_crear']);
+        Permission::create(['name' => 'gp_slider_eliminar']);
         // create roles and assign existing permissions
         $admin = Role::create(['name' => 'Superadmin']);
         $empleado = Role::create(['name' => 'Administrador']);
@@ -180,7 +184,11 @@ class PermissionTableSeeder extends Seeder
                 'pg_menu_registrovisitas',
                 'pg_registrovisitas_leer',
                 'pg_registrovisitas_reporte',
-                'pagina_pide'
+                'pagina_pide',
+                'gp_slider_leer',
+                'gp_slider_editar',
+                'gp_slider_crear',
+                'gp_slider_eliminar'
             ]
         );
 

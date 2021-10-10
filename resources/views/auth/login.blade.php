@@ -23,7 +23,7 @@
                   <form class="form mt-2" method="POST" action="{{ route('login') }}">
                     @csrf
                       <div class="form-group">
-                          <label class="text-white" for="login-email">Usuario:</label>
+                          <label class="text-white" for="login-email">Usuario SGD:</label>
                           <input class="form-control {{ $errors->has('adm_email')|| $errors->has('adm_email') ? 'is-invalid':''}}" id="adm_email" type="text" name="adm_email" placeholder="Usuario..." aria-describedby="login-email" autofocus="" tabindex="1" value="{{ old('adm_email')?:old('adm_email') }}" onkeyup="javascript:this.value=this.value.toUpperCase();" required/>
                           {{-- @error('adm_email') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror --}}
 
@@ -36,7 +36,7 @@
                       </div>
                       <div class="form-group">
                           <div class="d-flex justify-content-between">
-                              <label for="login-password" class="text-white">Contrtaseña:</label>
+                              <label for="login-password" class="text-white">Contrtaseña SGD:</label>
                               {{-- <a href="page-auth-forgot-password-v2.html"><small>Olvidaste tu contraseña?</small></a> --}}
                           </div>
                           <div class="input-group input-group-merge form-password-toggle">
