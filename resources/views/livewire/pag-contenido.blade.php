@@ -116,14 +116,14 @@
             </div>
             @if(count($ticketcreados)>0)
             <div class="col-md-9 col-sm-12 ">   
-               <div class="card">
-                  <div class="card-header">
+               <div class="card ">
+                  <div class="card-header bg-secondary">
                     Ticket en atención y por atender
                   </div>
                   <div class="card-body">
                        <div class="table-responsive">
                            <table class="table table-bordered table-hover table-sm table-striped" style="z-index: -1">
-                               <thead>
+                               <thead class="bg-secondary">
                                    <tr><td>CODIGO</td><td>USUARIO|UNIDAD|CARGO</td><td>DETALLE PEDIDO</td><td>FECHA</td><td></td></tr>
                                </thead>
                                <tbody>
@@ -154,8 +154,8 @@
                                            @if($tickets->iduser==Auth::user()->id)
                                                        <tr class="bg-gray disabled color-palette"><td>{{ str_pad($tickets->idticket,6,"0",STR_PAD_LEFT)  }} </td>
                                                         <td><small><strong>Usuario</strong>:{{ $tickets->nombre_pedido }},</small><small class="right badge badge-primary"><strong>Celular:</strong>{{ $tickets->adm_telefono }}</small><br>
-                                                            <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small><br>
-                                                            <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small></td>
+                                                            <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small><br>
+                                                            <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small></td>
                                                         <td>{!! $estado??'' !!}<br><small><strong>Pedido: </strong>{{ $tickets->detalleayuda }}</small></td>
                                                         <td><small><strong>Registrado: </strong> {{ date("d M g:ia", strtotime($tickets->fechaticket)) }}</small>{!! $fecharecpcion !!}</td>
                                                            <td>
@@ -171,8 +171,8 @@
                                                    @else
                                                    <tr><td>{{ str_pad($tickets->idticket,6,"0",STR_PAD_LEFT)  }} </td>
                                                     <td><small><strong>Usuario</strong>:{{ $tickets->nombre_pedido }}, </small><small class="right badge badge-info"><strong>Celular : </strong>{{ $tickets->adm_telefono }}</small><br>
-                                                        <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small><br>
-                                                        <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small></td>
+                                                        <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small><br>
+                                                        <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small></td>
                                                     <td>{!! $estado??'' !!}<br><small><strong>Pedido: </strong>{{ $tickets->detalleayuda }}</small></td>
                                                     <td><small> <strong>Registrado: </strong>{!! date("d M g:ia", strtotime($tickets->fechaticket)) !!}</small>{!! $fecharecpcion !!}</td>
                                                        <td>
@@ -309,6 +309,18 @@
                     </select>
                     @error('prioridad') <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
+                {{-- {{ $this->iddependencia }} --}}
+                @if($this->iddependencia<>3)
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" wire:model="ayudasede" value="3">
+                            <label class="form-check-label">Pedir ayuda a la Sede Central del GRH</label>
+                          </div>
+                    </div>
+                </div> 
+                @endif
+                
             </div>
             <div class="modal-footer justify-content-between">
             <button  class="btn btn-default" data-dismiss="modal">Cancelar</button>

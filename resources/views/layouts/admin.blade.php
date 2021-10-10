@@ -373,7 +373,7 @@
             <a href="{{ route('usuariossgd') }}" class="nav-link {{ activo('usuariossgd') }}">
               <i class="nav-icon far fa-user"></i>
               <p>
-                Usuarios SGD
+                Usuarios
                 {{-- <span class="badge badge-info right">2</span> --}}
               </p>
             </a>

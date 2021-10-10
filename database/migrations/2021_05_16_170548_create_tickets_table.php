@@ -18,6 +18,7 @@ class CreateTicketsTable extends Migration
             $table->integer('iduser');
             $table->integer('idoficina');
             $table->integer('codejecutora');
+            $table->integer('ayudasede')->nullable();// ayuda a sede desde cualquier dependencia
             $table->integer('tipoayuda');
             $table->text('detalleayuda');
             $table->string('prioridad');

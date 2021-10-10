@@ -5,7 +5,7 @@
     
     <br>
     <div class="row">
-        @if($contadorsgd>$contadorrol)
+        {{-- @if($contadorsgd>$contadorrol) --}}
         @role('Superadmin')
         <div class="col-sm-6">
             <div class="card card-gray">
@@ -91,10 +91,11 @@
             </div>
         </div>
         @endrole
-        @endif
+        {{-- @endif --}}
         <div class="col-sm-6">
             <div class="card card-gray">
                 <div class="card-header p-2">
+                    <button class=" btn btn-success btn-xs float-right">Agregar nuevo usuario</button>
                   <h3 class="card-title">Relacion de personal a nivel pliego</h3>
                   <!-- /.card-tools -->
                 </div>
@@ -223,7 +224,7 @@
                     <p><strong>Usuario</strong>: {{ $nombres }}</p>
                     <div class="form-group" >
                         <div wire:ignore>
-                            <label>Asignacion de rol:{!! print_r($nomrolasig) !!} </label>
+                            <label>Asignacion de rol:</label>
                             <select name="nomrol" id="category-dropdown"class="custom-select text-sm select2" wire:model="nomrolasig" multiple>
                                 {{-- <option value="">Seleccion tipo de ayuda...</option> --}}
                                 @foreach($rol as $rols)                            

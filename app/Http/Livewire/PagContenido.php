@@ -34,6 +34,7 @@ class PagContenido extends Component
 
     public $problemas;
     public $textsolucion;
+    public $ayudasede;
 
     protected $listeners=['mostrarTickets'];
     
@@ -44,6 +45,7 @@ class PagContenido extends Component
         $this->ticketenproceso='';
         $this->ticketpendiente='';
         $this->ticketatendido='';
+        $this->ayudasede=0;
 
 
     }
@@ -56,8 +58,16 @@ class PagContenido extends Component
 
         // para ver usuarios de soporte
         $this->usersoporte=DB::table('vistausersoporte')->where(['depe_depende'=>$this->iddependencia,'rolasignado'=>'Soporte'])->get();
+
         // PARA MOSTRAR LOS TICKET QUE SON<> DE FINALIZADO por que los finalizados ya no aparecen en la lista
-        $this->ticketcreados=DB::table('vistaticket')->join('dependencia','vistaticket.depe_id','=','dependencia.iddependencia')->where('codejecutora',$this->iddependencia)->get();
+        if($this->iddependencia==3)
+        {
+            $this->ticketcreados=DB::table('vistaticket')->join('dependencia','vistaticket.idoficina','=','dependencia.iddependencia')->where('codejecutora',$this->iddependencia)->orWhere('ayudasede',$this->iddependencia)->get();
+        }
+        else{
+            $this->ticketcreados=DB::table('vistaticket')->join('dependencia','vistaticket.idoficina','=','dependencia.iddependencia')->where('codejecutora',$this->iddependencia)->get();
+        }
+        
 
         $this->numticket();
         
@@ -74,11 +84,12 @@ class PagContenido extends Component
         $this->validate(['tipoayuda'=>'required','detalle'=>'required','prioridad'=>'required']);
         $fecha=date('Y-m-d H:i:s');
         // creados nuevos tickets
-        DB::insert('insert into tickets (iduser, idoficina,codejecutora,tipoayuda,detalleayuda,prioridad,estado_atencion,created_at) values (?, ?,?,?,?,?,?,?)', [$iduser,$depeid,$this->iddependencia,$this->tipoayuda,$this->detalle,$this->prioridad,'ENVIADO',$fecha]);
+        DB::insert('insert into tickets (iduser, idoficina,codejecutora,ayudasede,tipoayuda,detalleayuda,prioridad,estado_atencion,created_at) values (?, ?,?,?,?,?,?,?,?)', [$iduser,$depeid,$this->iddependencia,$this->ayudasede,$this->tipoayuda,$this->detalle,$this->prioridad,'ENVIADO',$fecha]);
 
         $this->emit('saveticket');
 
         return event(new \App\Events\RegistrarTicket($iduser));
+        // return $this->ayudasede;
 
     }
     // para mostrar los ticket

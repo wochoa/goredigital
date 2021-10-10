@@ -23,7 +23,7 @@
 <div class="container-fluid">
     {{-- <div class="row justify-content-center"> --}}
     <div class="row">
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <div class="card card-gray">
                 <div class="card-header p-2">
                   <h3 class="card-title">Relacion de servicios PIDE(Plataforma de Interoperabilidad del Estado)</h3>
@@ -32,68 +32,68 @@
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#reniec">
-                                <i class="fas fa-inbox fa-2x"></i><br> Reniec</button>
+                                <i class="fas fa-inbox fa-2x"></i><br> <small>Reniec</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#sis">
-                                <i class="fa fa-heartbeat fa-2x"></i><br> Sistema Integrado de Salud(SIS)</button>
+                                <i class="fa fa-heartbeat fa-2x"></i><br> <small>Sistema Integrado de Salud(SIS)</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#essalud">
-                                <i class="fa fa-ambulance fa-2x"></i><br> ESSALUD</button>
+                                <i class="fa fa-ambulance fa-2x"></i><br> <small>ESSALUD</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#sunat">
-                                <i class="fa fa-leaf fa-2x"></i><br> SUNAT</button>
+                                <i class="fa fa-leaf fa-2x"></i><br> <small>SUNAT</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#antejudicial">
-                                <i class="fa fa-flask fa-2x"></i><br>  Antecedentes judiciales</button>
+                                <i class="fa fa-flask fa-2x"></i><br>  <small>Antecedentes judiciales</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-primary btn-xs">
-                                <i class="fa fa-leaf fa-2x"></i><br> Sunarp</button>
+                                <i class="fa fa-leaf fa-2x"></i><br> <small>SUNARP</small></button>
                         </div>
                        
                         
                     </div>
                     <div class="row pt-2">
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedorsancionado">
-                                <i class="fa fa-gavel fa-2x"></i><br>  PROVEEDOR SANCIONADO-OSCE</button>
+                                <i class="fa fa-gavel fa-2x"></i><br>  <small>PROVEEDOR SANCIONADO-OSCE</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#busprocselxexpediente">
-                                <i class="fa fa-gavel fa-2x"></i><br>  Proceso seleccion por expediente-OSCE</button>
+                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proceso seleccion por expediente-OSCE</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#busprocselrucaniomes">
-                                <i class="fa fa-gavel fa-2x"></i><br>  Proceso seleccion(Ruc,mes y año) -OSCE</button>
+                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proceso seleccion (Ruc,mes y año) -OSCE</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedoradjudicadoxexpe">
-                                <i class="fa fa-gavel fa-2x"></i><br>  Proveedor adjudicado por expediente</button>
+                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proveedor adjudicado por expediente-OSCE</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedoradjudicadoxrucanio">
-                                <i class="fa fa-gavel fa-2x"></i><br>  Proveedor adjudicado por Ruc y Año</button>
+                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proveedor adjudicado por Ruc y Año-OSCE</small></button>
                         </div>
                         {{-- sobra uno --}}
                     </div>
                     <div class="row pt-2">
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#sunedu">
-                                <i class="fa fa-university fa-2x"></i><br> SUNEDU</button>
+                                <i class="fa fa-university fa-2x"></i><br> <small>SUNEDU</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#gradotitinsttecnyped">
-                                <i class="fa fa-home fa-2x"></i><br> Grados y Títulos de Institutos Tecnológicos y Pedagógicos por DNI</button>
+                                <i class="fa fa-home fa-2x"></i><br> <small>Grados y Títulos de Institutos Tecnológicos y Pedagógicos por DNI</small></button>
                         </div>
-                        <div class="col-xs-4 col-sm-2">
+                        <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#infocolnacioparticular">
-                                <i class="fa fa-book fa-2x"></i><br> Información de colegio nacional y particular</button>
+                                <i class="fa fa-book fa-2x"></i><br> <small>Información de colegio nacional y particular</small></button>
                         </div>
                         
                     </div>
@@ -101,11 +101,11 @@
                 <!-- /.card-body -->
             </div>
         </div>
-        <div class="col-sm-5">
-            <div class="card">
-                <div class="card-header">Resultados</div>
-                <div class="card-body">
-                    ....
+        <div class="col-sm-6">
+            <div class="card card-gray">
+                <div class="card-header">Resultados <span id="textoresul"></span></div>
+                <div class="card-body resultado">
+                    En esta seccion se mostrará los resultados de la consulta
                 </div>
             </div>
         </div>
@@ -553,3 +553,635 @@
   </div>
 </div>
 @endsection
+
+@section('script')
+<script>
+  // CONSULTA DNI PARA RENIEC
+
+function reniec()
+{
+  var valdni = $('#ndni').val();
+  //alert(valdni);
+  $.ajax({
+          type:'GET',
+          url:'{{ url('reniec') }}/'+valdni,
+          dataType: "json",
+          success:function(data){
+
+        nombre=data.prenombres + ' ' + data.apPrimer + ' ' + data.apSegundo;
+        direccion=data.direccion;
+        estadocivil=data.estadoCivil;
+        ubigeo=data.ubigeo;
+        foto='<img src="data:image/jpg;base64,'+ data.foto+'">';
+
+        tabla='<table class="table table-bordered table-sm table-hover"><tr><td><strong>DNI</strong></td><td>'+valdni+'</td></tr><tr><td>Nombre y apellido</td><td>'+nombre+'</td></tr><tr><td>Direccion:</td><td>'+direccion+'</td></tr><tr><td>Estado civil:</td><td>'+estadocivil+'</td></tr><tr><td>Ubigeo:</td><td>'+ubigeo+'</td></tr><tr><td>Foto</td><td>'+foto+'</td></tr></table>';
+        
+        $('.resultado').html(tabla);
+        $('#textoresul').html(' - Consulta RENIEC');
+        // ocultamos modal       
+        $('#reniec').modal('hide')
+        
+        $("#ndni" ).focus();
+      },
+      error: function(e){
+
+              }
+
+  });
+}
+  // CONSULTA DNI PARA SIS
+
+function sis()
+{
+  var valdni = $('#numdni').val();
+  //alert(valdni);
+  $.ajax({
+          type:'GET',
+          url:'{{ url('sis') }}/'+valdni,
+          dataType: "json",
+          success:function(data){
+            //alert(data.afiliadoDetalle.resultado);
+            cod=data.afiliadoDetalle.codError
+
+            if(cod=="1001")// si no es afiliado
+            {
+              tabla=`<div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-ban"></i> Resultado!</h5>
+                  `+data.afiliadoDetalle.resultado+`
+                </div>`;
+
+            }
+            else{// si esta afiliado
+              tabla=`<div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-ban"></i> Resultado!</h5>
+                  `+data.afiliadoDetalle.resultado+`
+                </div>`;
+                tabla+=`<table class="table table-bordered table-sm table-hover">
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>DNI</strong></td><td>`+data.afiliadoDetalle.nroDocumento+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Apellidos y nombres</strong></td><td>`+data.afiliadoDetalle.apePaterno+` `+data.afiliadoDetalle.apeMaterno+`, `+data.afiliadoDetalle.nombres+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>fecha afiliacion</strong></td><td>`+data.afiliadoDetalle.fecAfiliacion+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Establecimiento de salud</strong></td><td>`+data.afiliadoDetalle.eess+`(`+data.afiliadoDetalle.descEESS+`)</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Ubigeo establecimiento /Descripcion</strong></td><td>`+data.afiliadoDetalle.eessUbigeo+`(`+data.afiliadoDetalle.descEESSUbigeo+`)</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Regimen</strong></td><td>`+data.afiliadoDetalle.regimen+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Tipo seguro</strong></td><td>`+data.afiliadoDetalle.tipoSeguro+` - `+data.afiliadoDetalle.descTipoSeguro+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Contrato</strong></td><td>`+data.afiliadoDetalle.contrato+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Fecha caducidad</strong></td><td>`+data.afiliadoDetalle.fecCaducidad+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Estado</strong></td><td>`+data.afiliadoDetalle.estado+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Tabla</strong></td><td>`+data.afiliadoDetalle.tabla+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>idNumReg</strong></td><td>`+data.afiliadoDetalle.idNumReg+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Genero</strong></td><td>`+data.afiliadoDetalle.genero+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Fecha nacimiento</strong></td><td>`+data.afiliadoDetalle.fecNacimiento+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Ubigeo</strong></td><td>`+data.afiliadoDetalle.idUbigeo+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Direccion</strong></td><td>`+data.afiliadoDetalle.direccion+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Disa</strong></td><td>`+data.afiliadoDetalle.disa+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Tipo formato</strong></td><td>`+data.afiliadoDetalle.tipoFormato+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Nro contrato</strong></td><td>`+data.afiliadoDetalle.nroContrato+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Correlativo</strong></td><td>`+data.afiliadoDetalle.correlativo+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>idPlan</strong></td><td>`+data.afiliadoDetalle.idPlan+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>idGrupoPoblacional</strong></td><td>`+data.afiliadoDetalle.idGrupoPoblacional+`</td></tr>
+                  <tr><td class='bg-lightblue disabled color-palette'><strong>Msg de Confidencialidad</strong></td><td>`+data.afiliadoDetalle.msgConfidencial+`</td></tr>
+                 </table>`;
+            }
+
+        
+        $('.resultado').html(tabla);
+        $('#textoresul').html(' - Consulta SIS');
+        // // ocultamos modal       
+        $('#sis').modal('hide')
+        
+        // $("#ndni" ).focus();
+      },
+      error: function(e){
+
+              }
+
+  });
+}
+function sunat()
+{
+  var valruc = $('#ruc').val();
+  //alert(valdni);
+  $.ajax({
+          type:'GET',
+          url:'{{ url('sunat') }}/'+valruc,
+          dataType: "json",
+          success:function(data)
+          {  
+
+            //alert(data['getDatosPrincipalesReturn'].desc_dep);
+            tabla=`<table class="table table-bordered table-sm">
+            <tr><td class='bg-lightblue disabled color-palette'>Departamente</td><td>`+data['getDatosPrincipalesReturn'].desc_dep+`</td><td class='bg-lightblue disabled color-palette'>Razón-Social</td><td>`+data['getDatosPrincipalesReturn'].ddp_nombre+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Provincia</td><td>`+data['getDatosPrincipalesReturn'].desc_prov+`</td><td class='bg-lightblue disabled color-palette'>Actividad economica</td><td>`+data['getDatosPrincipalesReturn'].ddp_ciiu+`-`+data['getDatosPrincipalesReturn'].desc_ciiu+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Distrito</td><td>`+data['getDatosPrincipalesReturn'].desc_dist+`</td><td class='bg-lightblue disabled color-palette'>Dependencia</td><td>`+data['getDatosPrincipalesReturn'].desc_numreg+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Tipo via</td><td>`+data['getDatosPrincipalesReturn'].desc_tipvia+`</td><td class='bg-lightblue disabled color-palette'>Tipo contribuyente</td><td>`+data['getDatosPrincipalesReturn'].desc_tpoemp+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Tipo zona</td><td>`+data['getDatosPrincipalesReturn'].desc_tipzon+`</td><td class='bg-lightblue disabled color-palette'>Fecha alta</td><td>`+data['getDatosPrincipalesReturn'].ddp_fecalt+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Nombre via</td><td>`+data['getDatosPrincipalesReturn'].ddp_nomvia+`</td><td class='bg-lightblue disabled color-palette'>Fecha actualización</td><td>`+data['getDatosPrincipalesReturn'].ddp_fecact+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Nombre Zona</td><td>`+data['getDatosPrincipalesReturn'].ddp_nomzon+`</td><td class='bg-lightblue disabled color-palette'>Estado</td><td>`+data['getDatosPrincipalesReturn'].desc_estado+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Referencia</td><td>`+data['getDatosPrincipalesReturn'].ddp_refer1+`</td><td class='bg-lightblue disabled color-palette'>Condicion de domicilio</td><td>`+data['getDatosPrincipalesReturn'].desc_flag22+`</td></tr>
+            </table>`;
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta SUNAT');
+            // // // ocultamos modal       
+            $('#sunat').modal('hide')          
+            // // $("#ndni" ).focus();
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+function sunedu()
+{
+  var dni = $('#dnisunedu').val();
+  //alert(valdni);
+  $.ajax({
+          type:'GET',
+          url:'{{ url('sunedu') }}/'+dni,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            //console.log(data);
+            dato=data.length;
+            tabla='<table class="table-bordered table-sm"><thead class="thead-light"><tr><td>USUARIO</td><td>GRADO O TITULO</td><td>INSTITUCION</td><td>FECHA DIPLOMA</td><td>RESOLUCION</td><td>FECHA INSCRIPCION</td></tr></thead><tbody>';
+            for(i=0;i<dato;i++)
+            {
+              tabla+=`<tr>
+                      <td>`+data[i].nroDocumento+`<br>`+data[i].nombres+` `+ data[i].apellidoPaterno+` `+ data[i].apellidoMaterno+`</td>
+                      <td><span class="badge badge-danger">`+data[i].abreviaturaTitulo+`</span>`+data[i].tituloProfesional+`</td>
+                      <td>`+data[i].universidad+`<br><span class="badge badge-dark">`+data[i].tipoInstitucion+`</span><span class="badge badge-warning">`+data[i].tipoGestion+`</span><span class="badge badge-danger">`+data[i].pais+`</span></td>
+                      <td>`+data[i].fechaEmision+`</td>
+                      <td>`+data[i].resolucion+`</td>
+                      <td>`+data[i].fechaResolucion+`</td>
+                      </tr>`;
+
+            }
+            tabla+='</tbody></table>';
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta SUNAT');
+            // // // ocultamos modal       
+            $('#sunedu').modal('hide')          
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+function essalud()
+{
+  var dni = $('#essaluddni').val();
+  //alert(valdni);
+  $.ajax({
+          type:'GET',
+          url:'{{ url('essalud') }}/'+dni,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            //dato=data.length;
+            Result=data.respuesta.ACCRED[0].ce_ads;
+            fechaini=data.respuesta.ACCRED[0].in_vig;
+            fechafin=data.respuesta.ACCRED[0].fi_vig;
+            //alert(Result);
+            //print(Result);
+            tabla=`<table class="table table-bordered table-sm">
+                  <tr><td>Tipo de documento de identidad:</td><td>`+data.respuesta.ACCRED[0].tp_doc+`</td></tr>
+                  <tr><td>DNI:</td><td>`+data.respuesta.ACCRED[0].nu_doc+`</td></tr>
+                  <tr><td>Centro de adscripción del asegurado:</td><td>`+data.respuesta.ACCRED[0].ce_ads+`</td></tr>
+                  <tr><td>Fecha inicio vigencia:</td><td>`+fechaini.substr(6,2)+`/`+fechaini.substr(4,2)+`/`+fechaini.substr(0,4)+`</td></tr>
+                  <tr><td>Fecha fin vigencia:</td><td>`+fechafin.substr(6,2)+`/`+fechafin.substr(4,2)+`/`+fechafin.substr(0,4)+`</td></tr>`;
+            
+            tabla+=`</tbody></table>`;
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta ESSALUD');
+            // // // ocultamos modal       
+            $('#essalud').modal('hide')          
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+
+function proveesancionado()
+{
+  var ruc = $('#rucsancionado').val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('proveedorsancionado') }}/'+ruc,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            //dato=data.length;
+            resultado=data.resultado;
+            mensage=data.mensage;
+            registro=data.registro;
+            if(resultado==1){// inscricpion vigente
+              tabla=`<div class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-ban"></i> Resultado!</h5>
+                  `+data.mensage+`
+                </div>`;
+              cantidad=registro.length;
+              if(cantidad>1)
+                {
+                  tabla+='<table class="table table-bordered table-sm">';
+                  for(i=0;i<cantidad;i++)
+                  {
+                    tabla+='<tr><td>NombreRazonSocial<br>email<br>Origen<br>CodigoRNP<br>TipoRegistro<br>CMC<br>EspecialidadesCategorias<br>FechaInicioVigencia<br>FechaFinVigencia</td><td>'+registro[i].nombreRazonSocial+'<br>'+registro[i].email+'<br>'+registro[i].origen+'<br>'+registro[i].codigoRNP+'<br>'+registro[i].tipoRegistro+'<br>'+registro[i].CMC+'<br>'+registro[i].especialidadesCategorias+'<br>'+registro[i].fechaInicioVigencia+'<br>'+registro[i].fechaFinVigencia+'</td></tr>';
+                  }
+                  tabla+=`</tbody></table>`;
+
+                }
+                else{
+                  tabla+='<table class="table table-bordered table-sm">';
+                 
+                    tabla+='<tr><td>NombreRazonSocial<br>email<br>Origen<br>CodigoRNP<br>TipoRegistro<br>CMC<br>EspecialidadesCategorias<br>FechaInicioVigencia<br>FechaFinVigencia</td><td>'+registro.nombreRazonSocial+'<br>'+registro.email+'<br>'+registro.origen+'<br>'+registro.codigoRNP+'<br>'+registro.tipoRegistro+'<br>'+registro.CMC+'<br>'+registro.especialidadesCategorias+'<br>'+registro.fechaInicioVigencia+'<br>'+registro.fechaFinVigencia+'</td></tr>';
+                 
+                  tabla+=`</tbody></table>`;
+                }
+            }
+            else{// sancion vigente
+              tabla=`<div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                  <h5><i class="icon fas fa-ban"></i> Resultado!</h5>
+                  `+data.mensage+`
+                </div>`;
+                cantidad=registro.length;
+                
+                  tabla+='<table class="table table-bordered table-sm">';
+                 
+                  tabla+='<tr><td>tipoInhabilitacion<br>nombreRazonSocial<br>resolucion<br>fechaResolucion<br>montoMulta<br>periodoInhabilitacion<br>fechaInicio<br>fechaFin</td><td>'+registro.tipoInhabilitacion+' - [T Temporal, D Definitiva, M Multa]<br>'+registro.nombreRazonSocial+'<br>'+registro.resolucion+'<br>'+registro.fechaResolucion+'<br>'+registro.montoMulta+'<br>'+registro.periodoInhabilitacion+'<br>'+registro.fechaInicio+'<br>'+registro.fechaFin+'</td></tr><tr><td>Descripcion</td><td> - '+registro.listadoInfraccion.infraccion[0].descripcionInfraccion+'<br>- '+registro.listadoInfraccion.infraccion[1].descripcionInfraccion+'</td></tr>';
+              
+                    tabla+=`</tbody></table>`;
+            }
+                
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta PROVEEDOR SANCIONADO/VIGENTE');
+            // // // // ocultamos modal       
+            $('#proveedorsancionado').modal('hide');
+            //alert(cantidad);        
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+
+function busprocselxexpediente()
+{
+  var exp=$('#expedinteproceso').val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('busprocselxexpediente') }}/'+exp,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            //dato=data.length;
+            tabla='<table class="table table-bordered table-sm">';
+            
+            tabla+="<tr><td>Expediente:</td><td>"+data.idExpediente+"</td></tr>";
+            tabla+="<tr><td>Ruc entidad convocante:</td><td>"+data.rucEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nombre entidad convocante:</td><td>"+data.nombreEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nomenclatura de proceso:</td><td>"+data.nomenclaturaProceso+"</td></tr>";
+            tabla+="<tr><td>Tipo Compra Seleccion:</td><td>"+data.tipoCompraSeleccion+"</td></tr>";
+            tabla+="<tr><td>Norma Aplicable:</td><td>"+data.normaAplicable+"</td></tr>";
+            tabla+="<tr><td>Objeto Contratacion:</td><td>"+data.objetoContratacion+"</td></tr>";
+            tabla+="<tr><td>Descripcion Objeto Contratacion:</td><td>"+data.descripcionObjetoContratacion+"</td></tr>";
+            tabla+="<tr><td>Valor Referencial:</td><td>"+data.valorReferencial+"</td></tr>";
+            tabla+="<tr><td>Moneda:</td><td>"+data.moneda+"</td></tr>";
+            tabla+="<tr><td>Fecha y Hora Publicacion:</td><td>"+data.fechaYHoraPublicacion+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora publicacion reinicio:</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta de Proceso de Seleccion Por Expediente');
+            // // // // ocultamos modal       
+            $('#busprocselxexpediente').modal('hide')  
+            // alert(cantidad);        
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+function procesoseleccionporaniomesruc()
+{
+  var ruc=$('#rucprocesosel').val();
+  var anio=$('#anioproc').val();
+  var mes=$('#procmes').val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('busprocselxrucaniomes') }}/'+ruc+'/'+anio+'/'+mes,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            cantidad=data.length;
+             tabla='<table class="table table-bordered table-sm">';
+            for(i=0;i<cantidad;i++)//i=0;i<dato;i++
+            {
+              tabla+="<tr style='background:#ccc;'><td>Expediente:</td><td>"+data[i].idExpediente+"</td></tr>";
+              tabla+="<tr><td>Ruc entidad convocante:</td><td>"+data[i].rucEntidadConvocante+"</td></tr>";
+              tabla+="<tr><td>Nombre entidad convocante:</td><td>"+data[i].nombreEntidadConvocante+"</td></tr>";
+              tabla+="<tr><td>Nomenclatura de proceso:</td><td>"+data[i].nomenclaturaProceso+"</td></tr>";
+              tabla+="<tr><td>Tipo Compra Seleccion:</td><td>"+data[i].tipoCompraSeleccion+"</td></tr>";
+              tabla+="<tr><td>Norma Aplicable:</td><td>"+data[i].normaAplicable+"</td></tr>";
+              tabla+="<tr><td>Objeto Contratacion:</td><td>"+data[i].objetoContratacion+"</td></tr>";
+              tabla+="<tr><td>Descripcion Objeto Contratacion:</td><td>"+data[i].descripcionObjetoContratacion+"</td></tr>";
+              tabla+="<tr><td>Valor Referencial:</td><td>"+data[i].valorReferencial+"</td></tr>";
+              tabla+="<tr><td>Moneda:</td><td>"+data[i].moneda+"</td></tr>";
+              tabla+="<tr><td>Fecha y Hora Publicacion:</td><td>"+data[i].fechaYHoraPublicacion+"</td></tr>";
+              tabla+="<tr><td>Fecha y hora publicacion reinicio:</td><td>"+data[i].fechaYHoraPublicacionReinicio+"</td></tr>";
+
+            }
+           
+            
+
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta de Proceso de Seleccion Por RUC,AÑO Y MES');
+            // // // // ocultamos modal       
+            $('#busprocselrucaniomes').modal('hide')  
+            //alert(cantidad);        
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+function informacioncolnacioparticular()
+{
+  var codmod=$('#codmod').val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('infocolnacioparticular') }}/'+codmod,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            lista=data.lstInstitucionesEducativas.InstitucionEducativa;
+
+            // cantidad=data.length;
+             tabla='<table class="table table-bordered table-sm table-hover">';
+
+              tabla+="<tr><td>Número de anexo a una institución educativa</td><td>"+lista.anexo+"</td></tr>";
+              tabla+="<tr><td>Número y/o nombre que identifica a la institución educativa:</td><td>"+lista.cenEdu+"</td></tr>";
+              tabla+="<tr><td>Nombre del centro poblado en el padrón de centros poblados con servicio educativo de la UEE-MINEDU:</td><td>"+lista.cenPob+"</td></tr>";
+              tabla+="<tr><td>Código de ubicación geográfica:</td><td>"+lista.codGeo+"</td></tr>";
+              tabla+="<tr><td>Código de identificación local en que funciona la institución educativa:</td><td>"+lista.codLocal+"</td></tr>";
+              tabla+="<tr style='background:#ccc'><td><strong>Código modular de la institución educativa:</strong></td><td>"+lista.codMod+"</td></tr>";
+              tabla+="<tr><td>Código de la DRE o UGEL que supervisa la institución educativa:</td><td>"+lista.codooii+"</td></tr>";
+              tabla+="<tr><td>Descripción de la denominación de la DRE o UGEL que supervisa la IE:</td><td>"+lista.dDreUgel+"</td></tr>";
+              tabla+="<tr><td>Descripción de la forma en que se imparte enseñanza:</td><td>"+lista.dForma+"</td></tr>";
+              tabla+="<tr><td>Descripción de la dependencia o entidad que gestiona la institución educativa:</td><td>"+lista.dGesDep+"</td></tr>";
+              tabla+="<tr><td>Descripción del tipo de gestión de la institución educativa:</td><td>"+lista.dGestion+"</td></tr>";
+              tabla+="<tr><td>Descripción de nivel educativo y modalidad que ofrece la institución educativa:</td><td>"+lista.dNivMod+"</td></tr>";
+              tabla+="<tr><td>Descripción de la dirección del local en que funciona la institución educativa:</td><td>"+lista.dirCen+"</td></tr>";
+              tabla+=`<tr><td>Código de nivel educativo y modalidad que ofrece la institución educativa<br>
+                                                                                                            A1 Inicial-Cuna<br>
+                                                                                                            A2 Inicial-Jardín<br>
+                                                                                                            A3 Inicial-Cuna-Jardín<br>
+                                                                                                            B0 Primaria<br>
+                                                                                                            F0 Secundaria<br>
+                                                                                                            E1 Básica Especial-Inicial<br>
+                                                                                                            E2 Básica Especial-Primaria
+                                                                                                            :</td><td>`+lista.nivMod+`</td></tr>`;
+              tabla+="<tr><td>Referencia:</td><td>"+lista.referencia+"</td></tr>";    
+
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta de informacion del colegio nacional y particular');
+            // // // // ocultamos modal       
+            $('#infocolnacioparticular').modal('hide')  
+       
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+  //lert(codmod);
+}
+
+function gradoinstituto()
+{
+  var dni = $('#dniinstitutos').val();
+  //alert(dni);
+  $.ajax({
+          type:'GET',
+          url:'{{ url('gradoinstituto') }}/'+dni,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            //dato=data.length;
+            tabla='<table class="table table-bordered table-hover table-sm">';
+            tabla+='<tr><td>Apellido paterno</td><td>'+data.APEPAT+'</td></tr>';
+            tabla+='<tr><td>Apellido materno</td><td>'+data.APEMAT+'</td></tr>';
+            tabla+='<tr><td>Nombres</td><td>'+data.NOMBRES+'</td></tr>';
+            tabla+='<tr><td>Tipo documento</td><td>'+data.DOCU_TIP+'</td></tr>';
+            tabla+='<tr><td>Numero documento</td><td>'+data.DOCU_NUM+'</td></tr>';
+            tabla+='<tr><td>Nivel</td><td>'+data.NIVEL+'</td></tr>';
+            tabla+='<tr><td>Nombre de Institucion Educativa</td><td>'+data.NOMBRE_IE+'</td></tr>';
+            tabla+='<tr><td>Nombre titulo</td><td>'+data.NOMBRE_TITU+'</td></tr>';
+            tabla+='<tr><td>Numero de titulo</td><td>'+data.NUM_TITU+'</td></tr>';
+            tabla+='<tr><td>Region</td><td>'+data.PAIS_REGION+'</td></tr>';
+            tabla+='<tr><td>Fecha titulo</td><td>'+data.TITU_FEC+'</td></tr>';
+
+            tabla+='</tbody></table>';
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta Grados y Títulos de Institutos Tecnológicos y Pedagógicos');
+            // // // ocultamos modal       
+            $('#gradotitinsttecnyped').modal('hide')          
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+
+function antecedentejudicial()
+{
+  var appat=$("#apepataj").val();
+  var apmat=$("#apemataj").val();
+  var nombres=$("#nombreaj").val();
+
+  $.ajax({
+          type:'GET',
+          url:'{{ url('antecedentejudicial') }}/'+appat+'/'+apmat+'/'+nombres,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            tabla='<table class="table table-bordered table-hover table-sm">';
+            tabla+='<tr><td>Resultado</td><td>'+data.getAntecedenteJudicialReturn+'</td></tr>';
+
+            tabla+='<tr class="bg-info"><td colspan="2">Leyenda</td></tr>';
+            tabla+='<tr><td>Observado:</td><td>Existen coincidencias con nombres de internos</td></tr>';
+            tabla+='<tr><td>No registra antecedentes judiciales:</td><td>No tiene coincidencias</td></tr>';
+            tabla+='</table>';
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta Antecedentes Judiciales');
+            // // // ocultamos modal       
+            $('#antejudicial').modal('hide')          
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+
+// keyup para antecedente judicial
+$("#dniaj").keyup(function() {//keypress -> para cuando realiza enter en el btn guardar 
+  $("#btnantejudi").prop('disabled',true)
+           var valdni = $('#dniaj').val();
+           var cantcaracter=$('#dniaj').val().length;
+           if(cantcaracter==8)
+           {
+              $.ajax({
+                           type:'GET',
+                           url:'{{ url('reniec') }}/'+valdni,
+                           dataType: "json",
+                           //data:{cruc:valruc},
+                           success:function(data)
+                           {  
+                            // nombre=data.prenombres + ' ' + data.apPrimer + ' ' + data.apSegundo;
+                            $("#apepataj").val(data.apPrimer);
+                            $("#apemataj").val(data.apSegundo);
+                            $("#nombreaj").val(data.prenombres);
+                            $("#btnantejudi").prop('disabled',false)
+                            }
+
+                    });
+           }
+
+
+
+      //alert("presionaste enter");
+    });
+function proveedoradjudicadoxexpediente()
+{
+  var exp=$("#proveadjxexpediente").val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('proveedoradjudicadoxexpediente') }}/'+exp,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            console.log(data);
+            //dato=data.length;
+            tabla='<table class="table table-bordered table-sm table-hover">';
+            
+            tabla+="<tr><td>Identificador de propuesta:</td><td>"+data.idPropuesta+"</td></tr>";
+            tabla+="<tr style='background:#ccc;'><td>Expediente:</td><td>"+data.idExpediente+"</td></tr>";
+            tabla+="<tr><td>Ruc:</td><td>"+data.ruc+"</td></tr>";
+            tabla+="<tr><td>Nombre Razon social:</td><td>"+data.nombreRazonSocial+"</td></tr>";
+            tabla+="<tr><td>Proveedor que presenta propuesta en consorcio:</td><td>"+data.esConsorcio+"</td></tr>";
+            tabla+="<tr><td>RUC de la entidad convocante:</td><td>"+data.rucEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nombre de la entidad convocante:</td><td>"+data.nombreEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nomenclatura del procedimiento de selección:</td><td>"+data.nomenclaturaProceso+"</td></tr>";
+            tabla+="<tr><td>Tipo de compra o selección:</td><td>"+data.tipoCompraSeleccion+"</td></tr>";
+            tabla+="<tr><td>objetoContratacion:</td><td>"+data.objetoContratacion+"</td></tr>";
+            tabla+="<tr><td>descripcionObjetoContratacion:</td><td>"+data.descripcionObjetoContratacion+"</td></tr>";
+            tabla+="<tr><td>Nombre de moneda:</td><td>"+data.moneda+"</td></tr>";
+            tabla+="<tr><td>Monto del valor referencial:</td><td>"+data.valorReferencial+"</td></tr>";
+            tabla+="<tr><td>Monto del valor referencial equivalente en soles:</td><td>"+data.valorReferencialEnSoles+"</td></tr>";
+            tabla+="<tr><td>Monto del valor adjudicado:</td><td>"+data.valorAdjudicadoTotal+"</td></tr>";
+            tabla+="<tr><td>Monto del valor adjudicado equivalente en soles:</td><td>"+data.valorAdjudicadoTotalEnSoles+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora de la publicación del proceso:</td><td>"+data.fechaYHoraPublicacion+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora de la publicación en caso el procedimiento el procedimiento de selección haya sufrido una nulidad y posterior reinicio a una etapa distinta a la convocatoria :</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta de Consulta de Proveedores Adjudicados por Expediente');
+            // // // // ocultamos modal       
+            $('#proveedoradjudicadoxexpe').modal('hide')  
+            // alert(cantidad);        
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+function proveeadjxrucyanio()
+{
+  var ruc=$("#rucproveeadj").val();
+  var anio=$("#anioproveeadj").val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('proveeadjxrucyanio') }}/'+ruc+'/'+anio,
+          dataType: "json",
+          // data:{cruc:valruc},
+          success:function(data)
+          {  
+            //console.log(data);
+            //dato=data.length;
+            tabla='<table class="table table-bordered table-sm table-hover">';
+            
+            tabla+="<tr><td>Identificador de propuesta:</td><td>"+data.idPropuesta+"</td></tr>";
+            tabla+="<tr style='background:#ccc;'><td>Expediente:</td><td>"+data.idExpediente+"</td></tr>";
+            tabla+="<tr><td>Ruc:</td><td>"+data.ruc+"</td></tr>";
+            tabla+="<tr><td>Nombre Razon social:</td><td>"+data.nombreRazonSocial+"</td></tr>";
+            tabla+="<tr><td>Proveedor que presenta propuesta en consorcio:</td><td>"+data.esConsorcio+"</td></tr>";
+            tabla+="<tr><td>RUC de la entidad convocante:</td><td>"+data.rucEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nombre de la entidad convocante:</td><td>"+data.nombreEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nomenclatura del procedimiento de selección:</td><td>"+data.nomenclaturaProceso+"</td></tr>";
+            tabla+="<tr><td>Tipo de compra o selección:</td><td>"+data.tipoCompraSeleccion+"</td></tr>";
+            tabla+="<tr><td>objetoContratacion:</td><td>"+data.objetoContratacion+"</td></tr>";
+            tabla+="<tr><td>descripcionObjetoContratacion:</td><td>"+data.descripcionObjetoContratacion+"</td></tr>";
+            tabla+="<tr><td>Nombre de moneda:</td><td>"+data.moneda+"</td></tr>";
+            tabla+="<tr><td>Monto del valor referencial:</td><td>"+data.valorReferencial+"</td></tr>";
+            tabla+="<tr><td>Monto del valor referencial equivalente en soles:</td><td>"+data.valorReferencialEnSoles+"</td></tr>";
+            tabla+="<tr><td>Monto del valor adjudicado:</td><td>"+data.valorAdjudicadoTotal+"</td></tr>";
+            tabla+="<tr><td>Monto del valor adjudicado equivalente en soles:</td><td>"+data.valorAdjudicadoTotalEnSoles+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora de la publicación del proceso:</td><td>"+data.fechaYHoraPublicacion+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora de la publicación en caso el procedimiento el procedimiento de selección haya sufrido una nulidad y posterior reinicio a una etapa distinta a la convocatoria :</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta de Consulta de Proveedores Adjudicados por RUC y AÑO');
+            // // // // ocultamos modal       
+            $('#proveedoradjudicadoxrucanio').modal('hide')  
+            // alert(cantidad);        
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+</script>
+@endsection
+

@@ -32,13 +32,14 @@ class CreateAdminTable extends Migration {
 			$table->string('adm_direccion')->nullable();
 			$table->string('adm_dni')->nullable();
 			$table->string('adm_con_especialidad')->nullable();
+			$table->integer('tipousuario')->default(1);//1:SGD(funcionarios y servidores),2:terceros
 			$table->string('push_id')->nullable();
 			$table->integer('adm_primer_logeo')->nullable();
+			$table->text('avatar')->default('avatar/logo.png');
+			$table->string('darkmode')->nullable();
 			$table->rememberToken();
 			$table->timestamp('email_verified_at')->nullable();
 			$table->timestamps();
-			$table->text('avatar')->default('avatar/logo.png');
-			$table->string('darkmode')->nullable();
 		});
 	}
 

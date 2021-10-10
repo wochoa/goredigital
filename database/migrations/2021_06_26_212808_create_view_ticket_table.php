@@ -18,7 +18,7 @@ class CreateViewTicketTable extends Migration
         //     $table->id();
         //     $table->timestamps();
         // });
-        DB::statement("CREATE VIEW vistaticket as select idticket,iduser,(adm_name||' '||adm_lastname) as nombre_pedido,detalleayuda,prioridad,estado_atencion, (SELECT b.adm_name||' '||b.adm_lastname from admin b WHERE b.id=tickets.idsoporte) as nombre_atencion, idsoporte, tickets.created_at as fechaticket,fecha_recepcion, adm_cargo,depe_id,codejecutora,adm_telefono from tickets join admin a on(tickets.iduser=a.id ) WHERE estado_atencion<>'FINALIZADO';");
+        DB::statement("CREATE VIEW vistaticket as select idticket,iduser,(adm_name||' '||adm_lastname) as nombre_pedido,detalleayuda,prioridad,estado_atencion, (SELECT b.adm_name||' '||b.adm_lastname from admin b WHERE b.id=tickets.idsoporte) as nombre_atencion, idsoporte, tickets.created_at as fechaticket,fecha_recepcion, adm_cargo,idoficina,codejecutora,ayudasede,adm_telefono from tickets join admin a on(tickets.iduser=a.id ) WHERE estado_atencion<>'FINALIZADO';");
     }
 
     /**

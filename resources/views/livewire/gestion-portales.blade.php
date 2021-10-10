@@ -55,6 +55,7 @@
                         <th>Id user</th>
                         <th>usuario</th>
                         <th>Id pagina</th>
+                        <th>Acciones</th>
                       </tr>
                     </thead>
                   
@@ -63,6 +64,7 @@
                       <td>{{ $userpor->iduser }}</td>
                       <td>{{ $userpor->nombreuser }}</td>
                       <td>{{ $userpor->iddirecciones_web }}</td>
+                      <td><button class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></button></td>
                     </tr>
                   @empty
                     <h4>No hay administradores de portales web</h4>
