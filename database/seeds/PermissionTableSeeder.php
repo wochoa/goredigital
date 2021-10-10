@@ -48,11 +48,59 @@ class PermissionTableSeeder extends Seeder
         Permission::create(['name' => 'inventario_crear']);
         Permission::create(['name' => 'inventario_editar']);
         Permission::create(['name' => 'inventario_eliminar']);
+
+        Permission::create(['name' => 'acceso_gestionportales']);
+        Permission::create(['name' => 'gp_menu_portalweb']);
+        Permission::create(['name' => 'gp_configuracion_tema']);
+        Permission::create(['name' => 'gp_publicacion_leer']);
+        Permission::create(['name' => 'gp_publicacion_editar']);
+        Permission::create(['name' => 'gp_publicacion_crear']);
+        Permission::create(['name' => 'gp_publicacion_eliminar']);
+        Permission::create(['name' => 'gp_menu_leer']);
+        Permission::create(['name' => 'gp_menu_crear']);
+        Permission::create(['name' => 'gp_menu_editar']);
+        Permission::create(['name' => 'gp_menu_eliminar']);
+        Permission::create(['name' => 'gp_pagina_leer']);
+        Permission::create(['name' => 'gp_pagina_crear']);
+        Permission::create(['name' => 'gp_pagina_editar']);
+        Permission::create(['name' => 'gp_pagina_eliminar']);
+        Permission::create(['name' => 'gp_taspagina_leer']);
+        Permission::create(['name' => 'gp_taspagina_crear']);
+        Permission::create(['name' => 'gp_taspagina_editar']);
+        Permission::create(['name' => 'gp_taspagina_eliminar']);
+        Permission::create(['name' => 'gp_categoria_leer']);
+        Permission::create(['name' => 'gp_categoria_crear']);
+        Permission::create(['name' => 'gp_categoria_editar']);
+        Permission::create(['name' => 'gp_categoria_eliminar']);
+        Permission::create(['name' => 'gp_anuncios_leer']);
+        Permission::create(['name' => 'gp_anuncios_crear']);
+        Permission::create(['name' => 'gp_anuncios_editar']);
+        Permission::create(['name' => 'gp_anuncios_eliminar']);
+        Permission::create(['name' => 'gp_seccion_leer']);
+        Permission::create(['name' => 'gp_seccion_crear']);
+        Permission::create(['name' => 'gp_seccion_editar']);
+        Permission::create(['name' => 'gp_seccion_eliminar']);
+        Permission::create(['name' => 'gp_enlaceref_leer']);
+        Permission::create(['name' => 'gp_enlaceref_crear']);
+        Permission::create(['name' => 'gp_enlaceref_editar']);
+        Permission::create(['name' => 'gp_enlaceref_eliminar']);
+        Permission::create(['name' => 'pg_menu_ciudadano']);
+        Permission::create(['name' => 'pg_libroreclamaciones_leer']);
+        Permission::create(['name' => 'pg_sugerencias_leer']);
+        Permission::create(['name' => 'pg_menu_registrovisitas']);
+        Permission::create(['name' => 'pg_registrovisitas_leer']);
+        Permission::create(['name' => 'pg_registrovisitas_reporte']);
+        Permission::create(['name' => 'pagina_pide']);
         // create roles and assign existing permissions
         $admin = Role::create(['name' => 'Superadmin']);
         $empleado = Role::create(['name' => 'Administrador']);
         $soporte = Role::create(['name' => 'Soporte']);
         $usuario = Role::create(['name' => 'Usuario']);
+        $portalweb_publicador = Role::create(['name' => 'portalweb_publicador']);
+        $portalweb_administrador = Role::create(['name' => 'portalweb_administrador']);
+        $portalweb_ciudadano = Role::create(['name' => 'portalweb_ciudadano']);
+        $portalweb_regvisitas = Role::create(['name' => 'portalweb_regvisitas']);
+        $consumo_pide = Role::create(['name' => 'consumo_pide']);
 
         // asignacion de roles y permisos
 
@@ -90,7 +138,49 @@ class PermissionTableSeeder extends Seeder
                 'inventario_leer',
                 'inventario_crear',
                 'inventario_editar',
-                'inventario_eliminar'
+                'inventario_eliminar',
+                'acceso_gestionportales',
+                'gp_menu_portalweb',
+                'gp_configuracion_tema',
+                'gp_publicacion_leer',
+                'gp_publicacion_editar',
+                'gp_publicacion_crear',
+                'gp_publicacion_eliminar',
+                'gp_menu_leer',
+                'gp_menu_crear',
+                'gp_menu_editar',
+                'gp_menu_eliminar',
+                'gp_pagina_leer',
+                'gp_pagina_crear',
+                'gp_pagina_editar',
+                'gp_pagina_eliminar',
+                'gp_taspagina_leer',
+                'gp_taspagina_crear',
+                'gp_taspagina_editar',
+                'gp_taspagina_eliminar',
+                'gp_categoria_leer',
+                'gp_categoria_crear',
+                'gp_categoria_editar',
+                'gp_categoria_eliminar',
+                'gp_anuncios_leer',
+                'gp_anuncios_crear',
+                'gp_anuncios_editar',
+                'gp_anuncios_eliminar',
+                'gp_seccion_leer',
+                'gp_seccion_crear',
+                'gp_seccion_editar',
+                'gp_seccion_eliminar',
+                'gp_enlaceref_leer',
+                'gp_enlaceref_crear',
+                'gp_enlaceref_editar',
+                'gp_enlaceref_eliminar',
+                'pg_menu_ciudadano',
+                'pg_libroreclamaciones_leer',
+                'pg_sugerencias_leer',
+                'pg_menu_registrovisitas',
+                'pg_registrovisitas_leer',
+                'pg_registrovisitas_reporte',
+                'pagina_pide'
             ]
         );
 
