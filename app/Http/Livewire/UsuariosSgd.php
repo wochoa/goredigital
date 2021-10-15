@@ -22,7 +22,7 @@ class UsuariosSgd extends Component
     public $idusuariosgd;// id del usuario que se desea asignar el rol
     public $nombreusersel;
     public $nomrol;//NOMBRE DE ROL
-    //public $rolasiguser;
+    public $rolasiguser;
     //public $userSGD;
 
     public $iduser;
