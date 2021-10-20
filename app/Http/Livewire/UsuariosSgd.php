@@ -92,8 +92,8 @@ class UsuariosSgd extends Component
         $this->unidades=DB::table('dependencia')->where('depe_depende',$this->depe_id)->orderBy('iddependencia','asc')->get();
         // fin de llenado de dependencias
 
-        $this->userSGD=User::where('adm_estado',1)->where('adm_lastname', 'like', '%'.$this->search.'%')->orderBy('id','asc')->paginate(10);
-        return view('livewire.usuarios-sgd',['userSGD'=>$this->userSGD,'rolasiguser'=>$rolasiguser,'datosdepe'=>$datosdepe]);
+        $userSGD=User::where('adm_estado',1)->where('adm_lastname', 'like', '%'.$this->search.'%')->orderBy('id','asc')->paginate(10);
+        return view('livewire.usuarios-sgd',['userSGD'=>$userSGD,'rolasiguser'=>$rolasiguser,'datosdepe'=>$datosdepe]);
     }
 
     public function cargadato($id)
