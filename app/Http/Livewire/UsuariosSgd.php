@@ -70,7 +70,7 @@ class UsuariosSgd extends Component
     public function render()
     {
         $this->rol=DB::table('roles')->get();//select *from users join model_has_roles on(users.id=model_has_roles.model_id) join roles on(model_has_roles.role_id=roles.id)
-        $this->rolasiguser=DB::table('vistadistinrolasignado')->where('depe_id',$this->unidad_id)->paginate(10);
+        $rolasiguser=DB::table('vistadistinrolasignado')->where('depe_id',$this->unidad_id)->paginate(10);
 
         $contarolesasig=DB::table('admin')->join('model_has_roles','admin.id','=','model_has_roles.model_id')->join('roles','model_has_roles.role_id','=','roles.id')->select('admin.adm_name as nombres','admin.adm_lastname as apellidos','roles.name as rol','admin.id')->where('admin.adm_lastname', 'like', '%'.$this->search.'%')->get();
         $datsgd=User::where('adm_estado',1)->orderBy('id','asc')->get();
@@ -93,7 +93,7 @@ class UsuariosSgd extends Component
         // fin de llenado de dependencias
 
         $this->userSGD=User::where('adm_estado',1)->where('adm_lastname', 'like', '%'.$this->search.'%')->orderBy('id','asc')->paginate(10);
-        return view('livewire.usuarios-sgd',['userSGD'=>$this->userSGD,'rolasiguser'=>$this->rolasiguser,'datosdepe'=>$datosdepe]);
+        return view('livewire.usuarios-sgd',['userSGD'=>$this->userSGD,'rolasiguser'=>$rolasiguser,'datosdepe'=>$datosdepe]);
     }
 
     public function cargadato($id)
