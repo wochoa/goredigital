@@ -14,28 +14,28 @@ class pide extends Controller
   public function reniec($dni)
   {
       
-      $url='https://app.regionhuanuco.gob.pe/soap_pruebas/reniec.php?cdni='.$dni;
+      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/reniec.php?cdni='.$dni;
 
       $wsdl = file_get_contents($url);
       return $wsdl;
   }
   public function sis($dni)
   {
-      $url='https://app.regionhuanuco.gob.pe/soap_pruebas/sis.php?dni='.$dni;
+      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/sis.php?dni='.$dni;
       $wsdl = getRemoteFile($url);
       //$datos=json_decode($wsdl);
       return $wsdl;
   }
   public function sunat($ruc)
   {
-      $url='https://app.regionhuanuco.gob.pe/soap_pruebas/sunat.php?ruc='.$ruc;
+      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/sunat.php?ruc='.$ruc;
       $wsdl = getRemoteFile($url);
       //$datos=json_decode($wsdl);
       return $wsdl;
   }
   public function sunedu($dni)
   {
-      $url='https://app.regionhuanuco.gob.pe/soap_pruebas/sunedu.php?dni='.$dni;
+      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/sunedu.php?dni='.$dni;
       $wsdl = getRemoteFile($url);
       //$datos=json_decode($wsdl);
       return $wsdl;
@@ -102,7 +102,7 @@ class pide extends Controller
 
   public function infocolnacioparticular($id)
   {
-      $url='https://app.regionhuanuco.gob.pe/soap_pruebas/infocolegio.php?id='.$id;
+      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/infocolegio.php?id='.$id;
       $wsdl = getRemoteFile($url);
       $datos=json_decode($wsdl);
       $ObtenerResult=$datos->ObtenerResult;
@@ -119,14 +119,14 @@ class pide extends Controller
   }
   public function antecedentejudicial($pat,$mat,$nom)
   {
-      $url='https://app.regionhuanuco.gob.pe/soap_pruebas/datosantjudget.php?nom='.$nom.'&pat='.$pat.'&mat='.$mat;
+      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/datosantjudget.php?nom='.$nom.'&pat='.$pat.'&mat='.$mat;
       $wsdl = getRemoteFile($url);
       return $wsdl;
   }
   public function proveedoradjudicadoxexpediente($exp)
   {
       //https://ws3.pide.gob.pe/Rest/ROsce/AdjudicadoXExpediente?idExpediente=445241&out=json
-      $url='https://ws3.pide.gob.pe/Rest/ROsce/AdjudicadoXExpediente?idExpediente='.$exp.'&out=json';
+      $url='http://ws3.pide.gob.pe/Rest/ROsce/AdjudicadoXExpediente?idExpediente='.$exp.'&out=json';
       $wsdl = getRemoteFile($url);
       $array=json_decode($wsdl);
       $datos=$array->obtenerProcesoAdjudicadoPorExpedienteResponse->output;
