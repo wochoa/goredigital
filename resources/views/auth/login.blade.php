@@ -24,7 +24,7 @@
                     @csrf
                       <div class="form-group">
                           <label class="text-white" for="login-email">Usuario SGD:</label>
-                          <input class="form-control {{ $errors->has('adm_email')|| $errors->has('adm_email') ? 'is-invalid':''}}" id="adm_email" type="text" name="adm_email" placeholder="Usuario..." aria-describedby="login-email" autofocus="" tabindex="1" value="{{ old('adm_email')?:old('adm_email') }}" onkeyup="javascript:this.value=this.value.toUpperCase();" required/>
+                          <input class="form-control {{ $errors->has('adm_email')|| $errors->has('adm_email') ? 'is-invalid':''}}" id="adm_email" type="text" name="adm_email" placeholder="Usuario..." aria-describedby="login-email" autofocus tabindex="1" value="{{ old('adm_email')?:old('adm_email') }}" onkeyup="javascript:this.value=this.value.toUpperCase();" required/>
                           {{-- @error('adm_email') <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>@enderror --}}
 
                           @if($errors->has('adm_email')|| $errors->has('adm_email'))

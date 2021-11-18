@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class pide extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
      // consulta PIDE
   public function pide()
   {
@@ -148,5 +153,35 @@ class pide extends Controller
   //    print_r($procesado);
       return json_encode($procesado);
       //return $wsdl;
+  }
+
+  public function conadis($dni)
+  {
+    //43709827
+    $url='https://ws5.pide.gob.pe/Rest/APide/Conadis/PDiscapacidad?Username=42282733-20489250731&Password=XYlYADG7dd&DocNumber='.$dni.'&out=json';
+      $wsdl = getRemoteFile($url);
+      $array=json_decode($wsdl);
+     
+      return json_encode($array);
+  }
+  public function juntos($dni)
+  {
+    //43709827
+    $url='https://ws3.pide.gob.pe/Rest/Juntos/Beneficiario?dni='.$dni.'&out=json';
+      $wsdl = getRemoteFile($url);
+      $array=json_decode($wsdl);
+      $datos=$array->getBeneficiarioByDNIResponse->return;
+      //$procesado=$datos->procesosAdjudicados;
+      return json_encode($datos);
+  }
+  public function pension($dni)
+  {
+    //43709827
+    $url='https://ws5.pide.gob.pe/Rest/APide/Pension65/CUsuario?usuario=42282733&clave=P3NS10N65HU4NUC0&idAppUsuario=1&numeroDocumento='.$dni.'&out=json';
+      $wsdl = getRemoteFile($url);
+      $array=json_decode($wsdl);
+      $datos=$array->consultarUsuarioResponse->return;
+      //$procesado=$datos->procesosAdjudicados;
+      return json_encode($datos);
   }
 }

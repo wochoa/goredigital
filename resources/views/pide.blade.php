@@ -97,6 +97,25 @@
                         </div>
                         
                     </div>
+                    <div class="row pt-2">
+                      <div class="col-xs-4 col-sm-3 pt-1">
+                          <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#conadis">
+                              <i class="fa fa-desktop fa-2x"></i><br> <small>CONADIS</small></button>
+                      </div>
+                      <div class="col-xs-4 col-sm-3 pt-1">
+                          <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#juntos">
+                              <i class="fa fa-users fa-2x"></i><br> <small>Programa juntos</small></button>
+                      </div>
+                      <div class="col-xs-4 col-sm-3 pt-1">
+                          <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#pension65">
+                            <i class="fas fa-book-reader fa-2x"></i><br> <small>Pension65</small></button>
+                      </div>
+                      <div class="col-xs-4 col-sm-3 pt-1">
+                        <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#Qaliwarma">
+                          <i class="fab fa-accusoft fa-2x"></i><br> <small>Qaliwarma</small></button>
+                    </div>
+                      
+                  </div>
                 </div>
                 <!-- /.card-body -->
             </div>
@@ -152,7 +171,8 @@
         </button>
       </div>
         <form class="form">
-            <div class="modal-body">                
+            <div class="modal-body">
+              <p>Ejemplo: <b>22484119</b></p>                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
                         <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE DNI" id="numdni">
@@ -552,6 +572,163 @@
     </div>
   </div>
 </div>
+
+{{-- modal CONADIS --}}
+<div class="modal fade" id="conadis">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Consulta CONADIS</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form class="form">
+            <div class="modal-body">
+              <p>Ejemplo: <b>43709827</b></p>                
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Ingresar DNI</label>
+                        <input type="number" class="form-control"  placeholder="INGRESAR NUMERO DE DNI" id="dniconadis">
+                    </div>  
+            </div>
+            <div class="modal-footer justify-content-between">
+              {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
+              <button type="button" class="btn btn-primary" onclick="conadis();">Consultar</button>
+            </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{-- modal JUNTOS --}}
+<div class="modal fade" id="juntos">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Consulta JUNTOS</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form class="form">
+            <div class="modal-body">
+              <p>Ejemplo: <b>63076171</b></p>                
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Ingresar DNI</label>
+                        <input type="number" class="form-control"  placeholder="INGRESAR NUMERO DE DNI" id="dnijuntos">
+                    </div>  
+            </div>
+            <div class="modal-footer justify-content-between">
+              {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
+              <button type="button" class="btn btn-primary" onclick="juntos();">Consultar</button>
+            </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{-- modal PENSION65 --}}
+<div class="modal fade" id="pension65">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Consulta PENSION65</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form class="form">
+            <div class="modal-body">
+              <p>Ejemplo: <b>00913648</b></p>                
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Ingresar DNI</label>
+                        <input type="number" class="form-control"  placeholder="INGRESAR NUMERO DE DNI" id="dnipension65">
+                    </div>  
+            </div>
+            <div class="modal-footer justify-content-between">
+              {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
+              <button type="button" class="btn btn-primary" onclick="pension65();">Consultar</button>
+            </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{{-- modal PENSION65 --}}
+<div class="modal fade" id="Qaliwarma">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Consulta Qaliwarma</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form class="form">
+            <div class="modal-body">
+                    <div class="row form-group">
+                      <label for="exampleInputEmail1" class="col-sm-4">Codigo modular</label>
+                      <div class="col-sm-4">
+                        
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:1307578" id="dnipension65">
+                      </div>
+                      <div class="col-sm-4 float-left">
+                        <button class="btn btn-danger btn-sm">Buscar</button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row form-group">
+                      <div class="col-sm-4">
+                        <label for="exampleInputEmail1">Anexo</label>
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:0" id="dnipension65">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="exampleInputEmail1">Codigo modular</label>
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:1307578" id="dnipension65">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="exampleInputEmail1">Ubigeo</label>
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:010205" id="dnipension65">
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-sm-4">
+                          <label for="exampleInputEmail1">Departamente</label>
+                          <input type="text" class="form-control form-control-sm"  placeholder="Ejem:AMAZONAS" id="dnipension65">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="exampleInputEmail1">Provincia</label>
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:BAGUA" id="dnipension65">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="exampleInputEmail1">Distrito</label>
+                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:IMAZA" id="dnipension65">
+                      </div>
+                    </div>        
+                    <div class="row form-group">
+                        <div class="col-sm-4">
+                          <label for="exampleInputEmail1">Centro poblado:</label>
+                          <input type="text" class="form-control form-control-sm"  placeholder="Ejem:NUEVO BELEN" id="dnipension65">
+                        </div>
+                        <div class="col-sm-8">
+                          <label for="exampleInputEmail1">Direccion:</label>
+                          <input type="text" class="form-control form-control-sm"  placeholder="Ejem:NUEVO BELEN" id="dnipension65">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Codigo modular</label>
+                      <input type="number" class="form-control form-control-sm"  placeholder="Ingresar codigo modular" id="dnipension65">
+                  </div>
+                    
+            </div>
+            <div class="modal-footer justify-content-between">
+              {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
+              <button type="button" class="btn btn-primary" onclick="pension65();">Consultar</button>
+            </div>
+      </form>
+    </div>
+  </div>
+</div>
 @endsection
 
 @section('script')
@@ -670,16 +847,16 @@ function sunat()
           success:function(data)
           {  
 
-            //alert(data['getDatosPrincipalesReturn'].desc_dep);
+            //alert(data[0].desc_dep);
             tabla=`<table class="table table-bordered table-sm">
-            <tr><td class='bg-lightblue disabled color-palette'>Departamente</td><td>`+data['getDatosPrincipalesReturn'].desc_dep+`</td><td class='bg-lightblue disabled color-palette'>Razón-Social</td><td>`+data['getDatosPrincipalesReturn'].ddp_nombre+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Provincia</td><td>`+data['getDatosPrincipalesReturn'].desc_prov+`</td><td class='bg-lightblue disabled color-palette'>Actividad economica</td><td>`+data['getDatosPrincipalesReturn'].ddp_ciiu+`-`+data['getDatosPrincipalesReturn'].desc_ciiu+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Distrito</td><td>`+data['getDatosPrincipalesReturn'].desc_dist+`</td><td class='bg-lightblue disabled color-palette'>Dependencia</td><td>`+data['getDatosPrincipalesReturn'].desc_numreg+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Tipo via</td><td>`+data['getDatosPrincipalesReturn'].desc_tipvia+`</td><td class='bg-lightblue disabled color-palette'>Tipo contribuyente</td><td>`+data['getDatosPrincipalesReturn'].desc_tpoemp+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Tipo zona</td><td>`+data['getDatosPrincipalesReturn'].desc_tipzon+`</td><td class='bg-lightblue disabled color-palette'>Fecha alta</td><td>`+data['getDatosPrincipalesReturn'].ddp_fecalt+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Nombre via</td><td>`+data['getDatosPrincipalesReturn'].ddp_nomvia+`</td><td class='bg-lightblue disabled color-palette'>Fecha actualización</td><td>`+data['getDatosPrincipalesReturn'].ddp_fecact+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Nombre Zona</td><td>`+data['getDatosPrincipalesReturn'].ddp_nomzon+`</td><td class='bg-lightblue disabled color-palette'>Estado</td><td>`+data['getDatosPrincipalesReturn'].desc_estado+`</td></tr>
-            <tr><td class='bg-lightblue disabled color-palette'>Referencia</td><td>`+data['getDatosPrincipalesReturn'].ddp_refer1+`</td><td class='bg-lightblue disabled color-palette'>Condicion de domicilio</td><td>`+data['getDatosPrincipalesReturn'].desc_flag22+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Departamente</td><td>`+data['desc_dep']+`</td><td class='bg-lightblue disabled color-palette'>Razón-Social</td><td>`+data['ddp_nombre']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Provincia</td><td>`+data['desc_prov']+`</td><td class='bg-lightblue disabled color-palette'>Actividad economica</td><td>`+data['ddp_ciiu']+`-`+data['desc_ciiu']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Distrito</td><td>`+data['desc_dist']+`</td><td class='bg-lightblue disabled color-palette'>Dependencia</td><td>`+data['desc_numreg']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Tipo via</td><td>`+data['desc_tipvia']+`</td><td class='bg-lightblue disabled color-palette'>Tipo contribuyente</td><td>`+data['desc_tpoemp']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Tipo zona</td><td>`+data['desc_tipzon']+`</td><td class='bg-lightblue disabled color-palette'>Fecha alta</td><td>`+data['ddp_fecalt']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Nombre via</td><td>`+data['ddp_nomvia']+`</td><td class='bg-lightblue disabled color-palette'>Fecha actualización</td><td>`+data['ddp_fecact']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Nombre Zona</td><td>`+data['ddp_nomzon']+`</td><td class='bg-lightblue disabled color-palette'>Estado</td><td>`+data['desc_estado']+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Referencia</td><td>`+data['ddp_refer1']+`</td><td class='bg-lightblue disabled color-palette'>Condicion de domicilio</td><td>`+data['desc_flag22']+`</td></tr>
             </table>`;
 
             $('.resultado').html(tabla);
@@ -1174,6 +1351,129 @@ function proveeadjxrucyanio()
             // // // // ocultamos modal       
             $('#proveedoradjudicadoxrucanio').modal('hide')  
             // alert(cantidad);        
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+function conadis()
+{
+  var dni=$("#dniconadis").val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('conadis') }}/'+dni,
+          dataType: "json",
+          success:function(data)
+          {  
+            apellidopat=data["ApellidoPaterno"];
+            apellidomat=data["ApellidoMaterno"];
+            nombre=data["Nombre"];
+            estado=data["Estado"];
+            fallecido=data["Fallecido"];
+            gravedad=data["Gravedad"];
+
+            //alert(apellidopat);
+            tabla=`<table class="table table-bordered table-sm table-hover">
+            <tr><td class='bg-lightblue disabled color-palette'>DNI</td><td>`+dni+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Apellido paterno</td><td>`+apellidopat+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Apellido materno</td><td>`+apellidomat+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Nombres</td><td>`+nombre+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Estado<br><b>lectura</b>:<br>Si se encuentra Inscrito [0 No, 1 Inscrito]</td><td>`+estado+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Fallecido</td><td>`+fallecido+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Gravedad<br><b>lectura</b>:<br>Nivel de Gravedad [1. Entero, 2 Moderado, 3 Severo, 9 NEP]</td><td>`+gravedad+`</td></tr>
+            
+            </table>`;
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta CONADIS');
+            // // // ocultamos modal       
+            $('#conadis').modal('hide')          
+            // // $("#ndni" ).focus();
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+//
+function juntos()
+{
+  var dni=$("#dnijuntos").val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('juntos') }}/'+dni,
+          dataType: "json",
+          success:function(data)
+          {  
+            apellidopat=data["primerApellido"];
+            apellidomat=data["segundoApellido"];
+            nombre=data["nombres"];
+            ut=data["ut"];
+            
+
+            //alert(apellidopat);
+            tabla=`<table class="table table-bordered table-sm table-hover">
+            <tr><td class='bg-lightblue disabled color-palette'>DNI</td><td>`+dni+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Apellido paterno</td><td>`+apellidopat+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Apellido materno</td><td>`+apellidomat+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Nombres</td><td>`+nombre+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>Unidad Territorial</td><td>`+ut+`</td></tr>
+            
+            
+            </table>`;
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta JUNTOS');
+                  
+            $('#juntos').modal('hide'); 
+            
+            
+          },
+              error: function(e){
+
+                      }
+
+  });
+}
+
+function pension65()
+{
+  var dni=$("#dnipension65").val();
+  $.ajax({
+          type:'GET',
+          url:'{{ url('pension') }}/'+dni,
+          dataType: "json",
+          success:function(data)
+          {  
+            anho=data["anho"];
+            dni=data["dni"];
+            //header=data["header"];
+            localidad=data["localidad"];
+            periodo=data["periodo"];
+            puntoPago=data["puntoPago"];
+            totalRegistros=data["totalRegistros"];
+
+            // alert(data['dni']);
+            tabla=`<table class="table table-bordered table-sm table-hover">
+            <tr><td class='bg-lightblue disabled color-palette'>año</td><td>`+anho+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>DNI paterno</td><td>`+dni+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>LOCALIDAD</td><td>`+localidad+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>PERIODO</td><td>`+periodo+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>PUNTO DE PAGO</td><td>`+puntoPago+`</td></tr>
+            <tr><td class='bg-lightblue disabled color-palette'>TOTAL REGISTROS</td><td>`+totalRegistros+`</td></tr>
+            
+            </table>`;
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta PENSION65');
+                  
+            $('#pension65').modal('hide'); 
+            
             
           },
               error: function(e){

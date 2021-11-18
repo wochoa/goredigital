@@ -72,3 +72,6 @@ route::get('/gradoinstituto/{dni}','pide@gradoinstituto')->name('gradoinstituto'
 route::get('/antecedentejudicial/{pat}/{mat}/{nom}','pide@antecedentejudicial')->name('antecedentejudicial'); 
 route::get('/proveedoradjudicadoxexpediente/{exp}','pide@proveedoradjudicadoxexpediente')->name('proveedoradjudicadoxexpediente');
 route::get('/proveeadjxrucyanio/{ruc}/{anio}','pide@proveeadjxrucyanio')->name('proveeadjxrucyanio');
+route::get('/conadis/{dni}','pide@conadis')->name('conadis');//
+route::get('/juntos/{dni}','pide@juntos')->name('juntos');
+route::get('/pension/{dni}','pide@pension')->name('pension');
