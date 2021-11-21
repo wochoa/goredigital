@@ -101,6 +101,10 @@
                               <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: {{ round($ticketpendiente*100/($ticketenproceso+$ticketpendiente+$ticketatendido),0) }}%">{{ round($ticketpendiente*100/($ticketenproceso+$ticketpendiente+$ticketatendido),0) }}%</div>
                             </div>
                         </div>
+
+                        {{-- <div id="chart">
+
+                        </div> --}}
                     </div>
                     <!-- /.card-body -->
                     
@@ -422,5 +426,29 @@ $(document).ready(function() {
         })
       }
   </script> --}}
+  {{-- @push('scrit')
+    <script>
+        var options = {
+          series: [44, 55, 41, 17, 15],
+          chart: {
+          type: 'donut',
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>  
+  @endpush --}}
 @endsection
 

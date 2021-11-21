@@ -523,8 +523,8 @@
 
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.js') }}"></script>
-
-
+{{-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+@stack('scrit') --}}
 
 @yield('script')
 

@@ -75,3 +75,5 @@ route::get('/proveeadjxrucyanio/{ruc}/{anio}','pide@proveeadjxrucyanio')->name('
 route::get('/conadis/{dni}','pide@conadis')->name('conadis');//
 route::get('/juntos/{dni}','pide@juntos')->name('juntos');
 route::get('/pension/{dni}','pide@pension')->name('pension');
+route::get('/qaliwarma','pide@qaliwarma')->name('qaliwarma');
+route::get('/toke_qaliwarma','pide@toke_qaliwarma')->name('toke_qaliwarma');

@@ -184,4 +184,34 @@ class pide extends Controller
       //$procesado=$datos->procesosAdjudicados;
       return json_encode($datos);
   }
+  public function qaliwarma(Request $request)
+  {
+    $departamento=$request->query('depa');
+    $provincia=$request->query('prov');
+    $distrito=$request->query('dist');
+    $nivel=$request->query('nivel');
+
+      $token=$this->toke_qaliwarma();
+
+      $url='https://ws3.pide.gob.pe/Rest/QaliWarma/IIEEs?anexo=&centro_poblado=&cod_modular=&departamento='.$departamento.'&direccion=&distrito='.$distrito.'&modalidad_atencion=&nivel_educativo='.$nivel.'&nombre=&nro_alumnos=0&provincia='.$provincia.'&rde=&token='.$token.'&ubigeo=&out=json';
+      $wsdl = getRemoteFile($url);
+      $array=json_decode($wsdl);
+    //   $datos=$array->getIIEEsResponse;
+    //   $resul=$datos->getIIEEsResult->listIIEEsResponse;
+      return $wsdl;
+  }
+  public function toke_qaliwarma()
+  {
+    $pass='Gobierno Regional de Huanuco$';
+    $token='hXPx2rkdkD9tRBsHaZ7ggyoiCiHb4ull5MuTUZP2mZWQ6jqzzFYJk6i8PcJZm8y';
+    $usuario='qwext00008';
+
+    $url='https://ws3.pide.gob.pe/Rest/QaliWarma/Autenticate?password=Gobierno%20Regional%20de%20Huanuco$&token=hXPx2rkdkD9tRBsHaZ7ggyoiCiHb4ull5MuTUZP2mZWQ6jqzzFYJk6i8PcJZm8y&username=qwext00008&out=json';
+    $wsdl = getRemoteFile($url);
+    $array=json_decode($wsdl);
+    $datos=$array->authenticateQWResponse;
+    $resul=$datos->authenticateQWResult->authenticationEntity;
+
+    return $resul->token;
+  }
 }

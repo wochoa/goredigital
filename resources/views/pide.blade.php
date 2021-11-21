@@ -8,7 +8,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Relacion de personal activos</h1>
+          <h1 class="m-0">Relación de servicios PIDE</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
         <div class="col-sm-6">
             <div class="card card-gray">
                 <div class="card-header p-2">
-                  <h3 class="card-title">Relacion de servicios PIDE(Plataforma de Interoperabilidad del Estado)</h3>
+                  <h3 class="card-title">Servicios PIDE(Plataforma de Interoperabilidad del Estado) <button class="btn btn-success btn-xs" onclick="desarrollador();">Integre en tu plataforma</button></h3>
                   <!-- /.card-tools -->
                 </div>
                 <!-- /.card-header -->
@@ -89,7 +89,7 @@
                         </div>
                         <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#gradotitinsttecnyped">
-                                <i class="fa fa-home fa-2x"></i><br> <small>Grados y Títulos de Institutos Tecnológicos y Pedagógicos por DNI</small></button>
+                                <i class="fa fa-home fa-2x"></i><br> <small>Grados y Títulos de Institutos por DNI</small></button>
                         </div>
                         <div class="col-xs-4 col-sm-3 pt-1">
                             <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#infocolnacioparticular">
@@ -126,6 +126,7 @@
                 <div class="card-body resultado">
                     En esta seccion se mostrará los resultados de la consulta
                 </div>
+                <div class="overlay dark" style="display: none;"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>
             </div>
         </div>
     </div>
@@ -138,7 +139,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Consulta DNI</h4>
+          <h6 class="modal-title">Consulta DNI</h6>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -147,7 +148,7 @@
               <div class="modal-body">                  
                       <div class="form-group">
                           <label for="exampleInputEmail1">Ingresar DNI</label>
-                          <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE DNI" id="ndni">
+                          <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="ndni">
                       </div>  
               </div>
               <div class="modal-footer justify-content-between">
@@ -165,7 +166,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta SIS</h4>
+        <h6 class="modal-title">Consulta SIS</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -175,7 +176,7 @@
               <p>Ejemplo: <b>22484119</b></p>                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE DNI" id="numdni">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="numdni">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -191,7 +192,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta ESSALUD</h4>
+        <h6 class="modal-title">Consulta ESSALUD</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -200,7 +201,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE DNI" id="essaluddni">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="essaluddni">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -217,7 +218,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta SUNAT</h4>
+        <h6 class="modal-title">Consulta SUNAT</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -226,7 +227,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar RUC</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE RUC" id="ruc">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="ruc">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -242,7 +243,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta SUNEDU</h4>
+        <h6 class="modal-title">Consulta SUNEDU</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -251,7 +252,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE DNI" id="dnisunedu">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="dnisunedu">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -268,7 +269,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta estado Proveedor</h4>
+        <h6 class="modal-title">Consulta estado Proveedor</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -282,7 +283,7 @@
                       </p>
                       <hr>
                         <label for="exampleInputEmail1">Ingresar RUC</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE RUC" id="rucsancionado">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="rucsancionado">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -299,7 +300,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta proceso de seleccion</h4>
+        <h6 class="modal-title">Consulta proceso de seleccion</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -308,7 +309,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar Expediente(Ejemplo:429538)</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE EXPEDIENTE" id="expedinteproceso">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE EXPEDIENTE" id="expedinteproceso">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -325,7 +326,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta proceso de seleccion</h4>
+        <h6 class="modal-title">Consulta proceso de seleccion</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -340,14 +341,14 @@
                         mes: 02
                       </p>
                         <label for="exampleInputEmail1">Ingresar RUC</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE RUC" id="rucprocesosel">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="rucprocesosel">
                     </div>
                     <div class="form-group">
                      <div class="row">
                        <div class="col-sm-6">
                         <label for="exampleInputEmail1">Año</label>
                         
-                        <select class="form-control" id="anioproc">
+                        <select class="form-control form-control-sm" id="anioproc">
                           <option selected>Seleccione...</option>
                           @php
                             $fechai=date('Y');
@@ -364,7 +365,7 @@
                        </div>
                        <div class="col-sm-6">
                         <label for="exampleInputEmail1">Mes</label>
-                        <select class="form-control" id="procmes">
+                        <select class="form-control form-control-sm" id="procmes">
                           <option selected>Seleccione...</option>
                           <option value="01">Enero</option>
                           <option value="02">Febrero</option>
@@ -398,7 +399,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Información de colegio nacional y particular</h4>
+        <h6 class="modal-title">Información de colegio nacional y particular</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -411,7 +412,7 @@
                         Codigo modular del I.E.: 0214874
                       </p>
                         <label for="exampleInputEmail1">Código Modular de la Institución Educativa</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR EL CÓDIGO" id="codmod">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR EL CÓDIGO" id="codmod">
                     </div>
                     
  
@@ -430,7 +431,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta Grados y Títulos de Institutos Tecnológicos y Pedagógicos por DNI</h4>
+        <h6 class="modal-title">Consulta Grados y Títulos de Institutos Tecnológicos y Pedagógicos por DNI</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -439,7 +440,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI(ejemplo:47643796)</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE DNI" id="dniinstitutos">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="dniinstitutos">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -456,7 +457,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta Antecedentes Judiciales </h4>
+        <h6 class="modal-title">Consulta Antecedentes Judiciales </h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -466,19 +467,19 @@
 
                   <div class="form-group">
                       <label for="exampleInputEmail1">Ingrese su DNI</label>
-                      <input type="number" class="form-control"  placeholder="Ingresar Apellido Paterno" id="dniaj">
+                      <input type="number" class="form-control form-control-sm"  placeholder="Ingresar Apellido Paterno" id="dniaj">
                   </div>                
                   <div class="form-group" style="display: none;">
                       <label for="exampleInputEmail1">Apellido Paterno</label>
-                      <input type="hidden" class="form-control"  placeholder="Ingresar Apellido Paterno" id="apepataj">
+                      <input type="hidden" class="form-control form-control-sm"  placeholder="Ingresar Apellido Paterno" id="apepataj">
                   </div> 
                   <div class="form-group" style="display: none;">
                     <label for="exampleInputEmail1">Apellido Materno</label>
-                    <input type="hidden" class="form-control"  placeholder="Ingresar Apellido Materno" id="apemataj">
+                    <input type="hidden" class="form-control form-control-sm"  placeholder="Ingresar Apellido Materno" id="apemataj">
                   </div> 
                   <div class="form-group" style="display: none;">
                       <label for="exampleInputEmail1">Nombres</label>
-                      <input type="hidden" class="form-control"  placeholder="Ingresar Nombres" id="nombreaj">
+                      <input type="hidden" class="form-control form-control-sm"  placeholder="Ingresar Nombres" id="nombreaj">
                   </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -495,7 +496,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Proveedor adjudicado por expediente</h4>
+        <h6 class="modal-title">Proveedor adjudicado por expediente</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -504,7 +505,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar Expediente(Ejemplo:445241)</label>
-                        <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE EXPEDIENTE" id="proveadjxexpediente">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE EXPEDIENTE" id="proveadjxexpediente">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -520,7 +521,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Proveedor adjudicado por Ruc y Año</h4>
+        <h6 class="modal-title">Proveedor adjudicado por Ruc y Año</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -539,12 +540,12 @@
                        <div class="col-sm-6">
                         
                           <label for="exampleInputEmail1">Ingresar RUC</label>
-                          <input type="number" class="form-control"  placeholder="INGERSAR NUMERO DE RUC" id="rucproveeadj">
+                          <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="rucproveeadj">
                        </div>
                        <div class="col-sm-6">
                         <label for="exampleInputEmail1">Año</label>
                         
-                        <select class="form-control" id="anioproveeadj">
+                        <select class="form-control form-control-sm" id="anioproveeadj">
                           <option selected>Seleccione...</option>
                           @php
                             $fechai=date('Y');
@@ -578,7 +579,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta CONADIS</h4>
+        <h6 class="modal-title">Consulta CONADIS</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -588,7 +589,7 @@
               <p>Ejemplo: <b>43709827</b></p>                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control"  placeholder="INGRESAR NUMERO DE DNI" id="dniconadis">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="dniconadis">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -605,7 +606,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta JUNTOS</h4>
+        <h6 class="modal-title">Consulta JUNTOS</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -615,7 +616,7 @@
               <p>Ejemplo: <b>63076171</b></p>                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control"  placeholder="INGRESAR NUMERO DE DNI" id="dnijuntos">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="dnijuntos">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -631,7 +632,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta PENSION65</h4>
+        <h6 class="modal-title">Consulta PENSION65</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -641,7 +642,7 @@
               <p>Ejemplo: <b>00913648</b></p>                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control"  placeholder="INGRESAR NUMERO DE DNI" id="dnipension65">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="dnipension65">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -658,72 +659,45 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Consulta Qaliwarma</h4>
+        <h6 class="modal-title">Consulta Qaliwarma</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
         <form class="form">
             <div class="modal-body">
-                    <div class="row form-group">
-                      <label for="exampleInputEmail1" class="col-sm-4">Codigo modular</label>
-                      <div class="col-sm-4">
-                        
-                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:1307578" id="dnipension65">
-                      </div>
-                      <div class="col-sm-4 float-left">
-                        <button class="btn btn-danger btn-sm">Buscar</button>
-                      </div>
-                    </div>
-                    <hr>
+                    
                     <div class="row form-group">
                       <div class="col-sm-4">
-                        <label for="exampleInputEmail1">Anexo</label>
-                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:0" id="dnipension65">
+                        <label for="exampleInputEmail1">Departamento</label>
+                        <input type="text" class="form-control form-control-sm form-control form-control-sm-sm"  placeholder="Ejem:HUANUCO" value="HUANUCO" required id="depart">
                       </div>
                       <div class="col-sm-4">
-                        <label for="exampleInputEmail1">Codigo modular</label>
-                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:1307578" id="dnipension65">
+                        <label for="exampleInputEmail1">Provincia(OPCIONAL)</label>
+                        <input type="text" class="form-control form-control-sm form-control form-control-sm-sm"  placeholder="Ejem:HUANUCO" value="HUANUCO" id="prov">
                       </div>
                       <div class="col-sm-4">
-                        <label for="exampleInputEmail1">Ubigeo</label>
-                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:010205" id="dnipension65">
+                        <label for="exampleInputEmail1">Distrito(OPCIONAL)</label>
+                        <input type="text" class="form-control form-control-sm form-control form-control-sm-sm"  placeholder="Ejem:HUANUCO" value="HUANUCO" id="dist">
                       </div>
                     </div>
                     <div class="row form-group">
+                      <label for="">Nivel educativo</label>
                       <div class="col-sm-4">
-                          <label for="exampleInputEmail1">Departamente</label>
-                          <input type="text" class="form-control form-control-sm"  placeholder="Ejem:AMAZONAS" id="dnipension65">
+                        <select id="niveducat" class="form-control form-control-sm form-control form-control-sm-sm">
+                          <option value="INICIAL">INICIAL</option>
+                          <option value="PRIMARIA">PRIMARIA</option>
+                          <option value="SECUNDARIA">SECUNDARIA</option>
+                        </select>
                       </div>
-                      <div class="col-sm-4">
-                        <label for="exampleInputEmail1">Provincia</label>
-                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:BAGUA" id="dnipension65">
-                      </div>
-                      <div class="col-sm-4">
-                        <label for="exampleInputEmail1">Distrito</label>
-                        <input type="text" class="form-control form-control-sm"  placeholder="Ejem:IMAZA" id="dnipension65">
-                      </div>
-                    </div>        
-                    <div class="row form-group">
-                        <div class="col-sm-4">
-                          <label for="exampleInputEmail1">Centro poblado:</label>
-                          <input type="text" class="form-control form-control-sm"  placeholder="Ejem:NUEVO BELEN" id="dnipension65">
-                        </div>
-                        <div class="col-sm-8">
-                          <label for="exampleInputEmail1">Direccion:</label>
-                          <input type="text" class="form-control form-control-sm"  placeholder="Ejem:NUEVO BELEN" id="dnipension65">
-                        </div>
+                      
                     </div>
                     
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Codigo modular</label>
-                      <input type="number" class="form-control form-control-sm"  placeholder="Ingresar codigo modular" id="dnipension65">
-                  </div>
                     
             </div>
             <div class="modal-footer justify-content-between">
               {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
-              <button type="button" class="btn btn-primary" onclick="pension65();">Consultar</button>
+              <button type="button" class="btn btn-primary" onclick="qaliwarma();">Consultar</button>
             </div>
       </form>
     </div>
@@ -738,7 +712,7 @@
 function reniec()
 {
   var valdni = $('#ndni').val();
-  //alert(valdni);
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('reniec') }}/'+valdni,
@@ -757,11 +731,13 @@ function reniec()
         $('#textoresul').html(' - Consulta RENIEC');
         // ocultamos modal       
         $('#reniec').modal('hide')
-        
+        $('.overlay').hide();
         $("#ndni" ).focus();
       },
       error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#reniec').modal('hide')
               }
 
   });
@@ -771,7 +747,7 @@ function reniec()
 function sis()
 {
   var valdni = $('#numdni').val();
-  //alert(valdni);
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('sis') }}/'+valdni,
@@ -827,11 +803,13 @@ function sis()
         $('#textoresul').html(' - Consulta SIS');
         // // ocultamos modal       
         $('#sis').modal('hide')
-        
+        $('.overlay').hide();
         // $("#ndni" ).focus();
       },
       error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#sis').modal('hide')
               }
 
   });
@@ -839,7 +817,7 @@ function sis()
 function sunat()
 {
   var valruc = $('#ruc').val();
-  //alert(valdni);
+  $('.overlay').show();  
   $.ajax({
           type:'GET',
           url:'{{ url('sunat') }}/'+valruc,
@@ -863,11 +841,13 @@ function sunat()
             $('#textoresul').html(' - Consulta SUNAT');
             // // // ocultamos modal       
             $('#sunat').modal('hide')          
-            // // $("#ndni" ).focus();
+            $('.overlay').hide();
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#sunat').modal('hide') 
                       }
 
   });
@@ -875,7 +855,7 @@ function sunat()
 function sunedu()
 {
   var dni = $('#dnisunedu').val();
-  //alert(valdni);
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('sunedu') }}/'+dni,
@@ -903,10 +883,12 @@ function sunedu()
             $('#textoresul').html(' - Consulta SUNAT');
             // // // ocultamos modal       
             $('#sunedu').modal('hide')          
-            
+            $('.overlay').hide();
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#sunedu').modal('hide') 
                       }
 
   });
@@ -914,7 +896,7 @@ function sunedu()
 function essalud()
 {
   var dni = $('#essaluddni').val();
-  //alert(valdni);
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('essalud') }}/'+dni,
@@ -941,10 +923,12 @@ function essalud()
             $('#textoresul').html(' - Consulta ESSALUD');
             // // // ocultamos modal       
             $('#essalud').modal('hide')          
-            
+            $('.overlay').hide();
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#essalud').modal('hide')
                       }
 
   });
@@ -953,6 +937,7 @@ function essalud()
 function proveesancionado()
 {
   var ruc = $('#rucsancionado').val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('proveedorsancionado') }}/'+ruc,
@@ -1010,11 +995,13 @@ function proveesancionado()
             $('#textoresul').html(' - Consulta PROVEEDOR SANCIONADO/VIGENTE');
             // // // // ocultamos modal       
             $('#proveedorsancionado').modal('hide');
-            //alert(cantidad);        
+            $('.overlay').hide();     
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#proveedorsancionado').modal('hide');
                       }
 
   });
@@ -1023,6 +1010,7 @@ function proveesancionado()
 function busprocselxexpediente()
 {
   var exp=$('#expedinteproceso').val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('busprocselxexpediente') }}/'+exp,
@@ -1051,11 +1039,13 @@ function busprocselxexpediente()
             $('#textoresul').html(' - Consulta de Proceso de Seleccion Por Expediente');
             // // // // ocultamos modal       
             $('#busprocselxexpediente').modal('hide')  
-            // alert(cantidad);        
+            $('.overlay').hide();        
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#busprocselxexpediente').modal('hide')
                       }
 
   });
@@ -1065,6 +1055,7 @@ function procesoseleccionporaniomesruc()
   var ruc=$('#rucprocesosel').val();
   var anio=$('#anioproc').val();
   var mes=$('#procmes').val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('busprocselxrucaniomes') }}/'+ruc+'/'+anio+'/'+mes,
@@ -1091,19 +1082,19 @@ function procesoseleccionporaniomesruc()
               tabla+="<tr><td>Fecha y hora publicacion reinicio:</td><td>"+data[i].fechaYHoraPublicacionReinicio+"</td></tr>";
 
             }
-           
-            
-
+                
 
             $('.resultado').html(tabla);
             $('#textoresul').html(' - Consulta de Proceso de Seleccion Por RUC,AÑO Y MES');
             // // // // ocultamos modal       
             $('#busprocselrucaniomes').modal('hide')  
-            //alert(cantidad);        
+            $('.overlay').hide();        
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#busprocselrucaniomes').modal('hide')  
                       }
 
   });
@@ -1111,6 +1102,7 @@ function procesoseleccionporaniomesruc()
 function informacioncolnacioparticular()
 {
   var codmod=$('#codmod').val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('infocolnacioparticular') }}/'+codmod,
@@ -1153,11 +1145,13 @@ function informacioncolnacioparticular()
             $('#textoresul').html(' - Consulta de informacion del colegio nacional y particular');
             // // // // ocultamos modal       
             $('#infocolnacioparticular').modal('hide')  
-       
+            $('.overlay').hide();
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#infocolnacioparticular').modal('hide') 
                       }
 
   });
@@ -1167,7 +1161,7 @@ function informacioncolnacioparticular()
 function gradoinstituto()
 {
   var dni = $('#dniinstitutos').val();
-  //alert(dni);
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('gradoinstituto') }}/'+dni,
@@ -1195,10 +1189,12 @@ function gradoinstituto()
             $('#textoresul').html(' - Consulta Grados y Títulos de Institutos Tecnológicos y Pedagógicos');
             // // // ocultamos modal       
             $('#gradotitinsttecnyped').modal('hide')          
-            
+            $('.overlay').hide();
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#gradotitinsttecnyped').modal('hide') 
                       }
 
   });
@@ -1209,7 +1205,7 @@ function antecedentejudicial()
   var appat=$("#apepataj").val();
   var apmat=$("#apemataj").val();
   var nombres=$("#nombreaj").val();
-
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('antecedentejudicial') }}/'+appat+'/'+apmat+'/'+nombres,
@@ -1229,10 +1225,12 @@ function antecedentejudicial()
             $('#textoresul').html(' - Consulta Antecedentes Judiciales');
             // // // ocultamos modal       
             $('#antejudicial').modal('hide')          
-            
+            $('.overlay').hide();
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#antejudicial').modal('hide')
                       }
 
   });
@@ -1243,6 +1241,7 @@ $("#dniaj").keyup(function() {//keypress -> para cuando realiza enter en el btn 
   $("#btnantejudi").prop('disabled',true)
            var valdni = $('#dniaj').val();
            var cantcaracter=$('#dniaj').val().length;
+           $('.overlay').show();
            if(cantcaracter==8)
            {
               $.ajax({
@@ -1256,8 +1255,10 @@ $("#dniaj").keyup(function() {//keypress -> para cuando realiza enter en el btn 
                             $("#apepataj").val(data.apPrimer);
                             $("#apemataj").val(data.apSegundo);
                             $("#nombreaj").val(data.prenombres);
+                            $('.overlay').hide();
                             $("#btnantejudi").prop('disabled',false)
                             }
+                            
 
                     });
            }
@@ -1269,6 +1270,7 @@ $("#dniaj").keyup(function() {//keypress -> para cuando realiza enter en el btn 
 function proveedoradjudicadoxexpediente()
 {
   var exp=$("#proveadjxexpediente").val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('proveedoradjudicadoxexpediente') }}/'+exp,
@@ -1303,11 +1305,13 @@ function proveedoradjudicadoxexpediente()
             $('#textoresul').html(' - Consulta de Consulta de Proveedores Adjudicados por Expediente');
             // // // // ocultamos modal       
             $('#proveedoradjudicadoxexpe').modal('hide')  
-            // alert(cantidad);        
+            $('.overlay').hide();       
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#proveedoradjudicadoxexpe').modal('hide') 
                       }
 
   });
@@ -1316,6 +1320,7 @@ function proveeadjxrucyanio()
 {
   var ruc=$("#rucproveeadj").val();
   var anio=$("#anioproveeadj").val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('proveeadjxrucyanio') }}/'+ruc+'/'+anio,
@@ -1350,11 +1355,13 @@ function proveeadjxrucyanio()
             $('#textoresul').html(' - Consulta de Consulta de Proveedores Adjudicados por RUC y AÑO');
             // // // // ocultamos modal       
             $('#proveedoradjudicadoxrucanio').modal('hide')  
-            // alert(cantidad);        
+            $('.overlay').hide();        
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#proveedoradjudicadoxrucanio').modal('hide')
                       }
 
   });
@@ -1362,6 +1369,7 @@ function proveeadjxrucyanio()
 function conadis()
 {
   var dni=$("#dniconadis").val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('conadis') }}/'+dni,
@@ -1391,11 +1399,13 @@ function conadis()
             $('#textoresul').html(' - Consulta CONADIS');
             // // // ocultamos modal       
             $('#conadis').modal('hide')          
-            // // $("#ndni" ).focus();
+            $('.overlay').hide();;
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#conadis').modal('hide')
                       }
 
   });
@@ -1404,6 +1414,7 @@ function conadis()
 function juntos()
 {
   var dni=$("#dnijuntos").val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('juntos') }}/'+dni,
@@ -1431,11 +1442,13 @@ function juntos()
             $('#textoresul').html(' - Consulta JUNTOS');
                   
             $('#juntos').modal('hide'); 
-            
+            $('.overlay').hide();
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#juntos').modal('hide'); 
                       }
 
   });
@@ -1444,6 +1457,7 @@ function juntos()
 function pension65()
 {
   var dni=$("#dnipension65").val();
+  $('.overlay').show();
   $.ajax({
           type:'GET',
           url:'{{ url('pension') }}/'+dni,
@@ -1473,14 +1487,100 @@ function pension65()
             $('#textoresul').html(' - Consulta PENSION65');
                   
             $('#pension65').modal('hide'); 
-            
+            $('.overlay').hide();
             
           },
               error: function(e){
-
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#pension65').modal('hide');
                       }
 
   });
+}
+
+function qaliwarma()
+{
+  departamneto=$("#depart").val();
+  provincia=$("#prov").val();
+  distrito=$("#dist").val();
+  nivel=$("#niveducat").val();
+  $('.overlay').show();
+  $.ajax({
+          type:'GET',
+          url:'qaliwarma?depa='+departamneto+'&prov='+provincia+'&dist='+distrito+'&nivel='+nivel,
+          dataType: "json",
+          success:function(data)
+          {  
+            lista=data.getIIEEsResponse.getIIEEsResult;
+            dato=lista.listIIEEsResponse.BE_IIEEsEntity
+            alert(dato.length);
+            // alert(data['dni']);
+            tabla='<table class="table table-bordered table-sm table-hover">';
+            
+            tabla+="<tr><td>Identificador de propuesta:</td><td>"+data.idPropuesta+"</td></tr>";
+            tabla+="<tr style='background:#ccc;'><td>Expediente:</td><td>"+data.idExpediente+"</td></tr>";
+            tabla+="<tr><td>Ruc:</td><td>"+data.ruc+"</td></tr>";
+            tabla+="<tr><td>Nombre Razon social:</td><td>"+data.nombreRazonSocial+"</td></tr>";
+            tabla+="<tr><td>Proveedor que presenta propuesta en consorcio:</td><td>"+data.esConsorcio+"</td></tr>";
+            tabla+="<tr><td>RUC de la entidad convocante:</td><td>"+data.rucEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nombre de la entidad convocante:</td><td>"+data.nombreEntidadConvocante+"</td></tr>";
+            tabla+="<tr><td>Nomenclatura del procedimiento de selección:</td><td>"+data.nomenclaturaProceso+"</td></tr>";
+            tabla+="<tr><td>Tipo de compra o selección:</td><td>"+data.tipoCompraSeleccion+"</td></tr>";
+            tabla+="<tr><td>objetoContratacion:</td><td>"+data.objetoContratacion+"</td></tr>";
+            tabla+="<tr><td>descripcionObjetoContratacion:</td><td>"+data.descripcionObjetoContratacion+"</td></tr>";
+            tabla+="<tr><td>Nombre de moneda:</td><td>"+data.moneda+"</td></tr>";
+            tabla+="<tr><td>Monto del valor referencial:</td><td>"+data.valorReferencial+"</td></tr>";
+            tabla+="<tr><td>Monto del valor referencial equivalente en soles:</td><td>"+data.valorReferencialEnSoles+"</td></tr>";
+            tabla+="<tr><td>Monto del valor adjudicado:</td><td>"+data.valorAdjudicadoTotal+"</td></tr>";
+            tabla+="<tr><td>Monto del valor adjudicado equivalente en soles:</td><td>"+data.valorAdjudicadoTotalEnSoles+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora de la publicación del proceso:</td><td>"+data.fechaYHoraPublicacion+"</td></tr>";
+            tabla+="<tr><td>Fecha y hora de la publicación en caso el procedimiento el procedimiento de selección haya sufrido una nulidad y posterior reinicio a una etapa distinta a la convocatoria :</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Consulta de Consulta de Qaliwarma');
+            // ocultamos modal       
+            $('#Qaliwarma').modal('hide') 
+            $('.overlay').hide();
+            
+          },
+              error: function(e){
+                $('.resultado').html('No se pudo conectar al PIDE*(Plataforma de Interoperabilidad del Estado)');
+                $('.overlay').hide();
+                $('#Qaliwarma').modal('hide') 
+                      }
+
+  });
+}
+// para desarrollador
+function desarrollador()
+{
+  $('.overlay').show();
+  tabla='<table class="table table-bordered table-sm table-hover">';
+            
+            tabla+="<tr><td>1</td><td><small>RENIEC</small><br><small>http://goredigital.regionhuanuco.gob.pe/reniec/<b>nrodni<b></small></td></tr>";
+            tabla+="<tr><td>2</td><td><small>SIS</small><br><small>http://goredigital.regionhuanuco.gob.pe/sis/<b>nrodni<b></small></td></tr>";
+            tabla+="<tr><td>3</td><td><small>ESSALUD</small><br><small>http://goredigital.regionhuanuco.gob.pe/essalud/<b>nrodni<b></small></td></tr>";
+            tabla+="<tr><td>4</td><td><small>SUNAT</small><br><small>http://goredigital.regionhuanuco.gob.pe/sunat/<b>nruc<b></small></td></tr>";
+            tabla+="<tr><td>5</td><td><small>Antecedentes judiciales:</small><br><small>http://goredigital.regionhuanuco.gob.pe/antecedentejudicial/<b>Appaterno</b>/<b>Apmaterno</b>/<b>Nombres</b></small></td></tr>";
+            tabla+="<tr><td>6</td><td><small>SUNARP</small><br><small class='text-danger'>En adecuacion por cambio de webservice en la PIDE</small></td></tr>";
+            tabla+="<tr><td>7</td><td><small>PROVEEDOR SANCIONADO-OSCE</small><br><small>http://goredigital.regionhuanuco.gob.pe/proveedorsancionado/<b>nruc<b></small></td></tr>";
+            tabla+="<tr><td>8</td><td><small>Proceso seleccion por expediente-OSCE</small><br><small>http://goredigital.regionhuanuco.gob.pe/busprocselxexpediente/<b>Nroexpediente<b></small></td></tr>";
+            tabla+="<tr><td>9</td><td><small>Proceso seleccion (Ruc,mes y año) -OSCE</small><br><small>http://goredigital.regionhuanuco.gob.pe/busprocselxrucaniomes//<b>ruc</b>/<b>año</b>/<b>Nromes</b></small></td></td></tr>";
+            tabla+="<tr><td>10</td><td><small>Proveedor adjudicado por expediente-OSCE</small><br><small>http://goredigital.regionhuanuco.gob.pe/proveedoradjudicadoxexpediente/<b>Nroexpediente<b></small></td></td></tr>";
+            tabla+="<tr><td>11</td><td><small>Proveedor adjudicado por Ruc y Año-OSCE</small><br><small>http://goredigital.regionhuanuco.gob.pe/proveeadjxrucyanio/<b>Ruc<b>/<b>Año<b></small></td></td></tr>";
+            tabla+="<tr><td>12</td><td><small>SUNEDU</small><br><small>http://goredigital.regionhuanuco.gob.pe/sunedu/<b>Nrodni<b></small></td></td></tr>";
+            tabla+="<tr><td>13</td><td><small>GRADOS Y TITULOS DE INSTITUTOS TECNOLOGICOS Y PEDAGOGICOS POR DNI</small><br><small>http://goredigital.regionhuanuco.gob.pe/gradoinstituto/<b>Nrodni<b></small></td></td></tr>";
+            tabla+="<tr><td>14</td><td><small>Información de colegio nacional y particular</small><br><small>http://goredigital.regionhuanuco.gob.pe/infocolnacioparticular/<b>Codmodular<b></small></td></td></tr>";
+            tabla+="<tr><td>15</td><td><small>CONADIS</small><br><small>http://goredigital.regionhuanuco.gob.pe/conadis/<b>Nrodni<b></small></td></td></tr>";
+            tabla+="<tr><td>16</td><td><small>PROGRAMA JUNTOS</small><br><small>http://goredigital.regionhuanuco.gob.pe/juntos/<b>Nrodni<b></small></td></td></tr>";
+            tabla+="<tr><td>17</td><td><small>PENSION 65</small><br><small>http://goredigital.regionhuanuco.gob.pe/pension/<b>Nrodni<b></small></td></td></tr>";
+            tabla+="<tr><td>18</td><td><small>QALIWARMA</small><br><small>http://goredigital.regionhuanuco.gob.pe/qaliwarma?depa=HUANUCO&prov=HUANUCO&dist=HUANUCO&nivel=SECUNDARIA(INICIAL,PRIMARIA,SECUNDARIA)</small></td></td></tr>";
+
+            $('.resultado').html(tabla);
+            $('#textoresul').html(' - Integracion para el  desarrollador');
+            $('.overlay').hide();
+
 }
 </script>
 @endsection
