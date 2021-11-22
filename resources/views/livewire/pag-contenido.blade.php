@@ -135,41 +135,39 @@
                                    @foreach($ticketcreados as $tickets)
                                            @switch($tickets->estado_atencion)
                                                @case('ENVIADO')
-                                                   @php $estado='<span class="right badge badge-danger">ESTADO: '.$tickets->estado_atencion.'</span><br><small><strong>TIPO PRIORIDAD</strong> : '.$tickets->prioridad.'</small>'; 
-                                                       $boton='<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#recpecionar" wire:click="validticket('.$tickets->idticket.')">Recepcionar</button>';
-                                                       $fecharecpcion='';
-                                                   @endphp
+                                                    @php 
+                                                            $estado='<span class="right badge badge-danger">ESTADO: '.$tickets->estado_atencion.'</span><br><small><strong>TIPO PRIORIDAD</strong> : '.$tickets->prioridad.'</small>'; 
+                                                            $boton='<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#recpecionar" wire:click="validticket('.$tickets->idticket.')">Recepcionar</button>';
+                                                            $fecharecpcion='';
+                                                    @endphp
                                                    @break
                                                @case('RECEPCIONADO')
-                                                   @php 
-                                                  
-                                                   $estado='<span class="right badge badge-primary">ESTADO: '.$tickets->estado_atencion.'</span><br><small><strong>TIPO PRIORIDAD</strong> : '.$tickets->prioridad.'</small><br><small><strong>Será atendido por</strong> : '.$tickets->nombre_atencion.'</small>';
-                                                   
-                                                    $boton='<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#atender" wire:click="validticket('.$tickets->idticket.')">Finalizar</button>';
-                                                    $fecharecpcion='<br><small> <strong>Recepción: </strong>'.date("d M g:ia", strtotime($tickets->fecha_recepcion)).'</small>';
-                                                   @endphp
+                                                    @php                                                     
+                                                            $estado='<span class="right badge badge-primary">ESTADO: '.$tickets->estado_atencion.'</span><br><small><strong>TIPO PRIORIDAD</strong> : '.$tickets->prioridad.'</small><br><small><strong>Será atendido por</strong> : '.$tickets->nombre_atencion.'</small>';
+                                                    
+                                                            //$boton='<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#atender" wire:click="validticket('.$tickets->idticket.')">Finalizar</button>';
+                                                            $boton2='<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#atender" wire:click="validticket('.$tickets->idticket.')">Finalizar</button>';
+                                                            $fecharecpcion='<br><small> <strong>Recepción: </strong>'.date("d M g:ia", strtotime($tickets->fecha_recepcion)).'</small>';
+                                                    @endphp
                                                    @break
-                                               {{-- @case('FINALIZADO')
-                                                   @php $estado='<span class="right badge badge-success">Estado: '.$tickets->estado_atencion.'</span>';@endphp
-                                                   @break
-                                               @default --}}
                                                    
                                            @endswitch
+                                           {{-- yo mismo no me puedo atender --}}
                                            @if($tickets->iduser==Auth::user()->id)
                                                        <tr class="bg-gray disabled color-palette"><td>{{ str_pad($tickets->idticket,6,"0",STR_PAD_LEFT)  }} </td>
-                                                        <td><small><strong>Usuario</strong>:{{ $tickets->nombre_pedido }},</small><small class="right badge badge-primary"><strong>Celular:</strong>{{ $tickets->adm_telefono }}</small><br>
-                                                            <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small><br>
-                                                            <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small></td>
-                                                        <td>{!! $estado??'' !!}<br><small><strong>Pedido: </strong>{{ $tickets->detalleayuda }}</small></td>
-                                                        <td><small><strong>Registrado: </strong> {{ date("d M g:ia", strtotime($tickets->fechaticket)) }}</small>{!! $fecharecpcion !!}</td>
+                                                            <td><small><strong>Usuario</strong>:{{ $tickets->nombre_pedido }},</small><small class="right badge badge-primary"><strong>Celular:</strong>{{ $tickets->adm_telefono }}</small><br>
+                                                                <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small><br>
+                                                                <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small></td>
+                                                            <td>{!! $estado??'' !!}<br><small><strong>Pedido: </strong>{{ $tickets->detalleayuda }}</small></td>
+                                                            <td><small><strong>Registrado: </strong> {{ date("d M g:ia", strtotime($tickets->fechaticket)) }}</small>{!! $fecharecpcion !!}</td>
                                                            <td>
-                                                               @if($tickets->idsoporte==Auth::user()->id)
-                                                                    @hasanyrole('Superadmin|Soporte|Administrador')
+                                                               {{-- solo los que hacen soporte o administrador o superadmin pueden recepcionar el tramite --}}
+                                                               {{-- @if($tickets->idsoporte==Auth::user()->id)
+                                                                    @hasanyrole('Superadmin|Soporte|Administrador') 
                                                                     {!! $boton ?? ''!!} 
-                                                                    {{-- @else
-                                                                        no puedo editar --}}
+
                                                                     @endhasanyrole  
-                                                               @endif    
+                                                               @endif     --}}
                                                            </td>
                                                        </tr> 
                                                    @else
@@ -186,8 +184,16 @@
                                                                     no puedo editar --}}
                                                                 {{-- @endhasanyrole      --}}
                                                                 @can('Ticket_editar')
-                                                                {!! $boton ?? ''!!} 
+                                                                    @if($tickets->idsoporte==Auth::user()->id)
+                                                                    
+                                                                        {!! $boton2 ?? ''!!}
+                                                                       
+                                                                    @endif
+                                                                    @if($tickets->idsoporte==null)
+                                                                    {!! $boton ?? ''!!}
+                                                                    @endif
                                                                 @endcan
+                                                                
                                                        </td>
                                                    </tr>
                                             @endif
