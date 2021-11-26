@@ -33,7 +33,7 @@
                     <!-- /.info-box-content -->
                 </div>
 
-                <div class="card card-danger collapsed-card">
+                <div class="card card-info collapsed-card">
                     <div class="card-header p-2">
                         <h3 class="card-title">Ver colaboradores de soporte.</h3>
 
@@ -48,7 +48,7 @@
                         <p>Personal encargado de dar soporte en temas de redes, sistemas, acceso y equipos tecnológicos</p>
                         <table class="table table-sm">
                             @foreach($usersoporte as $keyuser)
-                            <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="{{ Storage::url($keyuser->avatar) }}" width="20"></td><td>{{ $keyuser->adm_name }} {{ $keyuser->adm_lastname }} <spa class=" badge badge-info float-right">{{ $keyuser->adm_telefono }}</span></td></tr>
+                            <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="{{ Storage::url($keyuser->avatar) }}" width="20"></td><td><small>{{ $keyuser->adm_name }} {{ $keyuser->adm_lastname }} <spa class=" badge badge-info float-right">{{ $keyuser->adm_telefono }}</span></small> </td></tr>
                             @endforeach
                         
                         {{-- <tr><td class="list-inline-item"><img alt="Avatar" class="table-avatar" src="../../dist/img/avatar4.png" width="20"></td><td>Adolfo H. Carlos Mendoza</td></tr>
@@ -139,15 +139,21 @@
                                                             $estado='<span class="right badge badge-danger">ESTADO: '.$tickets->estado_atencion.'</span><br><small><strong>TIPO PRIORIDAD</strong> : '.$tickets->prioridad.'</small>'; 
                                                             $boton='<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#recpecionar" wire:click="validticket('.$tickets->idticket.')">Recepcionar</button>';
                                                             $fecharecpcion='';
+                                                            $tiemportranscurrido='';
                                                     @endphp
                                                    @break
                                                @case('RECEPCIONADO')
-                                                    @php                                                     
+                                                    @php           
+                                                    $creado = Carbon\Carbon::parse($tickets->fechaticket);
+                                                    $recpecionadoss = Carbon\Carbon::parse($tickets->fecha_recepcion);
+                                                    $fechaatendido=$creado->diffInDays($recpecionadoss);
+
                                                             $estado='<span class="right badge badge-primary">ESTADO: '.$tickets->estado_atencion.'</span><br><small><strong>TIPO PRIORIDAD</strong> : '.$tickets->prioridad.'</small><br><small><strong>Será atendido por</strong> : '.$tickets->nombre_atencion.'</small>';
                                                     
                                                             //$boton='<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#atender" wire:click="validticket('.$tickets->idticket.')">Finalizar</button>';
                                                             $boton2='<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#atender" wire:click="validticket('.$tickets->idticket.')">Finalizar</button>';
                                                             $fecharecpcion='<br><small> <strong>Recepción: </strong>'.date("d M g:ia", strtotime($tickets->fecha_recepcion)).'</small>';
+                                                            $tiemportranscurrido='<br><small> <strong>Transcurrido: </strong>'.$fechaatendido.' dias</small>';
                                                     @endphp
                                                    @break
                                                    
@@ -159,7 +165,7 @@
                                                                 <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small><br>
                                                                 <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small></td>
                                                             <td>{!! $estado??'' !!}<br><small><strong>Pedido: </strong>{{ $tickets->detalleayuda }}</small></td>
-                                                            <td><small><strong>Registrado: </strong> {{ date("d M g:ia", strtotime($tickets->fechaticket)) }}</small>{!! $fecharecpcion !!}</td>
+                                                            <td><small><strong>Registrado: </strong> {{ date("d M g:ia", strtotime($tickets->fechaticket)) }}</small><span class="right badge badge-info">{{ $diff = Carbon\Carbon::parse($tickets->fechaticket)->diffForHumans() }}</span>{!! $fecharecpcion !!}{!! $tiemportranscurrido !!}</td>
                                                            <td>
                                                                {{-- solo los que hacen soporte o administrador o superadmin pueden recepcionar el tramite --}}
                                                                {{-- @if($tickets->idsoporte==Auth::user()->id)
@@ -176,7 +182,7 @@
                                                         <small><strong>cargo</strong>: {{ $tickets->adm_cargo }}</small><br>
                                                         <small> <strong>Unidad</strong>: {{ $tickets->depe_nombre }}</small></td>
                                                     <td>{!! $estado??'' !!}<br><small><strong>Pedido: </strong>{{ $tickets->detalleayuda }}</small></td>
-                                                    <td><small> <strong>Registrado: </strong>{!! date("d M g:ia", strtotime($tickets->fechaticket)) !!}</small>{!! $fecharecpcion !!}</td>
+                                                    <td><small><strong>Registrado: </strong> {{ date("d M g:ia", strtotime($tickets->fechaticket)) }}</small><span class="right badge badge-info">{{ $diff = Carbon\Carbon::parse($tickets->fechaticket)->diffForHumans() }}</span>{!! $fecharecpcion !!}{!! $tiemportranscurrido !!}</td>
                                                        <td>
                                                         {{-- @hasanyrole('Superadmin|Soporte|Administrador') --}}
                                                                 {{-- {!! $boton ?? ''!!}  --}}
@@ -276,7 +282,7 @@
         <!-- /.modal-dialog -->
     </div>
 
-    {{-- modal sistemas--}}
+    {{-- modal creacion de tcicket nuievo--}}
     <div wire:ignore.self class="modal fade" id="sistemas" >
         <div class="modal-dialog">
         <div class="modal-content">
@@ -334,7 +340,7 @@
             </div>
             <div class="modal-footer justify-content-between">
             <button  class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <button  class="btn btn-primary" wire:click="nuevoticket({{ Auth::user()->id }},{{ Auth::user()->depe_id }})">Guardar</button>
+            <button  class="btn btn-primary reproductor" wire:click="nuevoticket({{ Auth::user()->id }},{{ Auth::user()->depe_id }})">Guardar</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -342,7 +348,8 @@
         <!-- /.modal-dialog -->
     </div>
 {{-- {{ $ticketenproceso }} --}}
-
+{{-- <button class="reproductor">Reproduce tu audio</button> --}}
+<audio src=""></audio>
 </div>
 @section('script')
 <script>
@@ -394,6 +401,17 @@
 
 
 
+  </script>
+  
+  <script>
+      let boton = document.querySelector(".reproductor")
+      let audioEtiqueta = document.querySelector("audio")
+  
+      boton.addEventListener("click", () => {
+        audioEtiqueta.setAttribute("src", "dist/img/sms.mp3")
+        audioEtiqueta.play()
+        console.log(`Reproduciendo: ${audioEtiqueta.src}`)
+      })
   </script>
   {{-- <script>
 

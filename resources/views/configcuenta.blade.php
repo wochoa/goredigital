@@ -39,47 +39,57 @@
               </div><!-- /.card-header -->
               <div class="card-body">
                 <form class="form-horizontal">
-                  <div class="form-group row">
-                    <label for="inputName" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name" value="{{ $datos[0]->adm_name  }}" disabled>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inputName" class="col-form-label">Nombre</label>
+                        <input type="email" class="form-control form-control-sm" id="inputName" placeholder="Name" value="{{ $datos[0]->adm_name  }}" disabled>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="inputName" class="col-form-label">Apellidos</label>
+                      <input type="email" class="form-control form-control-sm" id="inputName" placeholder="Name" value="{{ $datos[0]->adm_lastname  }}" disabled>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="inputName" class="col-form-label">Usuario</label>
+                        <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="Email" value="{{ $datos[0]->adm_email  }}" disabled>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <label for="inputName" class="col-form-label">DNI</label>
+                      <input type="text" class="form-control form-control-sm" id="inputName2" placeholder="Name" value="{{ $datos[0]->adm_dni  }}" disabled>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="inputName" class="col-form-label">Telefono</label>
+                        <input type="text" class="form-control form-control-sm" id="inputName2" placeholder="Name" value="{{ $datos[0]->adm_telefono  }}" disabled>
+                      </div>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputName" class="col-sm-2 col-form-label">Apellidos</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="Name" value="{{ $datos[0]->adm_lastname  }}" disabled>
+                    <label for="inputName" class="col-sm-2 form-label">Mi Cargo:</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control form-control-sm" id="inputName2" placeholder="Name" value="{{ $datos[0]->adm_cargo  }}" disabled>
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{ $datos[0]->adm_email  }}" disabled>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName2" placeholder="Name" value="{{ $datos[0]->adm_dni  }}" disabled>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="inputExperience" class="col-sm-2 col-form-label">Telefono</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName2" placeholder="Name" value="{{ $datos[0]->adm_telefono  }}" disabled>
-                    </div>
-                  </div>
+                  
+                  
+                  
+                  
                   <div class="dropdown-divider"></div>
                   <div class="form-group row">
                     <label for="inputSkills" class="col-sm-2 col-form-label">Dependencia labores</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="{{ $datos[0]->depe_nombre  }}" disabled>
+                      <input type="text" class="form-control form-control-sm" id="inputSkills" placeholder="Skills" value="{{ $datos[0]->depe_nombre  }}" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputSkills" class="col-sm-2 col-form-label">Representate dependencia</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="{{ $datos[0]->depe_representante  }}" disabled>
+                      <input type="text" class="form-control form-control-sm" id="inputSkills" placeholder="Skills" value="{{ $datos[0]->depe_representante  }}" disabled>
                     </div>
                   </div>
 

@@ -23,17 +23,7 @@
 
           <p class="text-muted text-center">{{ Auth::user()->adm_cargo }}</p>
 
-          {{-- <ul class="list-group list-group-unbordered mb-3">
-            <li class="list-group-item">
-              <b>Oficina</b> <a class="float-right">{{ $datos[0]->depe_nombre }}</a>
-            </li>
-            <li class="list-group-item">
-              <b>DNI</b> <a class="float-right">{{ $datos[0]->dni }}</a>
-            </li>
-            <li class="list-group-item">
-              <b>Telefono</b> <a class="float-right">{{ $datos[0]->telefono }}</a>
-            </li>
-          </ul> --}}
+          
 
           <button class="btn btn-primary btn-block" wire:click="cargaavatar" data-toggle="modal" data-target="#avatar"><b>Cargar nueva foto</b></button>
           
