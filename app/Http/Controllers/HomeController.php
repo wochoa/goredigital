@@ -171,5 +171,21 @@ class HomeController extends Controller
     {
         return view('gestionportales');
     }
+    public function exportdfatenciones(Request $request)
+    {
+        $fecha_inicial=$request->fecha1;
+        $fecha_final=$request->fecha2;
+
+        $iduser=Auth::user()->id;
+        $datos=Ticket::where('idsoporte',$iduser)->whereBetween('fecha_resuelto', [$fecha_inicial, $fecha_final])->get();
+
+
+         //return view('exportpdfatenciones',compact('datos'));
+         //return \PDF::loadView('exportpdfatenciones', $datos)->setPaper('a4', 'landscape')->download('archivo.pdf');
+         $pdf=\PDF::loadView ('exportpdfatenciones',compact('datos'));
+         return $pdf->stream();
+       
+
+    }
 
 }

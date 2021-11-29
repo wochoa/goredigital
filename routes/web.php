@@ -51,6 +51,7 @@ route::get('/rolpermiso','HomeController@rolpermiso')->name('rolpermiso');
 route::get('/permisos','HomeController@permisos')->name('permisos');
 
 route::get('/reporteetnciones','HomeController@reporteetnciones')->name('reporteetnciones');
+route::post('exportdfatenciones','HomeController@exportdfatenciones')->name('exportdfatenciones');
 
 //gestion portales
 route::get('/gestionportales','HomeController@gestionportales')->name('gestionportales');

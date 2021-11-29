@@ -32,19 +32,24 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <div class="form-group row">
-                    <div class="col-md-3">
-                      <label for="">Fecha inicial</label>
-                      <input type="date" name="" id="" class="form-control form-control-sm">                      
+                  
+                    <form action="{{ route('exportdfatenciones') }}" method="post">
+                      <div class="form-group row">
+                      @csrf
+                      <div class="col-md-3">
+                        <label for="">Fecha inicial</label>
+                        <input type="date" name="fecha1" class="form-control form-control-sm">                      
+                      </div>
+                      <div class="col-md-3">
+                        <label for="">Fecha inicial</label>
+                        <input type="date" name="fecha2"  class="form-control form-control-sm">
+                      </div>
+                      <div class="col-md-3 mt-4 mb-2">
+                        <button class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Descargar</button>
+                      </div>
                     </div>
-                    <div class="col-md-3">
-                      <label for="">Fecha inicial</label>
-                      <input type="date" name="" id="" class="form-control form-control-sm">
-                    </div>
-                    <div class="col-md-3 mt-4 mb-2">
-                      <button class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Descargar</button>
-                    </div>
-                  </div>
+                    </form>
+                  
 
                     @if(count($datos)>0)
 
