@@ -65,7 +65,7 @@
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="https://gestionportales.regionhuanuco.gob.pe" class="small-box-footer" target="_blanck">Ir a GP <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="http://gestionportales.regionhuanuco.gob.pe" class="small-box-footer" target="_blanck">Ir a GP <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
