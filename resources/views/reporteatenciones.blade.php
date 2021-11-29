@@ -45,7 +45,7 @@
                         <input type="date" name="fecha2"  class="form-control form-control-sm">
                       </div>
                       <div class="col-md-3 mt-4 mb-2">
-                        <button class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Descargar</button>
+                        <button type="submit" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Descargar</button>
                       </div>
                     </div>
                     </form>
