@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-    <meta name="description" content="goredigital, Gobierno Digital,gobierno digital,gobierno regional hu8anuco">
+    <meta name="description" content="goredigital, Gobierno Digital,gobierno digital,Gobierno Regional Huánuco">
     <meta name="keywords" content="goredigital,Gobierno Digital">
     <meta name="author" content="wochoa">
     <title>GoreDigital</title>
