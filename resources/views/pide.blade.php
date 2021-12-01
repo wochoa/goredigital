@@ -148,7 +148,7 @@
               <div class="modal-body">                  
                       <div class="form-group">
                           <label for="exampleInputEmail1">Ingresar DNI</label>
-                          <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="ndni">
+                          <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="ndni">
                       </div>  
               </div>
               <div class="modal-footer justify-content-between">
@@ -176,7 +176,7 @@
               <p>Ejemplo: <b>22484119</b></p>                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="numdni">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="numdni">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -201,7 +201,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="essaluddni">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="essaluddni">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -227,7 +227,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar RUC</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="ruc">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE RUC" id="ruc">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -252,7 +252,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="dnisunedu">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="dnisunedu">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -283,7 +283,7 @@
                       </p>
                       <hr>
                         <label for="exampleInputEmail1">Ingresar RUC</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="rucsancionado">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE RUC" id="rucsancionado">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -309,7 +309,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar Expediente(Ejemplo:429538)</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE EXPEDIENTE" id="expedinteproceso">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE EXPEDIENTE" id="expedinteproceso">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -341,7 +341,7 @@
                         mes: 02
                       </p>
                         <label for="exampleInputEmail1">Ingresar RUC</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE RUC" id="rucprocesosel">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE RUC" id="rucprocesosel">
                     </div>
                     <div class="form-group">
                      <div class="row">
@@ -412,7 +412,7 @@
                         Codigo modular del I.E.: 0214874
                       </p>
                         <label for="exampleInputEmail1">Código Modular de la Institución Educativa</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR EL CÓDIGO" id="codmod">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR EL CÓDIGO" id="codmod">
                     </div>
                     
  
@@ -440,7 +440,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar DNI(ejemplo:47643796)</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE DNI" id="dniinstitutos">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE DNI" id="dniinstitutos">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
@@ -505,7 +505,7 @@
             <div class="modal-body">                
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ingresar Expediente(Ejemplo:445241)</label>
-                        <input type="number" class="form-control form-control-sm"  placeholder="INGERSAR NUMERO DE EXPEDIENTE" id="proveadjxexpediente">
+                        <input type="number" class="form-control form-control-sm"  placeholder="INGRESAR NUMERO DE EXPEDIENTE" id="proveadjxexpediente">
                     </div>  
             </div>
             <div class="modal-footer justify-content-between">
