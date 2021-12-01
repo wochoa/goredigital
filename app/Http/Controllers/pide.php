@@ -131,7 +131,7 @@ class pide extends Controller
   public function proveedoradjudicadoxexpediente($exp)
   {
       //https://ws3.pide.gob.pe/Rest/ROsce/AdjudicadoXExpediente?idExpediente=445241&out=json
-      $url='http://ws3.pide.gob.pe/Rest/ROsce/AdjudicadoXExpediente?idExpediente='.$exp.'&out=json';
+      $url='https://ws3.pide.gob.pe/Rest/ROsce/AdjudicadoXExpediente?idExpediente='.$exp.'&out=json';
       $wsdl = getRemoteFile($url);
       $array=json_decode($wsdl);
       $datos=$array->obtenerProcesoAdjudicadoPorExpedienteResponse->output;

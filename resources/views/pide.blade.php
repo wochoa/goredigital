@@ -1302,7 +1302,7 @@ function proveedoradjudicadoxexpediente()
             tabla+="<tr><td>Fecha y hora de la publicación en caso el procedimiento el procedimiento de selección haya sufrido una nulidad y posterior reinicio a una etapa distinta a la convocatoria :</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
 
             $('.resultado').html(tabla);
-            $('#textoresul').html(' - Consulta de Consulta de Proveedores Adjudicados por Expediente');
+            $('#textoresul').html(' - Consulta de Proveedores Adjudicados por Expediente');
             // // // // ocultamos modal       
             $('#proveedoradjudicadoxexpe').modal('hide')  
             $('.overlay').hide();       
@@ -1352,7 +1352,7 @@ function proveeadjxrucyanio()
             tabla+="<tr><td>Fecha y hora de la publicación en caso el procedimiento el procedimiento de selección haya sufrido una nulidad y posterior reinicio a una etapa distinta a la convocatoria :</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
 
             $('.resultado').html(tabla);
-            $('#textoresul').html(' - Consulta de Consulta de Proveedores Adjudicados por RUC y AÑO');
+            $('#textoresul').html(' - Consulta de Proveedores Adjudicados por RUC y AÑO');
             // // // // ocultamos modal       
             $('#proveedoradjudicadoxrucanio').modal('hide')  
             $('.overlay').hide();        
@@ -1514,31 +1514,40 @@ function qaliwarma()
           {  
             lista=data.getIIEEsResponse.getIIEEsResult;
             dato=lista.listIIEEsResponse.BE_IIEEsEntity
-            alert(dato.length);
+            //alert(dato.length);
             // alert(data['dni']);
-            tabla='<table class="table table-bordered table-sm table-hover">';
-            
-            tabla+="<tr><td>Identificador de propuesta:</td><td>"+data.idPropuesta+"</td></tr>";
-            tabla+="<tr style='background:#ccc;'><td>Expediente:</td><td>"+data.idExpediente+"</td></tr>";
-            tabla+="<tr><td>Ruc:</td><td>"+data.ruc+"</td></tr>";
-            tabla+="<tr><td>Nombre Razon social:</td><td>"+data.nombreRazonSocial+"</td></tr>";
-            tabla+="<tr><td>Proveedor que presenta propuesta en consorcio:</td><td>"+data.esConsorcio+"</td></tr>";
-            tabla+="<tr><td>RUC de la entidad convocante:</td><td>"+data.rucEntidadConvocante+"</td></tr>";
-            tabla+="<tr><td>Nombre de la entidad convocante:</td><td>"+data.nombreEntidadConvocante+"</td></tr>";
-            tabla+="<tr><td>Nomenclatura del procedimiento de selección:</td><td>"+data.nomenclaturaProceso+"</td></tr>";
-            tabla+="<tr><td>Tipo de compra o selección:</td><td>"+data.tipoCompraSeleccion+"</td></tr>";
-            tabla+="<tr><td>objetoContratacion:</td><td>"+data.objetoContratacion+"</td></tr>";
-            tabla+="<tr><td>descripcionObjetoContratacion:</td><td>"+data.descripcionObjetoContratacion+"</td></tr>";
-            tabla+="<tr><td>Nombre de moneda:</td><td>"+data.moneda+"</td></tr>";
-            tabla+="<tr><td>Monto del valor referencial:</td><td>"+data.valorReferencial+"</td></tr>";
-            tabla+="<tr><td>Monto del valor referencial equivalente en soles:</td><td>"+data.valorReferencialEnSoles+"</td></tr>";
-            tabla+="<tr><td>Monto del valor adjudicado:</td><td>"+data.valorAdjudicadoTotal+"</td></tr>";
-            tabla+="<tr><td>Monto del valor adjudicado equivalente en soles:</td><td>"+data.valorAdjudicadoTotalEnSoles+"</td></tr>";
-            tabla+="<tr><td>Fecha y hora de la publicación del proceso:</td><td>"+data.fechaYHoraPublicacion+"</td></tr>";
-            tabla+="<tr><td>Fecha y hora de la publicación en caso el procedimiento el procedimiento de selección haya sufrido una nulidad y posterior reinicio a una etapa distinta a la convocatoria :</td><td>"+data.fechaYHoraPublicacionReinicio+"</td></tr>";
+            tabla1='<table class="table table-bordered table-sm table-hover">';
+            tabla1='';
+            cantidad=dato.length;
+            //alert(dato[0].centro_poblado)
+            for(i=0;i<cantidad;i++)
+            {tabla1+='<tr><td>';
 
-            $('.resultado').html(tabla);
-            $('#textoresul').html(' - Consulta de Consulta de Qaliwarma');
+                tabla='<table class="table table-sm">';
+                tabla+="<tr><td>Anexo:</td><td>"+dato[i].anexo+"</td></tr>";
+                tabla+="<tr class='bg-info'><td>centro poblado:</td><td>"+dato[i].centro_poblado+"</td></tr>";
+                tabla+="<tr><td>Codigo modular:</td><td>"+dato[i].cod_modular+"</td></tr>";
+                tabla+="<tr><td>Departamento:</td><td>"+dato[i].departamento+"</td></tr>";
+                tabla+="<tr><td>Provincia:</td><td>"+dato[i].provincia+"</td></tr>";
+                tabla+="<tr><td>Distrito:</td><td>"+dato[i].direccion+"</td></tr>";
+                tabla+="<tr><td>Direccción:</td><td>"+dato[i].distrito+"</td></tr>";
+                tabla+="<tr><td>Modalidad de atención:</td><td>"+dato[i].modalidad_atencion+"</td></tr>";
+                tabla+="<tr><td>Nivel educativo:</td><td>"+dato[i].nivel_educativo+"</td></tr>";
+                tabla+="<tr><td>Nombre:</td><td>"+dato[i].nombre+"</td></tr>";
+                tabla+="<tr><td>Numero de alumnos:</td><td>"+dato[i].nro_alumnos+"</td></tr>";
+                tabla+="<tr><td>RDE:</td><td>"+dato[i].rde+"</td></tr>";
+                tabla+="<tr><td>Ubigeo:</td><td>"+dato[i].ubigeo+"</td></tr>";
+                tabla+="</table>";
+
+                tabla1+=tabla+'</td></tr>';
+                
+            }
+            tabla1+='</table>';
+            
+           text="Cantidad de resultado:"+cantidad+"<br>"+tabla1;
+
+            $('.resultado').html(text);
+            $('#textoresul').html(' - Consulta de Qaliwarma');
             // ocultamos modal       
             $('#Qaliwarma').modal('hide') 
             $('.overlay').hide();
