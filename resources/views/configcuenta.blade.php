@@ -35,7 +35,8 @@
           <div class="col-md-9">
             <div class="card">
               <div class="card-header p-2">
-                <h4>Mis datos</h4>
+                <h4 class="float-left">Mis datos</h4>
+                @livewire('updateuser',['nombre'=>$datos[0]->adm_name,'apellidos'=>$datos[0]->adm_lastname,'dni'=>$datos[0]->adm_dni,'telefono'=>$datos[0]->adm_telefono,'cargo'=>$datos[0]->adm_cargo ])
               </div><!-- /.card-header -->
               <div class="card-body">
                 <form class="form-horizontal">
@@ -75,6 +76,7 @@
                       <input type="text" class="form-control form-control-sm" id="inputName2" placeholder="Name" value="{{ $datos[0]->adm_cargo  }}" disabled>
                     </div>
                   </div>
+
                   
                   
                   

@@ -51,8 +51,8 @@
                       </div>
                       <div class="form-group">
                           <div class="custom-control custom-checkbox">
-                              <input class="custom-control-input" name="remember" id="remember" type="checkbox" tabindex="3" {{ old('remember') ? 'checked' : '' }}/>
-                              <label class="custom-control-label text-white" for="remember-me"> Recordarme</label>
+                            <input class="custom-control-checkbox" name="remember" id="remember" type="checkbox" tabindex="3" {{ old('remember') ? 'checked' : '' }}/>
+                            <label class=" text-white" for="remember-me"> Recordarme</label>
                           </div>
                       </div>
                       <button class="btn btn-dark btn-block" tabindex="4" type="submit"> Ingresar</button>

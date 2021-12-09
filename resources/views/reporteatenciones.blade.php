@@ -44,7 +44,7 @@
                         <label for="">Fecha inicial</label>
                         <input type="date" name="fecha2"  class="form-control form-control-sm">
                       </div>
-                      <div class="col-md-3 mt-4 mb-2">
+                      <div class="col-md-2 mt-4 mb-2">
                         <button type="submit" class="btn btn-danger btn-xs"><i class="fas fa-file-pdf"></i> Descargar</button>
                       </div>
                     </div>
@@ -55,11 +55,16 @@
 
                     <table class="table table-bordered table-hover table-sm table-striped">
                         <thead>
-                            <tr><td>CODIGO</td><td>ESTADO</td><td>DETALLE AYUDA</td><td>SOLUCION</td><td>FECHA_PEDIDO</td><td>FECHA_SOLUCION</td></tr>
+                            <tr><td>N</td><td>CODIGO</td><td>ESTADO</td><td>DETALLE AYUDA</td><td>SOLUCION</td><td>FECHA_PEDIDO</td><td>FECHA_SOLUCION</td></tr>
                         </thead>
                         <tbody>
-                            {{-- <tr><td></td><td></td></tr> --}}
+                            @php
+                              $i=0;
+                            @endphp
                             @foreach($datos as $tickets)
+                            @php
+                              $i++;
+                            @endphp
                                     @switch($tickets->estado_atencion)
                                         @case('ENVIADO')
                                             @php $estado='<span class="right badge badge-danger">'.$tickets->estado_atencion.'</span>'; @endphp
@@ -73,7 +78,7 @@
                                         @default
 
                                     @endswitch
-                                    <tr><td>{{ str_pad($tickets->idticket,6,"0",STR_PAD_LEFT)  }}</td><td>{!! $estado??'' !!}</td><td>{{ $tickets->detalleayuda }}</td><td>{!! $tickets->solucion??'<span class="badge badge-warning">En proceso de solución...</span>' !!}</td><td><small>{{ date("d M g:ia", strtotime($tickets->created_at)) }}</small></td><td>
+                                    <tr><td>{{ $i }}</td><td>{{ str_pad($tickets->idticket,6,"0",STR_PAD_LEFT)  }}</td><td>{!! $estado??'' !!}</td><td>{{ $tickets->detalleayuda }}</td><td>{!! $tickets->solucion??'<span class="badge badge-warning">En proceso de solución...</span>' !!}</td><td><small>{{ date("d M g:ia", strtotime($tickets->created_at)) }}</small></td><td>
                                         @if($tickets->fecha_resuelto)
                                         <small>{{ date("d M ", strtotime($tickets->fecha_resuelto)) }}</small><small>{{ date("g:ia", strtotime($tickets->hora_resuelto)) }}</small>
                                         @else

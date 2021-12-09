@@ -467,7 +467,7 @@
 
                   <div class="form-group">
                       <label for="exampleInputEmail1">Ingrese su DNI</label>
-                      <input type="number" class="form-control form-control-sm"  placeholder="Ingresar Apellido Paterno" id="dniaj">
+                      <input type="number" class="form-control form-control-sm"  placeholder="Ingresar su número DNI" id="dniaj">
                   </div>                
                   <div class="form-group" style="display: none;">
                       <label for="exampleInputEmail1">Apellido Paterno</label>
@@ -495,7 +495,7 @@
 <div class="modal fade" id="proveedoradjudicadoxexpe">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+        <div class="modal-header">
         <h6 class="modal-title">Proveedor adjudicado por expediente</h6>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
