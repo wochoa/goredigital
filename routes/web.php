@@ -25,7 +25,12 @@ Route::get('storage/avatar/{file}', function ($file) {
 	//return $rutaDeArchivo;
 	return response()->file($rutaDeArchivo);
 });
+Route::get('storage/comunicacion/{file}', function ($file) {
 
+	$rutaDeArchivo = storage_path() . '/app/comunicacion/' . $file;
+	//return $rutaDeArchivo;
+	return response()->file($rutaDeArchivo);
+});
 Route::get('/', 'HomeController@index')->name('main');
 Route::get('/register', function () {
     return redirect('/');
@@ -56,6 +61,10 @@ route::post('exportdfatenciones','HomeController@exportdfatenciones')->name('exp
 //gestion portales
 route::get('/gestionportales','HomeController@gestionportales')->name('gestionportales');
 
+// SISTEMAS PAD
+route::get('/regdenuncia','Pad@index')->name('regdenuncia');//
+route::get('/controlexpedientes','Pad@controlexpedientes')->name('controlexpedientes');
+route::get('/reporteexpediente','Pad@reporteexpediente')->name('reporteexpediente');
 // rutas para servicios pide
 // consulta pide
 route::get('/pide','pide@pide')->name('pide');

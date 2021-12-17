@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
   
   <!-- Ionicons -->
-  {{-- <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> --}}
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
 
@@ -99,7 +99,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
@@ -155,9 +155,9 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
-      </li>
+      </li> --}}
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -182,7 +182,7 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
+      </li> --}}
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#" role="button">
           <i class="far fa-user"></i>
@@ -322,6 +322,46 @@
               
             </ul>
           </li>
+          {{-- .............. --}}
+          @can('pagina_pad')
+          <li class="nav-item {{ menuopen(['regdenuncia','controlexpedientes','reporteexpediente'])}}">
+            <a href="#" class="nav-link {{ tituloactivo(['regdenuncia','controlexpedientes','reporteexpediente']) }}">
+              <i class="nav-icon fas fa-book-reader"></i>
+              <p>
+                Sistema PAD
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              @can('pagina_regexpediente')
+              <li class="nav-item">
+                <a href="{{ route('regdenuncia') }}" class="nav-link {{ activo('regdenuncia') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registro expediente</p>
+                </a>
+              </li>
+              @endcan
+              @can('pagina_controlexpedeinte')
+              <li class="nav-item">
+                <a href="{{ route('controlexpedientes') }}" class="nav-link {{ activo('controlexpedientes') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Control Expediente</p>
+                </a>
+              </li>
+              @endcan
+              @can('pagina_reporteexpediente')
+              <li class="nav-item">
+                <a href="{{ route('reporteexpediente') }}" class="nav-link {{ activo('reporteexpediente') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reporte control expediente</p>
+                </a>
+              </li>
+              @endcan
+              
+            </ul>
+          </li>
+          @endcan
+          {{-- .............. --}}
           @can('Pagina_chat')
           <li class="nav-item">
             <a href="{{ route('chat') }}" class="nav-link" {{ activo('chat') }}>
@@ -464,7 +504,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021 <a href="https://www.regionhuanuco.gob.pe">Gorehco</a>.</strong>
+    <strong>Copyright &copy; 2021 <a id="id01" data-toggle="modal" data-target="#modal-default">Gorehco</a>.</strong>
     Reservado todo los derechos
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0
@@ -478,7 +518,25 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
+{{-- modal para popup --}}
+@php
+//$avatar=asset('dist/img/avatar.png');
+$comunicacion=Storage::url('comunicacion/ejemplo.jpg')
+@endphp
+<div class="modal fade" id="modal-default" >{{-- data-backdrop="static" --}}
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content ">
+      
+      <div class="modal-body" style="padding: 2px !important;" >
+        <a href="#" class="bg-warning" data-dismiss="modal" style="float: right;position: relative;padding-left: 8px;border-radius: 10px;width: 23px;margin-top: -20px;margin-right: -5px;font-weight: bold;">x</a>
+        <img src="{{ $comunicacion }}" alt="" class="img-fluid">
+      
+      </div>
+      <!-- /.modal-content -->
+    </div>
+  <!-- /.modal-dialog -->
+  </div>
+</div>
 {{-- liveWire --}}
 
 @livewireScripts
@@ -527,6 +585,13 @@
 @stack('scrit') --}}
 
 @yield('script')
-
+{{-- <script type="text/javascript">
+  function redireccionar(){
+    document.getElementById('id01').style.display='active';
+    $("#id01").trigger("click");
+  } 
+  setTimeout ("redireccionar()", 1000); //tiempo expresado en milisegundos
+  
+</script> --}}
 </body>
 </html>
