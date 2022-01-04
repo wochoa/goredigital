@@ -866,17 +866,30 @@ function sunedu()
             //console.log(data);
             dato=data.length;
             tabla='<table class="table-bordered table-sm"><thead class="thead-light"><tr><td>USUARIO</td><td>GRADO O TITULO</td><td>INSTITUCION</td><td>FECHA DIPLOMA</td><td>RESOLUCION</td><td>FECHA INSCRIPCION</td></tr></thead><tbody>';
-            for(i=0;i<dato;i++)
+            if(dato>1)
             {
-              tabla+=`<tr>
-                      <td>`+data[i].nroDocumento+`<br>`+data[i].nombres+` `+ data[i].apellidoPaterno+` `+ data[i].apellidoMaterno+`</td>
-                      <td><span class="badge badge-danger">`+data[i].abreviaturaTitulo+`</span>`+data[i].tituloProfesional+`</td>
-                      <td>`+data[i].universidad+`<br><span class="badge badge-dark">`+data[i].tipoInstitucion+`</span><span class="badge badge-warning">`+data[i].tipoGestion+`</span><span class="badge badge-danger">`+data[i].pais+`</span></td>
-                      <td>`+data[i].fechaEmision+`</td>
-                      <td>`+data[i].resolucion+`</td>
-                      <td>`+data[i].fechaResolucion+`</td>
-                      </tr>`;
+              for(i=0;i<dato;i++)
+              {
+                tabla+=`<tr>
+                        <td>`+data[i].nroDocumento+`<br>`+data[i].nombres+` `+ data[i].apellidoPaterno+` `+ data[i].apellidoMaterno+`</td>
+                        <td><span class="badge badge-danger">`+data[i].abreviaturaTitulo+`</span>`+data[i].tituloProfesional+`</td>
+                        <td>`+data[i].universidad+`<br><span class="badge badge-dark">`+data[i].tipoInstitucion+`</span><span class="badge badge-warning">`+data[i].tipoGestion+`</span><span class="badge badge-danger">`+data[i].pais+`</span></td>
+                        <td>`+data[i].fechaEmision+`</td>
+                        <td>`+data[i].resolucion+`</td>
+                        <td>`+data[i].fechaResolucion+`</td>
+                        </tr>`;
 
+              }
+            }
+            else{
+              tabla+=`<tr>
+                        <td>`+data.nroDocumento+`<br>`+data.nombres+` `+ data.apellidoPaterno+` `+ data.apellidoMaterno+`</td>
+                        <td><span class="badge badge-danger">`+data.abreviaturaTitulo+`</span>`+data.tituloProfesional+`</td>
+                        <td>`+data.universidad+`<br><span class="badge badge-dark">`+data.tipoInstitucion+`</span><span class="badge badge-warning">`+data.tipoGestion+`</span><span class="badge badge-danger">`+data.pais+`</span></td>
+                        <td>`+data.fechaEmision+`</td>
+                        <td>`+data.resolucion+`</td>
+                        <td>`+data.fechaResolucion+`</td>
+                        </tr>`;
             }
             tabla+='</tbody></table>';
             $('.resultado').html(tabla);
