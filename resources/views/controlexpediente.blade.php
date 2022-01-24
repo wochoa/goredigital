@@ -9,7 +9,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Control de expedientes <button class="btn btn-xs btn-info">Agregar expedientes al control</button></h1><span class="badge badge-secondary navbar-badge"><strong>FECHA ACTUAL :</strong> {{ Carbon\Carbon::now()->format('d/m/Y') }}</span>
+          <h1 class="m-0">Control de expedientes <a class="btn btn-xs btn-info" href="{{ route('regdenuncia') }}">Agregar expedientes al control</a></h1><span class="badge badge-secondary navbar-badge"><strong>FECHA ACTUAL :</strong> {{ Carbon\Carbon::now()->format('d/m/Y') }}</span>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">

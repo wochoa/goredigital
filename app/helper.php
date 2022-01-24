@@ -1,5 +1,7 @@
 <?php
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+
 function activo($ruta)
 {
 	return request()->routeIs($ruta) ? 'active' : '';
@@ -56,6 +58,18 @@ function getRemoteFile($url, $timeout = 10) {
 	$file_contents = curl_exec($ch);
 	curl_close($ch);
 	return ($file_contents) ? $file_contents : FALSE;
+  }
+
+  function nombre_oficina($id)
+  {
+	  $buscar=DB::connection('pgsqlhelp')->table('tram_dependencia')->where('iddependencia',$id)->value('depe_nombre');
+	  return $buscar;
+	  
+  }
+  function nombre_documento($id)
+  {
+	  $buscar=DB::connection('pgsqlhelp')->table('tram_tipodocumento')->where('idtdoc',$id)->value('tdoc_descripcion');
+	  return $buscar;
   }
 
 ?>

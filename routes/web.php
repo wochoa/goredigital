@@ -65,6 +65,7 @@ route::get('/gestionportales','HomeController@gestionportales')->name('gestionpo
 route::get('/regdenuncia','Pad@index')->name('regdenuncia');//
 route::get('/controlexpedientes','Pad@controlexpedientes')->name('controlexpedientes');
 route::get('/reporteexpediente','Pad@reporteexpediente')->name('reporteexpediente');
+route::get('/userpad','Pad@userpad')->name('userpad');
 // rutas para servicios pide
 // consulta pide
 route::get('/pide','pide@pide')->name('pide');
@@ -87,3 +88,5 @@ route::get('/juntos/{dni}','pide@juntos')->name('juntos');
 route::get('/pension/{dni}','pide@pension')->name('pension');
 route::get('/qaliwarma','pide@qaliwarma')->name('qaliwarma');
 route::get('/toke_qaliwarma','pide@toke_qaliwarma')->name('toke_qaliwarma');
+
+Route::get('/authpromype','Apicontroleer@verificar')->name('authpromype');

@@ -324,8 +324,8 @@
           </li>
           {{-- .............. --}}
           @can('pagina_pad')
-          <li class="nav-item {{ menuopen(['regdenuncia','controlexpedientes','reporteexpediente'])}}">
-            <a href="#" class="nav-link {{ tituloactivo(['regdenuncia','controlexpedientes','reporteexpediente']) }}">
+          <li class="nav-item {{ menuopen(['regdenuncia','controlexpedientes','reporteexpediente','userpad'])}}">
+            <a href="#" class="nav-link {{ tituloactivo(['regdenuncia','controlexpedientes','reporteexpediente','userpad']) }}">
               <i class="nav-icon fas fa-book-reader"></i>
               <p>
                 Sistema PAD
@@ -354,6 +354,14 @@
                 <a href="{{ route('reporteexpediente') }}" class="nav-link {{ activo('reporteexpediente') }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reporte control expediente</p>
+                </a>
+              </li>
+              @endcan
+              @can('pagina_personalpad')
+              <li class="nav-item">
+                <a href="{{ route('userpad') }}" class="nav-link {{ activo('userpad') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Usuarios del PAD</p>
                 </a>
               </li>
               @endcan
