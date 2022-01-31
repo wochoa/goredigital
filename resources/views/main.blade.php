@@ -129,6 +129,21 @@
         </div>
       </div>
       <!-- ./col -->
+      <div class="col-lg-2 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3>20</h3>
+
+            <p>Promype</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-ios-cog"></i>
+          </div>
+          <a href="http://doceditor.regionhuanuco.gob.pe/promype/public/" class="small-box-footer" target="_blanck">Ir a promype <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
     </div>
 </div>
 {{-- modal sistemas--}}

@@ -66,6 +66,10 @@ route::get('/regdenuncia','Pad@index')->name('regdenuncia');//
 route::get('/controlexpedientes','Pad@controlexpedientes')->name('controlexpedientes');
 route::get('/reporteexpediente','Pad@reporteexpediente')->name('reporteexpediente');
 route::get('/userpad','Pad@userpad')->name('userpad');
+
+// SISTEMA SGD
+route::get('/sgd','Sgd@index')->name('sgd');
+
 // rutas para servicios pide
 // consulta pide
 route::get('/pide','pide@pide')->name('pide');

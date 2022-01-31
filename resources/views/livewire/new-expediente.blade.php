@@ -55,23 +55,45 @@
                                         <td><small>{{ $key->docu_asunto }}</small></td>
                                         <td><small>{{ $key->docu_firma }}</small></td>
                                         <td><small>{{ nombre_oficina($key->docu_iddependencia) }}</small></td>
-                                        <td><button class="btn btn-warning btn-xs" onclick="iniciarpad({{ $key->iddocumento }},{{ $key->docu_idexma }})"><small>Iniciar</small></button></td>
+                                        <td><button class="btn btn-warning btn-xs" wire:click="iniciarpad({{ $key->iddocumento }},{{ $key->docu_idexma }})" data-toggle="modal" data-target="#iniciapad"><small>Iniciar</small></button></td>
                                     </tr>
-                                {{-- @empty
-                                .. --}}
-                                    
+                            
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
                     <div class="modal-footer justify-content-between">
-                        {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
                         <button type="button" class="btn btn-primary">Registrar denuncias</button>
                     </div>
                 </div>
                 @endif
            
             </div>
+        </div>
+    </div>
+    {{-- modal atender por administradores--}}
+    <div wire:ignore.self class="modal fade" id="iniciapad" >
+        <div class="modal-dialog modal-xl">
+        <div class="modal-content p-0">
+            <div class="modal-header"><h5 class="modal-title">Iniciando registro de control | <small> PAD</small> </h5>                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <small >{{ date('d/m/Y h:i:s') }}</small>&nbsp;&nbsp;<span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <strong>Expediente:</strong>{{ $expediente }}<br>
+                <strong>documento:</strong>{{ $iddoc }}<br>
+                
+            </div>
+            <div class="modal-footer justify-content-between">
+            <button  class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button  class="btn btn-primary" wire:click="atenderticket({{ Auth::user()->id }})">Finalizar</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
     </div>
 </div>
 @section('script')
@@ -92,9 +114,9 @@ function abrirPopupSolicitado(url) {
   referenciaObjetoVentana = window.open(url, "fCC_WindowName", strCaracteristicasVentana);
 }
 
-function iniciarpad(iddoc,idexpe)
-{
-    alert(iddoc+'--'+idexpe)
-}
-</script>
+// function iniciarpad(iddoc,idexpe)
+// {
+//     alert(iddoc+'--'+idexpe)
+// }
+// </script>
 @endsection

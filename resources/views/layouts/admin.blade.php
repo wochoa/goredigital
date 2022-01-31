@@ -369,6 +369,52 @@
             </ul>
           </li>
           @endcan
+          @can('pagina_sgd')
+          <li class="nav-item {{ menuopen(['sgd','controlexpedientes','reporteexpediente','userpad'])}}">
+            <a href="#" class="nav-link {{ tituloactivo(['sgd','controlexpedientes','reporteexpediente','userpad']) }}">
+              <i class="nav-icon fas fa-book-reader"></i>
+              <p>
+                Sistema SGD
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              @can('pagina_dashboardsgd')
+              <li class="nav-item">
+                <a href="{{ route('sgd') }}" class="nav-link {{ activo('sgd') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard SGD</p>
+                </a>
+              </li>
+              @endcan
+              @can('pagina_controlexpedeinte')
+              <li class="nav-item">
+                <a href="{{ route('controlexpedientes') }}" class="nav-link {{ activo('controlexpedientes') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Control Expediente</p>
+                </a>
+              </li>
+              @endcan
+              @can('pagina_reporteexpediente')
+              <li class="nav-item">
+                <a href="{{ route('reporteexpediente') }}" class="nav-link {{ activo('reporteexpediente') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reporte control expediente</p>
+                </a>
+              </li>
+              @endcan
+              @can('pagina_personalpad')
+              <li class="nav-item">
+                <a href="{{ route('userpad') }}" class="nav-link {{ activo('userpad') }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Usuarios del PAD</p>
+                </a>
+              </li>
+              @endcan
+              
+            </ul>
+          </li>
+          @endcan
           {{-- .............. --}}
           @can('Pagina_chat')
           <li class="nav-item">
@@ -593,6 +639,7 @@ $comunicacion=Storage::url('comunicacion/ejemplo.jpg')
 @stack('scrit') --}}
 
 @yield('script')
+@stack('js')
 {{-- <script type="text/javascript">
   function redireccionar(){
     document.getElementById('id01').style.display='active';
