@@ -70,6 +70,10 @@ route::get('/userpad','Pad@userpad')->name('userpad');
 // SISTEMA SGD
 route::get('/sgd','Sgd@index')->name('sgd');
 
+// REGISTROS A REUNIONES
+route::get('/reuniones','Reuniones@index')->name('reunioncreacion');
+route::get('/incripciones/{titulo}','Reuniones@incripcionesreunion')->name('incripcionesreunion');
+
 // rutas para servicios pide
 // consulta pide
 route::get('/pide','pide@pide')->name('pide');

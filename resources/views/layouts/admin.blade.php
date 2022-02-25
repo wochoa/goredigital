@@ -436,6 +436,15 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('reunioncreacion') }}" class="nav-link" {{ activo('reunioncreacion') }}>
+              <i class="nav-icon fa fa-comments"></i>
+              <p>
+                Reuniones
+                {{-- <span class="right badge badge-danger">Nueva función</span> --}}
+              </p>
+            </a>
+          </li>
           @endcan
           @can('Pagina_personalsoporte')
           <li class="nav-item">
