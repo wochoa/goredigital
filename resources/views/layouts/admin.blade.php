@@ -416,7 +416,18 @@
           </li>
           @endcan
           {{-- .............. --}}
-          @can('Pagina_chat')
+          @can('papeleta_vehiculo')
+          <li class="nav-item">
+            <a href="{{ route('papeletavehiculo') }}" class="nav-link" {{ activo('papeletavehiculo') }}>
+              <i class="nav-icon fa fa-car"></i>
+              <p>
+                Papeleta vehiculo
+                {{-- <span class="right badge badge-danger">Nueva función</span> --}}
+              </p>
+            </a>
+          </li>
+          @endcan
+          @can('pagina_vehiculo_leer')
           <li class="nav-item">
             <a href="{{ route('chat') }}" class="nav-link" {{ activo('chat') }}>
               <i class="nav-icon fa fa-comments"></i>

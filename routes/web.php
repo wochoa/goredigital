@@ -40,6 +40,9 @@ Route::get('/password/reset', function () {
     return redirect('/');
 });
 
+// papeleta vehiculo
+Route::get('/papeletavehiculo', 'HomeController@papeletavehiculo')->name('papeletavehiculo');
+//.....................................
 Route::get('/ticket', 'HomeController@ticket')->name('ticket');
 
 Route::get('/oficina', 'HomeController@oficina')->name('oficina');
