@@ -348,8 +348,8 @@
         <!-- /.modal-dialog -->
     </div>
 {{-- {{ $ticketenproceso }} --}}
-{{-- <button class="reproductor">Reproduce tu audio</button> --}}
-<audio src=""></audio>
+
+{{-- <audio src=""></audio> --}}
 </div>
 @section('script')
 <script>
@@ -404,14 +404,14 @@
   </script>
   
   <script>
-      let boton = document.querySelector(".reproductor")
-      let audioEtiqueta = document.querySelector("audio")
+    //   let boton = document.querySelector(".reproductor")
+    //   let audioEtiqueta = document.querySelector("audio")
   
-      boton.addEventListener("click", () => {
-        audioEtiqueta.setAttribute("src", "dist/img/sms.mp3")
-        audioEtiqueta.play()
-        console.log(`Reproduciendo: ${audioEtiqueta.src}`)
-      })
+    //   boton.addEventListener("click", () => {
+    //     audioEtiqueta.setAttribute("src", "dist/img/sms.mp3")
+    //     audioEtiqueta.play()
+    //     console.log(`Reproduciendo: ${audioEtiqueta.src}`)
+    //   })
   </script>
   {{-- <script>
 

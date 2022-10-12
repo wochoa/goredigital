@@ -19,26 +19,16 @@ use Illuminate\Support\Facades\Storage;
 
 Auth::routes();
 
-Route::get('storage/avatar/{file}', function ($file) {
-
-	$rutaDeArchivo = storage_path() . '/app/avatar/' . $file;
-	//return $rutaDeArchivo;
-	return response()->file($rutaDeArchivo);
-});
-Route::get('storage/comunicacion/{file}', function ($file) {
-
-	$rutaDeArchivo = storage_path() . '/app/comunicacion/' . $file;
-	//return $rutaDeArchivo;
-	return response()->file($rutaDeArchivo);
-});
+Route::get('storage/avatar/{file}', 'Adicionales@avatares'); 
+Route::get('storage/comunicacion/{file}', 'Adicionales@comunicacion'); 
 Route::get('/', 'HomeController@index')->name('main');
-Route::get('/register', function () {
-    return redirect('/');
-});
 
-Route::get('/password/reset', function () {
-    return redirect('/');
-});
+Route::get('/register', 'Adicionales@regist'); 
+
+Auth::routes(['register' => false,'password.update'=>false]);
+
+Route::get('/password/reset', 'Adicionales@reset'); 
+
 
 // papeleta vehiculo
 Route::get('/papeletavehiculo', 'HomeController@papeletavehiculo')->name('papeletavehiculo');
