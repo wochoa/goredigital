@@ -114,14 +114,10 @@ class HomeController extends Controller
 
     public function usersoporte()
     {
-        $idofi=Auth::user()->depe_id;
-        $codigodepe=DB::table('dependencia')->where('iddependencia',$idofi)->value('depe_depende');
-        $coddependencia=$codigodepe;//$codigodepe[0]->depe_depende;
-
-        $usersoporte=DB::table('vistausersoporte')->where('depe_depende',$coddependencia)->get();
+        
         if(Auth::user()->can('Pagina_personalsoporte'))
         {
-            return view('usersoporte',compact('usersoporte'));
+            return view('usersoporte');
         }
         else{
             return redirect('/');
