@@ -22,7 +22,7 @@
         "nesbot/carbon": "^2.50",
         "pusher/pusher-http-laravel": "^4.2",
         "pusher/pusher-php-server": "~4.0",
-        "spatie/laravel-permission": "^4.0"
+        "spatie/laravel-permission": "^5.11"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

@@ -38,13 +38,13 @@ class GestionPortales extends Component
 
         if(Auth::user()->hasRole('Superadmin')==1)
         {
-            $paginas=DB::connection('mysql')->table('direcciones_web')->get();
-            $userportales=DB::connection('mysql')->table('userportales')->get();
+            $paginas=DB::connection('pgsql_pag')->table('direcciones_web')->get();
+            $userportales=DB::connection('pgsql_pag')->table('userportales')->get();
         }
         else{
-            $paginas=DB::connection('mysql')->table('direcciones_web')->where('iddependencia',$codidepe)->get();
-            $codwebpor=DB::connection('mysql')->table('direcciones_web')->where('iddependencia',$codidepe)->value('iddirecciones_web');
-            $userportales=DB::connection('mysql')->table('userportales')->where('iddirecciones_web',$codwebpor)->get();
+            $paginas=DB::connection('pgsql_pag')->table('direcciones_web')->where('iddependencia',$codidepe)->get();
+            $codwebpor=DB::connection('pgsql_pag')->table('direcciones_web')->where('iddependencia',$codidepe)->value('iddirecciones_web');
+            $userportales=DB::connection('pgsql_pag')->table('userportales')->where('iddirecciones_web',$codwebpor)->get();
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +80,7 @@ class GestionPortales extends Component
     }
     public function Buscardirweb($id,$nombre)
     {
-        //$data=DB::connection('mysql')->table('direcciones_web')->where('iddirecciones_web',$id)->get();
+        //$data=DB::connection('pgsql_pag')->table('direcciones_web')->where('iddirecciones_web',$id)->get();
         //$nombre=$data->nom_direcciones_web;
         // return $nombre;
         $this->codpag=$id;
@@ -90,7 +90,7 @@ class GestionPortales extends Component
     {
        //return $this->coddepe;
        $sql='UPDATE direcciones_web SET iddependencia='.$this->coddepe.' where iddirecciones_web='.$this->codpag;
-       DB::connection('mysql')->update($sql);
+       DB::connection('pgsql_pag')->update($sql);
        $this->emit('editadoweb');
     }
     public function personal($iduni)
@@ -106,7 +106,7 @@ class GestionPortales extends Component
         //return $this->codpag.'-'.$this->iduser;
         $fecha=date('Y-m-d H:i:s');
         $nombre=$this->nombrecompleto($this->iduser);
-        DB::connection('mysql')->insert('insert into userportales (iduser, iddirecciones_web,nombreuser,created_at,updated_at) values (?, ?,?,?,?)', [$this->iduser, $this->codpag,$nombre,$fecha,$fecha]);
+        DB::connection('pgsql_pag')->insert('insert into userportales (iduser, iddirecciones_web,nombreuser,created_at,updated_at) values (?, ?,?,?,?)', [$this->iduser, $this->codpag,$nombre,$fecha,$fecha]);
         $this->emit('userasignado');
     }
 

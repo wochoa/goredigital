@@ -13,7 +13,7 @@ class CreateUserSoporteTable extends Migration
      */
     public function up()
     {
-        DB::statement("CREATE VIEW vistausersoporte as select admin.id,adm_name,adm_lastname,adm_cargo,adm_correo,adm_telefono,adm_dni,avatar,name as rolasignado,depe_nombre,depe_sigla,depe_depende from admin join model_has_roles on(admin.id=model_has_roles.model_id) 
+        DB::statement("CREATE VIEW vistausersoporte as select admin.id,adm_name,adm_lastname,adm_estado,adm_cargo,adm_correo,adm_telefono,adm_dni,avatar,name as rolasignado,depe_nombre,depe_sigla,depe_depende from admin join model_has_roles on(admin.id=model_has_roles.model_id) 
         join roles on(model_has_roles.role_id=roles.id) join dependencia on(admin.depe_id=dependencia.iddependencia);");
     }
 
