@@ -19,11 +19,10 @@ class pide extends Controller
   public function reniec($dni)
   {
       
-      $url='http://app.regionhuanuco.gob.pe/soap_pruebas/reniec.php?cdni='.$dni;
+    $url='http://app.regionhuanuco.gob.pe/soap_pruebas/reniec.php?cdni='.$dni.'&key=j53e130xRfEV1KYH1W2m57HToKRtaIYGKn0RlBqQUf9l2pCh8ewoK1inHj5HdVGb';
 
-      //$wsdl = file_get_contents($url);
-      $wsdl = getRemoteFile($url);
-      return $wsdl;
+    $wsdl = file_get_contents($url);
+    return $wsdl;
   }
   public function sis($dni)
   {
