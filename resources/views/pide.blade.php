@@ -22,114 +22,123 @@
   <!-- /.content-header -->
 <div class="container-fluid">
     {{-- <div class="row justify-content-center"> --}}
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card card-gray">
-                <div class="card-header p-2">
-                  <h3 class="card-title">Servicios PIDE(Plataforma de Interoperabilidad del Estado) <button class="btn btn-success btn-xs" onclick="desarrollador();">Integre en tu plataforma</button></h3>
-                  <!-- /.card-tools -->
+      @can('pagina_pide')
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card card-gray">
+                    <div class="card-header p-2">
+                      <h3 class="card-title">Servicios PIDE(Plataforma de Interoperabilidad del Estado) 
+                        {{-- <button class="btn btn-success btn-xs" onclick="desarrollador();">Integre en tu plataforma</button> --}}
+                      </h3>
+                      <!-- /.card-tools -->
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#reniec">
+                                    <i class="fas fa-inbox fa-2x"></i><br> <small>Reniec</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#sis">
+                                    <i class="fa fa-heartbeat fa-2x"></i><br> <small>Sistema Integrado de Salud(SIS)</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#essalud">
+                                    <i class="fa fa-ambulance fa-2x"></i><br> <small>ESSALUD</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#sunat">
+                                    <i class="fa fa-leaf fa-2x"></i><br> <small>SUNAT</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#antejudicial">
+                                    <i class="fa fa-flask fa-2x"></i><br>  <small>Antecedentes judiciales</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-primary btn-xs">
+                                    <i class="fa fa-leaf fa-2x"></i><br> <small>SUNARP</small></button>
+                            </div>
+                          
+                            
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedorsancionado">
+                                    <i class="fa fa-gavel fa-2x"></i><br>  <small>PROVEEDOR SANCIONADO-OSCE</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#busprocselxexpediente">
+                                    <i class="fa fa-gavel fa-2x"></i><br>  <small>Proceso seleccion por expediente-OSCE</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#busprocselrucaniomes">
+                                    <i class="fa fa-gavel fa-2x"></i><br>  <small>Proceso seleccion (Ruc,mes y año) -OSCE</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedoradjudicadoxexpe">
+                                    <i class="fa fa-gavel fa-2x"></i><br>  <small>Proveedor adjudicado por expediente-OSCE</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedoradjudicadoxrucanio">
+                                    <i class="fa fa-gavel fa-2x"></i><br>  <small>Proveedor adjudicado por Ruc y Año-OSCE</small></button>
+                            </div>
+                            {{-- sobra uno --}}
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#sunedu">
+                                    <i class="fa fa-university fa-2x"></i><br> <small>SUNEDU</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#gradotitinsttecnyped">
+                                    <i class="fa fa-home fa-2x"></i><br> <small>Grados y Títulos de Institutos por DNI</small></button>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 pt-1">
+                                <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#infocolnacioparticular">
+                                    <i class="fa fa-book fa-2x"></i><br> <small>Información de colegio nacional y particular</small></button>
+                            </div>
+                            
+                        </div>
+                        <div class="row pt-2">
+                          <div class="col-xs-4 col-sm-3 pt-1">
+                              <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#conadis">
+                                  <i class="fa fa-desktop fa-2x"></i><br> <small>CONADIS</small></button>
+                          </div>
+                          <div class="col-xs-4 col-sm-3 pt-1">
+                              <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#juntos">
+                                  <i class="fa fa-users fa-2x"></i><br> <small>Programa juntos</small></button>
+                          </div>
+                          <div class="col-xs-4 col-sm-3 pt-1">
+                              <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#pension65">
+                                <i class="fas fa-book-reader fa-2x"></i><br> <small>Pension65</small></button>
+                          </div>
+                          <div class="col-xs-4 col-sm-3 pt-1">
+                            <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#Qaliwarma">
+                              <i class="fab fa-accusoft fa-2x"></i><br> <small>Qaliwarma</small></button>
+                        </div>
+                          
+                      </div>
+                    </div>
+                    <!-- /.card-body -->
                 </div>
-                <!-- /.card-header -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#reniec">
-                                <i class="fas fa-inbox fa-2x"></i><br> <small>Reniec</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#sis">
-                                <i class="fa fa-heartbeat fa-2x"></i><br> <small>Sistema Integrado de Salud(SIS)</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#essalud">
-                                <i class="fa fa-ambulance fa-2x"></i><br> <small>ESSALUD</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#sunat">
-                                <i class="fa fa-leaf fa-2x"></i><br> <small>SUNAT</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-primary btn-xs" data-toggle="modal" data-target="#antejudicial">
-                                <i class="fa fa-flask fa-2x"></i><br>  <small>Antecedentes judiciales</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-primary btn-xs">
-                                <i class="fa fa-leaf fa-2x"></i><br> <small>SUNARP</small></button>
-                        </div>
-                       
-                        
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-gray">
+                    <div class="card-header">Resultados <span id="textoresul"></span></div>
+                    <div class="card-body resultado">
+                        En esta seccion se mostrará los resultados de la consulta
                     </div>
-                    <div class="row pt-2">
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedorsancionado">
-                                <i class="fa fa-gavel fa-2x"></i><br>  <small>PROVEEDOR SANCIONADO-OSCE</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#busprocselxexpediente">
-                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proceso seleccion por expediente-OSCE</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#busprocselrucaniomes">
-                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proceso seleccion (Ruc,mes y año) -OSCE</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedoradjudicadoxexpe">
-                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proveedor adjudicado por expediente-OSCE</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-warning btn-xs" data-toggle="modal" data-target="#proveedoradjudicadoxrucanio">
-                                <i class="fa fa-gavel fa-2x"></i><br>  <small>Proveedor adjudicado por Ruc y Año-OSCE</small></button>
-                        </div>
-                        {{-- sobra uno --}}
-                    </div>
-                    <div class="row pt-2">
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#sunedu">
-                                <i class="fa fa-university fa-2x"></i><br> <small>SUNEDU</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#gradotitinsttecnyped">
-                                <i class="fa fa-home fa-2x"></i><br> <small>Grados y Títulos de Institutos por DNI</small></button>
-                        </div>
-                        <div class="col-xs-4 col-sm-3 pt-1">
-                            <button type="button" class="btn btn-block btn-outline-info btn-xs" data-toggle="modal" data-target="#infocolnacioparticular">
-                                <i class="fa fa-book fa-2x"></i><br> <small>Información de colegio nacional y particular</small></button>
-                        </div>
-                        
-                    </div>
-                    <div class="row pt-2">
-                      <div class="col-xs-4 col-sm-3 pt-1">
-                          <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#conadis">
-                              <i class="fa fa-desktop fa-2x"></i><br> <small>CONADIS</small></button>
-                      </div>
-                      <div class="col-xs-4 col-sm-3 pt-1">
-                          <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#juntos">
-                              <i class="fa fa-users fa-2x"></i><br> <small>Programa juntos</small></button>
-                      </div>
-                      <div class="col-xs-4 col-sm-3 pt-1">
-                          <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#pension65">
-                            <i class="fas fa-book-reader fa-2x"></i><br> <small>Pension65</small></button>
-                      </div>
-                      <div class="col-xs-4 col-sm-3 pt-1">
-                        <button type="button" class="btn btn-block btn-outline-danger btn-xs" data-toggle="modal" data-target="#Qaliwarma">
-                          <i class="fab fa-accusoft fa-2x"></i><br> <small>Qaliwarma</small></button>
-                    </div>
-                      
-                  </div>
+                    <div class="overlay dark" style="display: none;"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>
                 </div>
-                <!-- /.card-body -->
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card card-gray">
-                <div class="card-header">Resultados <span id="textoresul"></span></div>
-                <div class="card-body resultado">
-                    En esta seccion se mostrará los resultados de la consulta
-                </div>
-                <div class="overlay dark" style="display: none;"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>
-            </div>
-        </div>
-    </div>
+        @else
+        <div class="alert alert-danger" role="alert">
+          No tines acceso a este módulo
+        </div> 
+        <a href="/" class="btn btn-primary btn-sm"> Volver</a>
+      @endcan
 </div>
 {{-- modal sistemas--}}
 
